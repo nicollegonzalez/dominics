@@ -12,8 +12,9 @@ const path         = require('path');
 
 
 mongoose
-  .connect('mongodb://localhost/dominics', { useUnifiedTopology: true, useNewUrlParser: true }
-    )
+  // .connect('mongodb://localhost/dominics', { useUnifiedTopology: true, useNewUrlParser: true }
+  //   )
+  .connect(process.env.MONGODB_URI)
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
