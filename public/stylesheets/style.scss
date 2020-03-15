@@ -502,7 +502,7 @@ form > *{
   background-color: #fff; 
   // outline: 1px solid rgb(205, 33, 42);
   // outline: rgb(205, 33, 42) solid !important;
-  outline-color: -webkit-focus-ring-color rgb(205, 33, 42) !important;
+  outline-color: rgb(205, 33, 42) !important;
 }
 
 #deals-form button {
