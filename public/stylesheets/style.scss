@@ -475,7 +475,7 @@ form > *{
   box-sizing: border-box;
   font-size: 14px;
   // outline: 0;
-  outline-color: rgb(205, 33, 42);
+  // outline-color: rgb(205, 33, 42);
   padding: 4px;
   // width: 100%;
   width: 100%;
@@ -489,7 +489,7 @@ form > *{
   // box-shadow: 5px 10px #888888;
   box-shadow:  
       inset 0 0 1px  rgba(0,0,0,0.1),
-            0 0 2px rgba(0,0,0,0.1); 
+            0 0 2px rgba(0,0,0,0.1) !important; 
   padding: 5px;
 }
 
@@ -498,9 +498,10 @@ form > *{
   // box-shadow: 5px 10px #888888;
   box-shadow:  
     inset 0 0 1px  rgba(205, 33, 42,1),
-          0 0 2px rgba(205, 33, 42,1);
+          0 0 2px rgba(205, 33, 42,1) !important;
   background-color: #fff; 
   // outline: 1px solid rgb(205, 33, 42);
+  outline-color: rgb(205, 33, 42);
 }
 
 #deals-form button {
