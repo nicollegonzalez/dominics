@@ -483,7 +483,7 @@ form > *{
   margin-bottom: 20px;
 }
 
-input{
+#deals-form input{
   border: 1px solid rgb(230, 230, 230);
   // box-shadow: 5px 10px #888888;
   box-shadow:  
@@ -492,7 +492,7 @@ input{
   padding: 5px;
 }
 
-input:focus, input:active {
+#deals-form input:focus, #deals-form input:active {
   border: 0px solid rgb(205, 33, 42);
   // box-shadow: 5px 10px #888888;
   box-shadow:  
