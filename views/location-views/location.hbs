@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<!--// OPEN HTML //-->
+<html lang="en-US">
+
+  <!--// OPEN HEAD //-->
+  <head>
+      
+    <!--// SITE META //-->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <!--// SITE TITLE //-->
+    <title>Dominic's Pizza & Pasta</title>                        
+
+                                        
+    <!-- <link rel='dns-prefetch' href='//maps.google.com' />
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' /> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
+
+    <!-- Facebook Meta -->
+    <meta property="og:title" content="Dominic's Pizza & Pasta I"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="https://dominicspizzapasta.com/dominicsI/"/>
+    <meta property="og:site_name" content="Dominic's Pizza & Pasta"/>
+    <meta property="og:description" content="">
+    <!-- <meta property="og:image" content="https://protospizza.com/wp-content/uploads/2016/08/protosLogo.png"/> -->
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Main">
+    <meta name="twitter:description" content="">
+    <!-- <meta property="twitter:image:src" content="https://protospizza.com/wp-content/uploads/2016/08/protosLogo.png"/> -->
+
+    <!-- CSS Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="/stylesheets/style.css" media="screen">
+
+    
+  <!--// CLOSE HEAD //-->
+  </head>
+
+    <!--// OPEN BODY //-->
+    <body>
+        <div class="main-content">
+            <nav class="navbar">
+                <div class="hamburger">
+                    <div class="hamburger-bar"></div>
+                    <div class="hamburger-bar"></div>
+                    <div class="hamburger-bar"></div>
+                </div>
+                <div class="logo">
+                    <img src="/images/dominicslogo.png" alt="Dominic's">
+                </div>
+                <div class="hamburger">
+                    <div class="hamburger-bar"></div>
+                    <div class="hamburger-bar"></div>
+                    <div class="hamburger-bar"></div>
+                </div>
+            </nav>
+            <ul class="nav-menu-large-screen hidden">
+                <li ><a class="nav-menu-link" href="/">Home</a></li>
+                <li ><a class="nav-menu-link" href="/locations">Locations</a></li>
+                <li ><a class="nav-menu-link" href="/about">About</a></li>
+                <li ><a class="nav-menu-link" href="/careers">Careers</a></li>
+            </ul>
+            <div id="main-content-body" class="main-content-body">
+                <div class="dominics-intro">
+                    <div class="logo">
+                        <img src="/images/dominicslogoellipse.png" alt="Dominic's Logo">
+                    </div>
+                    <p>Buon appetito!</p>
+                </div>
+                <div class="location-information">
+                    <h1>{{location.locationName}} - {{location.locationCity}}</h1>
+                    <div class="address">
+                        <h2>Address:</h2>
+                        <div>{{location.locationAddress.description}}</div>
+                        <a href="{{location.locationAddress.addressURL}}" target="_blank">
+                            <div>{{location.locationAddress.street}}</div>
+                            <div>{{location.locationAddress.city}}, {{location.locationAddress.state}} {{location.locationAddress.zip}}</div>  
+                        </a>
+                    </div>
+                    <div class="Hours">
+                        <h2>Hours:</h2>
+                        <div class="Hours">Sunday: 3-10PM</div>
+                        <div class="Hours">{{location.locationHours.secondLabel}} {{location.locationHours.mondayThursday}}</div>
+                        <div class="Hours">{{location.locationHours.thirdLabel}} {{location.locationHours.fridaySaturday}}</div>
+                    </div>
+                    <div class="Contact">
+                        <h2>Contact:</h2>
+                        <div><a href="tel:{{location.locationContact.locationPhoneNumber}}">Phone: {{location.locationContact.locationPhoneNumber}}</a></div>
+                        <div><a href="mailto:{{location.locationContact.locationEmail}}">Email: {{location.locationContact.locationEmail}}</a></div>
+                    </div>
+                    {{!-- <iframe src="{{location.mapURL}}" width="100%" height="450" frameborder="0" style="border:0; filter: grayscale(100%);" allowfullscreen=""></iframe> --}}
+                    {{!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14298.693055152396!2d-80.1726854!3d26.369428!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e8712880c79d03d!2sDominic&#39;s%20I%20Pizza%20and%20Pasta!5e0!3m2!1sen!2sus!4v1583482760710!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0; filter: grayscale(100%);" allowfullscreen=""></iframe> --}}
+                    <div id="map{{location.locationNumber}}"></div>
+                </div>
+                <div class="location-button menu-button">
+                    <a href="{{location.lunchMenu}}" alt="Lunch Menu">Lunch Menu</a>
+                </div>
+                <div class="location-button menu-button">
+                    <a href="{{location.dinnerMenu}}" alt="Dinner Menu">Dinner Menu</a>
+                </div>
+                <div class="location-button menu-button">
+                    <a href="{{location.childrenMenu}}" alt="Children's Menu">Children's Menu</a>
+                </div>
+                <div class="dominics-quote">
+                    <p>Our Italian Specialties and Pizzas have generated a family following among residents and visitors alike. We hope you will enjoy dining with us!</p>
+                </div>
+                <div>
+                    {{> dealsForm}}
+                </div>
+                <footer>
+                    <p>© 2020 Dominic's Pizza & Pasta. All Rights Reserved.</p>
+                </footer>
+            </div>
+        </div>
+        <div class="nav-menus">
+            <ul class="nav-menu">
+                <li ><a class="nav-menu-link" href="/">Home</a></li>
+                <li ><a class="nav-menu-link" href="/locations">Locations</a></li>
+                <li ><a class="nav-menu-link" href="/about">About</a></li>
+                <li ><a class="nav-menu-link" href="/careers">Careers</a></li>
+            </ul>
+        </div>
+        
+          
+          
+        <!-- <script type="text/javascript" src="//maps.google.com/maps/api/js?key=AIzaSyCLLxP0JZfwX3FDYANr147jNfqnEILQRHc"></script> -->
+        {{!-- <script type="text/javascript" src="/javascripts/script.js"></script> --}}
+        {{!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMEBfZ8dw1054JeBQs0oUn0PhiKT_brAI"></script> --}}
+
+    <!--// CLOSE BODY //-->
+    </body>
+
+
+<!--// CLOSE HTML //-->
+</html>

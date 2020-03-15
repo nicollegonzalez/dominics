@@ -1,0 +1,48 @@
+<div class="main-content">
+    <nav class="navbar">
+        <div class="hamburger">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+        </div>
+        <div class="logo">
+            <img src="/images/DominicsLogo.png" alt="Dominic's">
+        </div>
+        <div class="hamburger">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+        </div>
+    </nav>
+    <ul class="nav-menu-large-screen hidden">
+        <li ><a class="nav-menu-link" href="/">Home</a></li>
+        <li ><a class="nav-menu-link" href="/locations">Locations</a></li>
+        <li ><a class="nav-menu-link" href="/about">About</a></li>
+        <li ><a class="nav-menu-link" href="/careers">Careers</a></li>
+    </ul>
+    <div id="main-content-body" class="main-content-body">
+        <div class="locations">
+            <h3 class="locations-heading">Locations</h3>
+            {{!-- <iframe src="https://www.google.com/maps/d/embed?mid=1z4qOYzsTswHglvBjFsXGkgchP8MSXvhu" width="100%" height="450" frameborder="0" style="border:0; filter: grayscale(100%);" allowfullscreen=""></iframe> --}}
+            <div id="map"></div>
+            {{#each locations}}
+                {{> location}}
+            {{/each}}
+        </div>
+        <footer>
+            <p>© 2020 Dominic's Pizza & Pasta. All Rights Reserved.</p>
+        </footer>
+    </div>
+</div>
+<div class="nav-menus">
+    <ul class="nav-menu">
+        <li ><a class="nav-menu-link" href="/">Home</a></li>
+        <li ><a class="nav-menu-link" href="/locations">Locations</a></li>
+        <li ><a class="nav-menu-link" href="/about">About</a></li>
+        <li ><a class="nav-menu-link" href="/careers">Careers</a></li>
+    </ul>
+</div>
+
+    
+{{!-- <script type="text/javascript" src="/javascripts/script.js"></script> --}}
+{{!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMEBfZ8dw1054JeBQs0oUn0PhiKT_brAI"></script> --}}
