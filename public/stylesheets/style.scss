@@ -502,7 +502,8 @@ form > *{
   // outline: 1px solid rgb(205, 33, 42);
   // outline: rgb(205, 33, 42) solid;
   outline-color: rgb(205, 33, 42);
-  border: 1px solid rgb(205, 33, 42);
+  outline-width: medium;
+  // border: 1px solid rgb(205, 33, 42);
 }
 
 #deals-form button {
