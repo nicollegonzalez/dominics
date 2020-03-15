@@ -474,7 +474,7 @@ form > *{
 #deals-form button {
   box-sizing: border-box;
   font-size: 14px;
-  outline: 0;
+  outline: none;
   // outline-color: rgb(205, 33, 42);
   padding: 4px;
   // width: 100%;
@@ -501,7 +501,7 @@ form > *{
           0 0 2px rgba(205, 33, 42,1) !important;
   background-color: #fff; 
   // outline: 1px solid rgb(205, 33, 42);
-  outline: rgb(205, 33, 42) dashed !important;
+  outline: rgb(205, 33, 42) !important;
   // outline-color: rgb(205, 33, 42) !important;
 }
 
