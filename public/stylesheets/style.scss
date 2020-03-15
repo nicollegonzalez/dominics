@@ -499,6 +499,7 @@ input:focus {
     inset 0 0 1px  rgba(205, 33, 42,1),
           0 0 2px rgba(205, 33, 42,1);
   background-color: #fff; 
+  outline: 1px solid rgb(205, 33, 42);
 }
 
 #deals-form button {
