@@ -474,7 +474,7 @@ form > *{
 #deals-form button {
   box-sizing: border-box;
   font-size: 14px;
-  outline: 0;
+  // outline: 0;
   padding: 4px;
   width: 100%;
   max-width: 380px;
@@ -526,9 +526,11 @@ form > *{
 }
 
 #deals-form button:focus, #deals-form button:active{
+  // outline-color: black;
+  // outline-width: thick;
+  // outline: thick solid black;
   outline-color: black;
-  outline-width: thick;
-  outline: thick solid black;
+  // outline-width: thick;
   background: #fff;
   color: #CD212A;
 }
