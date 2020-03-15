@@ -492,7 +492,7 @@ input{
   padding: 5px;
 }
 
-input:focus {
+input:focus, input:active {
   border: 0px solid rgb(205, 33, 42);
   // box-shadow: 5px 10px #888888;
   box-shadow:  
