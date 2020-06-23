@@ -14,7 +14,6 @@ const mapsKey = process.env.MAPSKEY;
 
 hbs.registerHelper('api_url', function () { 
   let ApiUrl= `https://maps.googleapis.com/maps/api/js?key=${mapsKey}`;
-  console.log(ApiUrl === "https://maps.googleapis.com/maps/api/js?key=AIzaSyAMEBfZ8dw1054JeBQs0oUn0PhiKT_brAI")
   return ApiUrl; 
 });
 
