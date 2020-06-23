@@ -1,10 +1,11 @@
+require('dotenv').config();
 
 const mongoose = require('mongoose');
 const Location = require('../models/location');
 
 const dbName = 'dominics';
-// mongoose.connect(`mongodb://localhost/${dbName}`,{ useUnifiedTopology: true, useNewUrlParser: true });
-mongoose.connect(process.env.MONGODB_URI,{ useUnifiedTopology: true, useNewUrlParser: true })
+// mongoose.connect(`mongodb://localhost/${dbName}`,{ useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true , useUnifiedTopology: true})
 .then(x => {
   console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
 })
@@ -17,7 +18,7 @@ const locations = [
   {
     locationRoute: "dominicsI",
     locationTagAlt: "Dominic's 1 - Boca Raton",
-    locationName:   "Dominic's I",
+    locationName:   "Dominic’s I Pizza and Pasta",
     locationCity: "Boca Raton",
     locationNumber: "1",
     locationImage: '/images/dominics-one/exterior.jpg',
@@ -49,7 +50,7 @@ const locations = [
   {
     locationRoute: "dominicsII",
     locationTagAlt: "Dominic's 2 - Boca Raton",
-    locationName:   "Dominic's II",
+    locationName:   "Dominic’s II Pizza and Pasta ",
     locationCity: "Boca Raton",
     locationNumber: "2",
     locationImage: '/images/dominics-two/exterior.jpg',
@@ -81,7 +82,7 @@ const locations = [
   {
     locationRoute: "dominicsIII",
     locationTagAlt: "Dominic's 3 - Lake Worth",
-    locationName:   "Dominic's III",
+    locationName:   "Dominic’s III Pizza and Pasta",
     locationCity: "Lake Worth",
     locationNumber: "3",
     locationImage: '/images/dominics-three/exterior.jpg',

@@ -4,18 +4,18 @@ const path    = require('path');
 const Recaptcha = require('express-recaptcha').RecaptchaV3;
 //import Recaptcha from 'express-recaptcha'
 const recaptcha = new Recaptcha('SITE_KEY', 'SECRET_KEY');
-const hbs = require('hbs');
+// const hbs = require('hbs');
 
 const Location = require('../models/location');
 const Customer = require('../models/customer');
-const mapsKey = process.env.MAPSKEY;
+// const mapsKey = process.env.MAPSKEY;
 
 
 
-hbs.registerHelper('api_url', function () { 
-  let ApiUrl= `https://maps.googleapis.com/maps/api/js?key=${mapsKey}`;
-  return ApiUrl; 
-});
+// hbs.registerHelper('api_url', function () { 
+//   let ApiUrl= `https://maps.googleapis.com/maps/api/js?key=${mapsKey}`;
+//   return ApiUrl; 
+// });
 
 
 /* GET home page */

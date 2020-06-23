@@ -30,6 +30,15 @@ const Recaptcha = require('express-recaptcha').RecaptchaV3;
 //import Recaptcha from 'express-recaptcha'
 const recaptcha = new Recaptcha('SITE_KEY', 'SECRET_KEY');
 
+
+const mapsKey = process.env.MAPSKEY;
+
+hbs.registerHelper('api_url', function () { 
+  let ApiUrl= `https://maps.googleapis.com/maps/api/js?key=${mapsKey}`;
+  return ApiUrl; 
+});
+
+
 // Middleware Setup
 app.use(logger('dev'));
 app.use(bodyParser.json());

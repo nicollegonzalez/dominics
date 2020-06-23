@@ -2,7 +2,7 @@ let sliderImages = document.querySelectorAll(".slide");
 const arrowLeft = document.querySelector("#arrow-left");
 const arrowRight = document.querySelector("#arrow-right");
 let current = 0;
-let carouselTimer = 4000;
+let carouselTimer = 3000;
 
 
 // Clear all images
