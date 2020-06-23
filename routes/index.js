@@ -4,16 +4,29 @@ const path    = require('path');
 const Recaptcha = require('express-recaptcha').RecaptchaV3;
 //import Recaptcha from 'express-recaptcha'
 const recaptcha = new Recaptcha('SITE_KEY', 'SECRET_KEY');
+const hbs = require('hbs');
 
 const Location = require('../models/location');
 const Customer = require('../models/customer');
+const mapsKey = process.env.MAPSKEY;
+// const ApiUrl= `https://maps.googleapis.com/maps/api/js?key=${mapsKey}`;
+
+// console.log(mapsKey);
+hbs.registerHelper('api_url', function () { 
+  let ApiUrl= `https://maps.googleapis.com/maps/api/js?key=${mapsKey}`;
+  console.log(ApiUrl === "https://maps.googleapis.com/maps/api/js?key=AIzaSyAMEBfZ8dw1054JeBQs0oUn0PhiKT_brAI")
+  return ApiUrl; 
+});
+
 
 /* GET home page */
 router.get('/', (req, res, next) => {
   // res.render('index');
+  // console.log(mapsKey);
   Location.find()
   .then(allTheLocations => {
-    res.render('index', { locations: allTheLocations});
+
+    res.render('index', { locations: allTheLocations });
   })
   .catch(error => {
     console.log('Error while getting the locations from the DB: ', error);
@@ -24,7 +37,7 @@ router.get('/locations', (req, res, next) => {
   Location.find()
   .then(allTheLocations => {
     // console.log('Retrieved locations from DB:', allTheLocations);
-    res.render('location-views/locations', { locations: allTheLocations});
+    res.render('location-views/locations', { locations: allTheLocations });
   })
   .catch(error => {
     console.log('Error while getting the locations from the DB: ', error);

@@ -1,12 +1,12 @@
 <div class="main-content">
-    <nav class="navbar" role=navigation>
+    <nav class="navbar" role="navigation">
         <button class="hamburger" alt="toggle navigation menu">
             <div class="hamburger-bar"></div>
             <div class="hamburger-bar"></div>
             <div class="hamburger-bar"></div>
         </button>
         <div class="logo">
-            <img src="/images/DominicsLogo.png" alt="Dominic's">
+            <img src="/images/DominicsLogo.png" alt="Dominic's Logo">
         </div>
         <button class="hamburger" alt="toggle navigation menu">
             <div class="hamburger-bar"></div>
@@ -22,14 +22,37 @@
     </ul>
     <div id="main-content-body" class="main-content-body">
         <div class="dominics-intro">
-            <div class="logo">
-                <img src="/images/dominicslogoellipse.png" alt="Dominic's Logo">
+            <div class="carousel">
+                <div id="arrow-left" class="arrow"></div>
+                <div class="logo">
+                {{!-- <img src="/images/dominicslogoellipse.png" alt="Dominic's Logo"> --}}
+                <img src="/images/dominicslogoellipsenew2.png" alt="Dominic's Logo">
+                {{!-- <img src="/images/dominicslogoellipsegreenandred.png" alt="Dominic's Logo"> --}}
+                {{!-- <img src="/images/dominicslogoellipsenew3.png" alt="Dominic's Logo"> --}}
                 {{!-- <img src="/images/dominicslogoborderdarker.png" alt="Dominic's"> --}}
-                {{!-- <img src="/images/dominicslogodarkshadow.png" alt="Dominic's"> --}}
+                <img src="/images/dominicslogodarkshadow.png" alt="Dominic's">
                 {{!-- <img src="/images/dominicslogogradientshadow.png" alt="Dominic's"> --}}
             </div>
+                <div class="slide slide1">
+                    <div class="slide-content">
+                        {{!-- <span>Image One</span> --}}
+                    </div>
+                </div>
+                <div class="slide slide2">
+                    <div class="slide-content">
+                        {{!-- <span>Image Two</span> --}}
+                    </div>
+                </div>
+                <div class="slide slide3">
+                    <div class="slide-content">
+                        {{!-- <span>Image Three</span> --}}
+                    </div>
+                </div>
+                <div id="arrow-right" class="arrow"></div>
+            </div>
+
             <!-- <p>Eat good, feel good!</p> -->
-            <p>Buon appetito!</p>
+            {{!-- <p>Buon appetito!</p> --}}
         </div>
         <div class="dominics-quote">
             <p>We strive to serve fine Italian specialties prepared to order, using only the freshest ingredients. It's our goal to present to you with excellent Italian food in a charming and friendly setting.</p>
@@ -64,7 +87,7 @@
             <p>Our Italian Specialties and Pizzas have generated a family following among residents and visitors alike. We hope you will enjoy dining with us!</p>
         </div>
         <footer>
-            <p>© 2020 Dominic's Pizza & Pasta. All Rights Reserved.</p>
+            <p>© 2020 Dominic's Pizza & Pasta. All Rights Reserved. *{{api_url}}*</p>
         </footer>
     </div>
 </div>

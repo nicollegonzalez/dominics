@@ -13,6 +13,7 @@ const locationSchema = new Schema({
   mapURL: String,
   lunchMenu: String,
   dinnerMenu: String,
+  cateringMenu: String,
   childrenMenu: String,
   locationAddress: {
     description: String,
