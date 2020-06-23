@@ -9,9 +9,9 @@ const hbs = require('hbs');
 const Location = require('../models/location');
 const Customer = require('../models/customer');
 const mapsKey = process.env.MAPSKEY;
-// const ApiUrl= `https://maps.googleapis.com/maps/api/js?key=${mapsKey}`;
 
-// console.log(mapsKey);
+
+
 hbs.registerHelper('api_url', function () { 
   let ApiUrl= `https://maps.googleapis.com/maps/api/js?key=${mapsKey}`;
   console.log(ApiUrl === "https://maps.googleapis.com/maps/api/js?key=AIzaSyAMEBfZ8dw1054JeBQs0oUn0PhiKT_brAI")
