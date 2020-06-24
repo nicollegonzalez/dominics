@@ -130,8 +130,6 @@ a:hover {
   max-height: 150px; */ }
 
 nav.navbar {
-  position: absolute;
-  z-index: 2;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -190,8 +188,7 @@ div.main-content-body {
   flex: 0 1 auto;
   /* overflow: visible; */
   /* overflow-x: hidden; */
-  /* overflow-y: scroll; */
-  overflow: scroll; }
+  /* overflow-y: scroll; */ }
 
 /* div.main-content-body > div{
   display: flex;
