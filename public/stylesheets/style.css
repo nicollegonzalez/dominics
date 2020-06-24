@@ -4,10 +4,7 @@ html, body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-family: Roboto Condensed,Arial, Helvetica, sans-serif;
-  /* display: flex;
-  flex-direction: column; */
-  /* text-align: center; */ }
+  font-family: Roboto Condensed,Arial, Helvetica, sans-serif; }
 
 h1, h2, h3 {
   text-align: center;
@@ -122,16 +119,10 @@ a:hover {
 
 /* Navbar Stylng */
 .main-content > .navbar {
-  /* flex: 0 1 auto; */
-  /* height: auto;
-  min-height: 50px;
-  max-height: 150px; */
+  flex: 0 0 75px;
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  overflow-y: scroll;
-  overflow-x: hidden; }
+  z-index: 3;
+  width: calc(100vw - 25px - 25px); }
 
 nav.navbar {
   background-color: white;

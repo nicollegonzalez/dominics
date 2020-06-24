@@ -4,7 +4,7 @@ html, body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  overflow-y: visible;
+  // overflow-y: visible;
   font-family: Roboto Condensed,Arial, Helvetica, sans-serif;
 }
 
@@ -122,11 +122,11 @@ a:hover {
 
 /* Navbar Stylng */
 .main-content > .navbar {
-  /* flex: 0 1 auto; */
   flex: 0 0 75px;
-  /* height: auto;
-  min-height: 50px;
-  max-height: 150px; */ }
+  position: fixed;
+  z-index: 3;
+  width: calc(100vw - 25px - 25px);
+}
 
 nav.navbar {
   background-color: white;
@@ -183,12 +183,14 @@ a.nav-menu-link {
   overflow-y: scroll;
   overflow: scroll;
 } */
+
 div.main-content-body {
   flex: 0 1 auto;
   /* overflow: visible; */
   /* overflow-x: hidden; */
   /* overflow-y: scroll; */
-  overflow: scroll; }
+  overflow: scroll; 
+}
 
 /* div.main-content-body > div{
   display: flex;
