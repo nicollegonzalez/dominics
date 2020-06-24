@@ -4,11 +4,9 @@ html, body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  // overflow-y: visible;
+  overflow-y: visible;
   font-family: Roboto Condensed,Arial, Helvetica, sans-serif;
-  /* display: flex;
-  flex-direction: column; */
-  /* text-align: center; */ }
+}
 
 h1, h2, h3 {
   text-align: center;
@@ -190,8 +188,7 @@ div.main-content-body {
   /* overflow: visible; */
   /* overflow-x: hidden; */
   /* overflow-y: scroll; */
-  // overflow: scroll; 
-}
+  overflow: scroll; }
 
 /* div.main-content-body > div{
   display: flex;
