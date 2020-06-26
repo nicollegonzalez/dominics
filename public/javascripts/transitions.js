@@ -41,19 +41,4 @@ scrollContainer.onscroll = function() {
   logo.classList.toggle("scrolled", scrollContainer.scrollTop > navBar.clientHeight);
 };
 
-
-//scroll to 1
-window.scrollTo( 0, 1 );
-var scrollTop = 1,
-  getScrollTop = function(){
-    return win.pageYOffset || win.document.compatMode === "CSS1Compat" && win.document.win.document.scrollTop || win.document.body.scrollTop || 0;
-  },
-
-  //reset to 0 on bodyready, if needed
-  bodycheck = setInterval(function(){
-    if( win.document.body ){
-      clearInterval( bodycheck );
-      scrollTop = getScrollTop();
-      win.scrollTo( 0, scrollTop === 1 ? 0 : 1 );
-    }	
-  }, 15 );
+window.scrollTo(0,1);
