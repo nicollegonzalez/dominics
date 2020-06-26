@@ -503,6 +503,22 @@ div.map-info-window {
 div.map-info-window a {
   color: #111; }
 
+
+
+@keyframes carouselslideout {
+  0% {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  100% {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+
 @media only screen and (min-width: 350px) {
   .location-title-background {
     height: 51.19px; }

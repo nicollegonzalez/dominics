@@ -1,58 +1,9 @@
-const hamburgers = document.querySelectorAll('.hamburger');
-const hamburgerSmallScreen = document.querySelector('.hamburger:last-of-type');
-const hamburgerLargeScreen = document.querySelector('.hamburger:first-of-type');
-const mainContent = document.querySelector('.main-content');
-const navMenu = document.querySelector('.nav-menu');
-const navMenuLargeScreen = document.querySelector('.nav-menu-large-screen');
-const mainContentChildren = document.querySelector('.main-content-body');
-const scrollContainer = document.getElementById("main-content-body");
-const navBar = document.querySelector('nav');
-const logo = document.querySelector('.logo');
-// const locations = {
-//   dominicsI: {title: "Dominic's Pizza & Pasta I", lat: 26.369428, lng:  -80.1726854, address: {street:"8177 Glades Rd #19", city:"Boca Raton", state:"Florida"}, number: '(561) 487-3186', addressURL: 'https://goo.gl/maps/TsiBJ26DMMoG2Uj66'},
-//   dominicsII: {title: "Dominic's Pizza & Pasta II", lat: 26.3653671, lng:  -80.1999743, address: {street:"9834 West Glades Road", city:"Boca Raton", state:"Florida"}, number: '(561) 487-6325'},
-//   dominicsIII: {title: "Dominic's Pizza & Pasta III", lat: 26.5711936, lng:  -80.1474034, address: {street:"6566 Hypoluxo Road", city:"Lake Worth", state:"Florida"}, number: '(561) 641-1110'},
-//   dominicsIV: {title: "Dominic's Pizza & Pasta IV", lat: 26.5441955, lng: -80.090206, address: {street:"1790 North Congress Avenue", city:"Boynton Beach", state:"Florida"}, number: '(561) 734-3033'},
-// }
 const locations = [
   {title: "Dominic's Pizza & Pasta I", lat: 26.369428, lng:  -80.1726854, address: {street:"8177 Glades Rd #19", city:"Boca Raton", state:"Florida"}, number: '(561) 487-3186', addressURL: 'https://goo.gl/maps/TsiBJ26DMMoG2Uj66'},
   {title: "Dominic's Pizza & Pasta II", lat: 26.3653671, lng:  -80.1999743, address: {street:"9834 West Glades Road", city:"Boca Raton", state:"Florida"}, number: '(561) 487-6325', addressURL: 'https://goo.gl/maps/vdq8R1JBkwNW5FHR8'},
   {title: "Dominic's Pizza & Pasta III", lat: 26.5711936, lng:  -80.1474034, address: {street:"6566 Hypoluxo Road", city:"Lake Worth", state:"Florida"}, number: '(561) 641-1110', addressURL: 'https://goo.gl/maps/2LqXPSy16fx1jN238'},
   {title: "Dominic's Pizza & Pasta IV", lat: 26.5441955, lng: -80.090206, address: {street:"1790 North Congress Avenue", city:"Boynton Beach", state:"Florida"}, number: '(561) 734-3033', addressURL: 'https://goo.gl/maps/xenEMwiqNQkvLV9p6'},
 ]
-
-
-
-hamburgerSmallScreen.addEventListener('click', function(e){
-  hamburgerSmallScreen.classList.toggle('hamburger-opened');
-  hamburgerLargeScreen.classList.toggle('hamburger-opened');
-  mainContent.classList.toggle('hamburger-opened');
-  navMenu.classList.toggle('hamburger-opened');
-  navBar.classList.toggle('hamburger-opened');
-  navMenuLargeScreen.classList.toggle('hidden');
-});
-hamburgerLargeScreen.addEventListener('click', function(e){
-  hamburgerSmallScreen.classList.toggle('hamburger-opened');
-  hamburgerLargeScreen.classList.toggle('hamburger-opened');
-  mainContent.classList.toggle('hamburger-opened');
-  navMenu.classList.toggle('hamburger-opened');
-  navBar.classList.toggle('hamburger-opened');
-  navMenuLargeScreen.classList.toggle('hidden');
-});
-
-
-mainContentChildren.addEventListener('click', function(e){
-  hamburgerSmallScreen.classList.remove('hamburger-opened');
-  hamburgerLargeScreen.classList.remove('hamburger-opened');
-  mainContent.classList.remove('hamburger-opened');
-  navMenu.classList.remove('hamburger-opened');
-});
-  
-scrollContainer.onscroll = function() {
-  navBar.classList.toggle("scrolled", scrollContainer.scrollTop > navBar.clientHeight);
-  logo.classList.toggle("scrolled", scrollContainer.scrollTop > navBar.clientHeight);
-};
-
 
 startMap()
 

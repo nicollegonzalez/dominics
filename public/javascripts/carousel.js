@@ -20,7 +20,7 @@ function startCarousel() {
     if (current === sliderImages.length - 1) {
       current = -1;
     }
-
+    
     slideRight();
   }, carouselTimer);
 
