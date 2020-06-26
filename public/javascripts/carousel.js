@@ -2,6 +2,7 @@ let sliderImages = document.querySelectorAll(".slide");
 const arrowLeft = document.querySelector("#arrow-left");
 const arrowRight = document.querySelector("#arrow-right");
 let current = 0;
+let previous = 0;
 let carouselTimer = 3000;
 
 
@@ -18,9 +19,10 @@ function startCarousel() {
   sliderImages[0].style.display = "block";
   carouselLoop = setInterval(function(){
     if (current === sliderImages.length - 1) {
+      previous = current;
       current = -1;
     }
-    
+
     slideRight();
   }, carouselTimer);
 
@@ -28,6 +30,7 @@ function startCarousel() {
     clearInterval(carouselLoop);
     carouselLoop = setInterval(function(){
       if (current === sliderImages.length - 1) {
+        previous = current;
         current = -1;
       }
   
@@ -39,6 +42,7 @@ function startCarousel() {
     clearInterval(carouselLoop);
     carouselLoop = setInterval(function(){
       if (current === sliderImages.length - 1) {
+        previous = current;
         current = -1;
       }
   
@@ -69,6 +73,7 @@ if(arrowLeft !== null){
   arrowLeft.addEventListener("click", function() {
     
     if (current === 0 && sliderImages != 0) {
+      previous = current;
       current = sliderImages.length;
     }
     slideLeft();
@@ -77,6 +82,7 @@ if(arrowLeft !== null){
 // Right arrow click
   arrowRight.addEventListener("click", function() {
     if (current === sliderImages.length - 1) {
+      previous = current;
       current = -1;
     }
     slideRight();

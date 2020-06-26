@@ -34,7 +34,7 @@ a:hover {
   visibility: collapse; }
 
 .carousel, .slide-content{
-  margin: 0;
+  margin: 0 50% 0 50%;
   padding: 0;
   width: 100%;
   height: calc(100vh - 75px - 10px - 10px - 1px);
@@ -138,7 +138,8 @@ nav.navbar {
   min-height: 50px;
   max-height: 75px;
   padding: 10px 25px;
-  border-bottom: 1px solid #333333; }
+  // border-bottom: 1px solid #333333; 
+}
 
 nav button {
   background-color: transparent;
@@ -148,8 +149,10 @@ nav div.logo {
   max-width: 53%; }
 
 nav div.logo img {
-  max-width: 220px;
-  width: 100%; }
+  margin-top: 3px;
+  max-width: 170px;
+  width: 100%; 
+}
 
 /* Nav Menu Styling */
 ul.nav-menu {
@@ -186,11 +189,11 @@ a.nav-menu-link {
 } */
 
 div.main-content-body {
-  flex: 0 1 auto;
+  flex: 0 1 auto;overflow: scroll;// <--These two are important
   /* overflow: visible; */
   /* overflow-x: hidden; */
   /* overflow-y: scroll; */
-  overflow: scroll; 
+  margin-top: 96px;
 }
 
 /* div.main-content-body > div{
@@ -507,12 +510,12 @@ div.map-info-window a {
 
 @keyframes carouselslideout {
   0% {
-    margin-left: 100%;
+    margin-right: 100%;
     width: 300%;
   }
 
   100% {
-    margin-left: 0%;
+    margin-right: 0%;
     width: 100%;
   }
 }
@@ -634,6 +637,10 @@ div.map-info-window a {
   } */
   .main-content.hamburger-opened {
     transform: translateX(0px); 
+  }
+
+  div.main-content-body {
+    margin-top: 0px;
   }
 
   div.dominics-intro {
