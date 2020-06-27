@@ -90,7 +90,7 @@ a:hover {
   transition: transform 1s;
   transition-timing-function: ease-out; }
 
-.main-content .main-content-body.hamburger-opened, .nav-menu.hamburger-opened {
+.main-content.hamburger-opened, .main-content .main-content-body.hamburger-opened, .nav-menu.hamburger-opened {
   transform: translateX(-280px);
   transition: transform 1s;
   transition-timing-function: ease-out;
@@ -530,7 +530,7 @@ div.map-info-window a {
     justify-content: space-around;
     align-items: center;
     background-color: rgba(255, 255, 255, 0);
-    position: absolute;
+    position: fixed;
     width: 100%;
     border-bottom: 0px solid #333333;
     z-index: 4; }
