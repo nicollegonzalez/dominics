@@ -47,6 +47,7 @@ a:hover {
   height: 450px;
   border: 0; }
 
+
 /* Hamburger Micro-interaction */
 .hamburger {
   height: 21px;
@@ -95,11 +96,14 @@ a:hover {
 .main-content .navbar, .main-content .main-content-body {
   transform: translateX(0); //Maybeing breaking position fixed
   transition: transform 1s;
-  transition-timing-function: ease-out; }
+  transition-timing-function: ease-out; 
+}
 
 // .main-content.hamburger-opened 
-.main-content .navbar.hamburger-opened, .main-content .main-content-body.hamburger-opened {
+.main-content .main-content-body.hamburger-opened, .nav-menu.hamburger-opened {
   transform: translateX(-280px); 
+  transition: transform 1s;
+  transition-timing-function: ease-out;
 
   overflow: hidden;
   height: 100vh;
@@ -119,7 +123,8 @@ a:hover {
   display: none; }
 
 .nav-menu.hamburger-opened {
-  transform: translateX(-280px); }
+  // transform: translateX(-280px);
+ }
 
 /* Main Content navbar and Main Content Body */
 .main-content {
@@ -132,8 +137,7 @@ a:hover {
 .main-content > .navbar {
   flex: 0 0 75px;
   position: fixed;
-  top:0;
-  z-index: 4;
+  z-index: 1;
   width: calc(100vw - 25px - 25px);
 }
 
@@ -581,7 +585,7 @@ div.map-info-window a {
     visibility: hidden; 
   }
 
-  nav.navbar {
+  .main-content > nav.navbar {
     // z-index: 0;
     display: flex;
     justify-content: space-around;
@@ -590,10 +594,13 @@ div.map-info-window a {
     position: absolute;
     width: 100%;
     border-bottom: 0px solid #333333; 
+     z-index: 4;
   }
 
   .main-content .navbar.hamburger-opened, .main-content .main-content-body.hamburger-opened {
     transform: translateX(0x);
+    transition: transform 1s;
+  transition-timing-function: ease-out;
   }
 
   nav.navbar.scrolled {
@@ -657,7 +664,8 @@ div.map-info-window a {
   } */
   .main-content.hamburger-opened {
     transform: translateX(0px);
-
+    transition: transform 1s;
+    transition-timing-function: ease-out;
     overflow: hidden;
     height: 100vh;
   }
