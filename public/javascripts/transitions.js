@@ -13,6 +13,7 @@ hamburgerSmallScreen.addEventListener('click', function(e){
   hamburgerSmallScreen.classList.toggle('hamburger-opened');
   hamburgerLargeScreen.classList.toggle('hamburger-opened');
   mainContent.classList.toggle('hamburger-opened');
+  mainContentChildren.classList.toggle('hambuger-opened');
   navMenu.classList.toggle('hamburger-opened');
   navBar.classList.toggle('hamburger-opened');
   navMenuLargeScreen.classList.toggle('hidden');
@@ -23,6 +24,7 @@ hamburgerLargeScreen.addEventListener('click', function(e){
   hamburgerSmallScreen.classList.toggle('hamburger-opened');
   hamburgerLargeScreen.classList.toggle('hamburger-opened');
   mainContent.classList.toggle('hamburger-opened');
+  mainContentChildren.classList.toggle('hambuger-opened');
   navMenu.classList.toggle('hamburger-opened');
   navBar.classList.toggle('hamburger-opened');
   navMenuLargeScreen.classList.toggle('hidden');
@@ -32,6 +34,7 @@ mainContentChildren.addEventListener('click', function(e){
   hamburgerSmallScreen.classList.remove('hamburger-opened');
   hamburgerLargeScreen.classList.remove('hamburger-opened');
   mainContent.classList.remove('hamburger-opened');
+  mainContentChildren.classList.toggle('hambuger-opened');
   navMenu.classList.remove('hamburger-opened');
   navBar.classList.remove('hamburger-opened');
   navMenuLargeScreen.classList.add('hidden');

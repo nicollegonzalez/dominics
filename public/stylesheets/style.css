@@ -1,6 +1,5 @@
-html, body, .main-content {
+html, body {
   width: 100vw;
-  height: 100%;
   padding: 0;
   margin: 0;
   font-family: Roboto Condensed,Arial, Helvetica, sans-serif; }
@@ -86,13 +85,15 @@ a:hover {
   transform: rotate(-45deg); }
 
 /* Shift main content and nav menu left  */
-.main-content {
+.main-content .navbar, .main-content .main-content-body {
   transform: translateX(0);
   transition: transform 1s;
   transition-timing-function: ease-out; }
 
-.main-content.hamburger-opened {
-  transform: translateX(-280px); }
+.main-content .navbar.hamburger-opened, .main-content .main-content-body.hamburger-opened {
+  transform: translateX(-280px);
+  overflow: hidden;
+  height: 100vh; }
 
 .nav-menu {
   margin: 0;
@@ -100,7 +101,7 @@ a:hover {
   position: fixed;
   top: 0;
   left: 100vw;
-  /* z-index: 0; */
+  z-index: 1;
   transition: transform 1s;
   transition-timing-function: ease-out; }
 
@@ -113,13 +114,13 @@ a:hover {
 /* Main Content navbar and Main Content Body */
 .main-content {
   display: flex;
-  flex-direction: column;
-  height: 100%; }
+  flex-direction: column; }
 
 /* Navbar Stylng */
 .main-content > .navbar {
   flex: 0 0 75px;
   position: fixed;
+  top: 0;
   z-index: 4;
   width: calc(100vw - 25px - 25px); }
 
@@ -128,7 +129,6 @@ nav.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
   min-height: 50px;
   max-height: 75px;
   padding: 10px 25px; }
@@ -194,7 +194,6 @@ div.dominics-intro {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -529,7 +528,6 @@ div.map-info-window a {
   .hamburger:last-of-type {
     visibility: hidden; }
   nav.navbar {
-    z-index: 4;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -537,6 +535,8 @@ div.map-info-window a {
     position: absolute;
     width: 100%;
     border-bottom: 0px solid #333333; }
+  .main-content .navbar.hamburger-opened, .main-content .main-content-body.hamburger-opened {
+    transform: translateX(0x); }
   nav.navbar.scrolled {
     background-color: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid #333333;
@@ -581,7 +581,9 @@ div.map-info-window a {
     opacity: 1;
   } */
   .main-content.hamburger-opened {
-    transform: translateX(0px); }
+    transform: translateX(0px);
+    overflow: hidden;
+    height: 100vh; }
   div.main-content-body {
     margin-top: 0px; }
   div.dominics-intro {
