@@ -1,4 +1,4 @@
-html, body {
+html, body, .main-content {
   width: 100vw;
   height: 100%;
   padding: 0;
@@ -31,10 +31,11 @@ a:hover {
   visibility: collapse; }
 
 .carousel, .slide-content {
-  margin: 0 50% 0 50%;
+  margin: 0 0% 0 0%;
   padding: 0;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  overflow-x: hidden; }
 
 #map, #map1, #map2, #map3, #map4 {
   width: 100%;
@@ -178,6 +179,7 @@ a.nav-menu-link {
   overflow: scroll;
 } */
 div.main-content-body {
+  overflow: visible;
   /* overflow: visible; */
   /* overflow-x: hidden; */
   /* overflow-y: scroll; */ }
@@ -520,6 +522,8 @@ div.map-info-window a {
 
 /* NavBar Big Change at min-wiidth: 767px */
 @media only screen and (min-width: 768px) {
+  html, body, .main-content {
+    overflow-x: hidden; }
   .hamburger:first-of-type {
     display: block; }
   .hamburger:last-of-type {

@@ -1,4 +1,4 @@
-html, body {
+html, body, .main-content {
   width: 100vw;
   height: 100%;
   padding: 0;
@@ -192,6 +192,7 @@ a.nav-menu-link {
 div.main-content-body {
   // flex: 0 1 auto;
   // overflow: scroll;// <--These two are important
+  overflow: visible;
   /* overflow: visible; */
   /* overflow-x: hidden; */
   /* overflow-y: scroll; */
@@ -560,6 +561,10 @@ div.map-info-window a {
 
 /* NavBar Big Change at min-wiidth: 767px */
 @media only screen and (min-width: 768px) {
+
+  html, body, .main-content {
+    overflow-x: hidden;//<--important
+  }
 
   .hamburger:first-of-type {
     display: block; 
