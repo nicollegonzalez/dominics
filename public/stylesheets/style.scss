@@ -189,7 +189,8 @@ a.nav-menu-link {
 } */
 
 div.main-content-body {
-  flex: 0 1 auto;overflow: scroll;// <--These two are important
+  // flex: 0 1 auto;
+  overflow: scroll;// <--These two are important
   /* overflow: visible; */
   /* overflow-x: hidden; */
   /* overflow-y: scroll; */

@@ -132,8 +132,7 @@ nav.navbar {
   height: 100%;
   min-height: 50px;
   max-height: 75px;
-  padding: 10px 25px;
-  border-bottom: 1px solid #333333; }
+  padding: 10px 25px; }
 
 nav button {
   background-color: transparent;
@@ -181,7 +180,6 @@ a.nav-menu-link {
   overflow: scroll;
 } */
 div.main-content-body {
-  flex: 0 1 auto;
   overflow: scroll;
   /* overflow: visible; */
   /* overflow-x: hidden; */
