@@ -16,6 +16,7 @@ hamburgerSmallScreen.addEventListener('click', function(e){
   navMenu.classList.toggle('hamburger-opened');
   navBar.classList.toggle('hamburger-opened');
   navMenuLargeScreen.classList.toggle('hidden');
+  // .classList.remove('hidden');
 });
 
 hamburgerLargeScreen.addEventListener('click', function(e){
