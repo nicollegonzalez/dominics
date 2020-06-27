@@ -3,7 +3,7 @@ html, body {
   height: 100%;
   padding: 0;
   margin: 0;
-  // overflow-x: hidden;//<--important
+  overflow-x: hidden;//<--important
   // overflow-y: visible;
   font-family: Roboto Condensed,Arial, Helvetica, sans-serif;
 }
@@ -191,7 +191,7 @@ a.nav-menu-link {
 
 div.main-content-body {
   // flex: 0 1 auto;
-  overflow-y: scroll;// <--These two are important
+  // overflow: scroll;// <--These two are important
   /* overflow: visible; */
   /* overflow-x: hidden; */
   /* overflow-y: scroll; */
