@@ -35,7 +35,7 @@ a:hover {
   margin: 0 50% 0 50%;
   padding: 0;
   width: 100%;
-  height: calc(100vh - 75px - 10px - 10px - 1px);
+  height: 100vh;
   overflow-x: hidden; }
 
 #map, #map1, #map2, #map3, #map4 {
@@ -183,8 +183,7 @@ div.main-content-body {
   overflow: scroll;
   /* overflow: visible; */
   /* overflow-x: hidden; */
-  /* overflow-y: scroll; */
-  margin-top: 96px; }
+  /* overflow-y: scroll; */ }
 
 /* div.main-content-body > div{
   display: flex;
@@ -196,7 +195,7 @@ div.dominics-intro {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 75px - 10px - 10px - 1px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
