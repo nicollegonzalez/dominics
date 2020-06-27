@@ -37,8 +37,14 @@ mainContentChildren.addEventListener('click', function(e){
 });
   
 scrollContainer.onscroll = function() {
+  window.scrollTo(0, 1);
   navBar.classList.toggle("scrolled", scrollContainer.scrollTop > navBar.clientHeight);
   logo.classList.toggle("scrolled", scrollContainer.scrollTop > navBar.clientHeight);
 };
 
-window.scrollTo(0,1);
+// // window.scrollTo(0,1);
+// window.addEventListener("load",function() {
+//   setTimeout(function() {
+//       window.scrollTo(0, 1);
+//   }, 1000);
+// });
