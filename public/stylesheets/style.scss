@@ -3,7 +3,7 @@ html, body {
   height: 100%;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
+  // overflow-x: hidden;//<--important
   // overflow-y: visible;
   font-family: Roboto Condensed,Arial, Helvetica, sans-serif;
 }
@@ -39,7 +39,7 @@ a:hover {
   width: 100%;
   // height: calc(100vh - 75px - 10px - 10px - 1px);
   height: 100vh;
-  overflow-x: hidden;
+  // overflow-x: hidden;//<--important
 }
 
 #map, #map1, #map2, #map3, #map4 {
@@ -191,7 +191,7 @@ a.nav-menu-link {
 
 div.main-content-body {
   // flex: 0 1 auto;
-  overflow: scroll;// <--These two are important
+  // overflow: scroll;// <--These two are important
   /* overflow: visible; */
   /* overflow-x: hidden; */
   /* overflow-y: scroll; */
