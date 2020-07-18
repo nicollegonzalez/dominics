@@ -4,28 +4,16 @@ const path    = require('path');
 const Recaptcha = require('express-recaptcha').RecaptchaV3;
 //import Recaptcha from 'express-recaptcha'
 const recaptcha = new Recaptcha('SITE_KEY', 'SECRET_KEY');
-// const hbs = require('hbs');
 
 const Location = require('../models/location');
 const Customer = require('../models/customer');
-// const mapsKey = process.env.MAPSKEY;
-
-
-
-// hbs.registerHelper('api_url', function () { 
-//   let ApiUrl= `https://maps.googleapis.com/maps/api/js?key=${mapsKey}`;
-//   return ApiUrl; 
-// });
-
 
 /* GET home page */
 router.get('/', (req, res, next) => {
   // res.render('index');
-  // console.log(mapsKey);
   Location.find()
   .then(allTheLocations => {
-
-    res.render('index', { locations: allTheLocations });
+    res.render('index', { locations: allTheLocations});
   })
   .catch(error => {
     console.log('Error while getting the locations from the DB: ', error);
@@ -36,7 +24,7 @@ router.get('/locations', (req, res, next) => {
   Location.find()
   .then(allTheLocations => {
     // console.log('Retrieved locations from DB:', allTheLocations);
-    res.render('location-views/locations', { locations: allTheLocations });
+    res.render('location-views/locations', { locations: allTheLocations});
   })
   .catch(error => {
     console.log('Error while getting the locations from the DB: ', error);
@@ -55,11 +43,18 @@ router.get('/locations/:location', (req, res, next) => {
       console.log('Error while retrieving location details: ', error);
     })
 });
+/* GET careers page */
+router.get('/careers', (req, res, next) => {
+  res.render(`careers-views/careers`);
+});
+/* GET about page */
+router.get('/about', (req, res, next) => {
+  res.render(`about-views/about`);
+});
 
-// // Get
-// router.get('/books/add', (req, res, next) => {
-//   res.render("book-add");
-// });
+
+
+
 // Post
 router.post('/deals-user-info',(req, res, next) => {
   // let name = req.body.name;

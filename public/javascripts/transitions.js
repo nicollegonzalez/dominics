@@ -40,11 +40,17 @@ mainContentChildren.addEventListener('click', function(e){
   navMenuLargeScreen.classList.add('hidden');
 });
   
+console.log(scrollContainer);
 scrollContainer.onscroll = function() {
-  window.scrollTo(0, 1);
   navBar.classList.toggle("scrolled", scrollContainer.scrollTop > navBar.clientHeight);
   logo.classList.toggle("scrolled", scrollContainer.scrollTop > navBar.clientHeight);
 };
+// scrollContainer.onscroll = function() {
+//   console.log('scrolling');
+//   // window.scrollTo(0, 1);
+//   navBar.classList.toggle("scrolled", scrollContainer.scrollTop > navBar.clientHeight);
+//   logo.classList.toggle("scrolled", scrollContainer.scrollTop > navBar.clientHeight);
+// };
 
 // // window.scrollTo(0,1);
 // window.addEventListener("load",function() {

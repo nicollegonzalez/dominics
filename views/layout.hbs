@@ -16,44 +16,95 @@
     <title>Dominic's Pizza & Pasta</title>                        
 
                                         
-    <!-- <link rel='dns-prefetch' href='//maps.google.com' />
-    <link rel='dns-prefetch' href='//fonts.googleapis.com' /> -->
+    {{!-- <link rel='dns-prefetch' href='//maps.google.com' /> --}}
+    {{!-- <link rel='dns-prefetch' href='//fonts.googleapis.com' /> --}}
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
 
     <!-- Facebook Meta -->
-    <meta property="og:title" content="Main - Dominic's Pizza & Pasta"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:url" content="https://dominicspizzapasta.com/"/>
+    <meta property="og:title" content="Dominic's Pizza & Pasta"/>
+    <meta property="og:type" content="website"/>
+    {{!-- <meta property="og:url" content="https://dominicspizzapasta.com/"/> --}}
+    <meta property="og:url" content="https://dominicsmockup.herokuapp.com/"/>
     <meta property="og:site_name" content="Dominic's Pizza & Pasta"/>
-    <meta property="og:description" content="">
-    <!-- <meta property="og:image" content="https://protospizza.com/wp-content/uploads/2016/08/protosLogo.png"/> -->
+    <meta property="og:description" content="If you love New York-Italian meals, you’re in for a treat.">
+    <meta property="og:image" content="https://dominicsmockup.herokuapp.com/images/DominicsLogo1.png"/>
+    <meta property="fb:app_id" content=""/>
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Main">
-    <meta name="twitter:description" content="">
-    <!-- <meta property="twitter:image:src" content="https://protospizza.com/wp-content/uploads/2016/08/protosLogo.png"/> -->
+    <meta name="twitter:title" content="Dominic's Pizza & Pasta">
+    <meta name="twitter:description" content="If you love New York-Italian meals, you’re in for a treat.">
+    <meta property="twitter:image:src" content="https://dominicsmockup.herokuapp.com/images/DominicsLogo1.png"/>
 
     <!-- CSS Stylesheet -->
     <link type="text/css" rel="stylesheet" href="/stylesheets/style.css" media="screen">
 
     <!-- Font Awesome Free Icons -->
-    <script src="https://kit.fontawesome.com/434265d577.js" crossorigin="anonymous"></script>
+    <script src={{font_awesome_api_url}} crossorigin="anonymous"></script>
+
     
   <!--// CLOSE HEAD //-->
   </head>
 
   <!--// OPEN BODY //-->
   <body>
-    
 
-    {{{ body }}}
+    <div id="wrapper">
+      <nav id="header" class="navbar" role="navigation">
+        <button class="hamburger" alt="toggle navigation menu">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+        </button>
+        <div class="logo">
+            <img src="/images/DominicsLogo1.png" alt="Dominic's Logo">
+            {{!-- <img src="/images/dominicslogoellipsenew2.png" alt="Dominic's Logo"> --}}
+        </div>
+        <button class="hamburger" alt="toggle navigation menu">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+        </button>
+      </nav>
 
-    
-    <script src={{api_url}}></script>
-    <script type="text/javascript" src="/javascripts/googlemaps.js"></script>
-    <script type="text/javascript" src="/javascripts/carousel.js"></script>
-    <script type="text/javascript" src="/javascripts/transitions.js"></script>
+      <nav role="navigation">
+        <ul class="nav-menu-large-screen hidden">
+          <li ><a class="nav-menu-link" href="/">Home</a></li>
+          <li ><a class="nav-menu-link" href="/locations">Locations</a></li>
+          <li ><a class="nav-menu-link" href="/about">Our Story</a></li>
+          <li ><a class="nav-menu-link" href="/careers">Careers</a></li>
+        </ul> 
+      </nav>
+
+      <div id="scrollingSegment">
+        <div id="midSection">
+          <div id="leftNav">Left Nav</div>
+      
+
+          {{{ body }}}
+
+
+          <nav id="rightNav" role="navigation">
+            <ul class="nav-menu">
+              <li ><a class="nav-menu-link" href="/">Home</a></li>
+              <li ><a class="nav-menu-link" href="/locations">Locations</a></li>
+              <li ><a class="nav-menu-link" href="/about">Our Story</a></li>
+              <li ><a class="nav-menu-link" href="/careers">Careers</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+        <footer id="footer">
+          <p>© {{current_year}} Dominic's Pizza & Pasta. All Rights Reserved</p>
+          <a id="facebook-icon" alt="link to our facebook page" href="https://www.facebook.com">
+            <img src="/images/facebooklogo.png" alt="facebook icon">
+          </a>
+        </footer>
+      </div>
+    </div>
+
+    <script src={{maps_api_url}}></script>
+    <script type="text/javascript" src="/javascripts/script.js"></script>
     
 
   <!--// CLOSE BODY //-->

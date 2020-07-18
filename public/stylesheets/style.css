@@ -1,5 +1,6 @@
 html, body {
   width: 100vw;
+  height: 100%;
   padding: 0;
   margin: 0;
   font-family: Roboto Condensed,Arial, Helvetica, sans-serif; }
@@ -170,7 +171,8 @@ a.nav-menu-link {
   overflow: scroll;
 } */
 div.main-content-body {
-  overflow: visible;
+  flex: 0 1 auto;
+  overflow-y: scroll;
   /* overflow: visible; */
   /* overflow-x: hidden; */
   /* overflow-y: scroll; */ }
@@ -189,7 +191,9 @@ div.dominics-intro {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  height: calc(100vh - 75px - 10px - 10px);
+  padding-top: 95px; }
 
 .carousel {
   height: 100vh;
@@ -200,7 +204,7 @@ div.dominics-intro {
 
 .carousel .logo {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   height: 100%; }
 
@@ -251,8 +255,8 @@ div.dominics-intro {
   top: 50%;
   left: 5%;
   z-index: 10;
-  font-size: 30px;
-  color: white;
+  font-size: 45px;
+  color: rgba(51, 51, 51, 0.9);
   cursor: pointer; }
 
 #arrow-right {
@@ -260,8 +264,8 @@ div.dominics-intro {
   top: 50%;
   right: 5%;
   z-index: 10;
-  font-size: 30px;
-  color: white;
+  font-size: 45px;
+  color: rgba(51, 51, 51, 0.9);
   cursor: pointer; }
 
 div.dominics-intro div.logo {
@@ -270,7 +274,7 @@ div.dominics-intro div.logo {
   justify-content: center;
   align-items: center; }
 
-div.dominics-intro .logo img {
+div.dominics-intro img {
   width: 80%; }
 
 div.dominics-intro p {
@@ -595,7 +599,8 @@ div.map-info-window a {
   div.main-content-body {
     margin-top: 0px; }
   div.dominics-intro {
-    height: 100vh; }
+    height: 100vh;
+    padding-top: 0px; }
   div.dominics-intro img {
     width: 613.59px; }
   div.dominics-intro p {

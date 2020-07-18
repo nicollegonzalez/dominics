@@ -1,3 +1,85 @@
+const carouselSlide = document.querySelector('.carousel-slide');
+const carouselImages = document.querySelectorAll('.slide');
+const arrowLeft = document.querySelector('#arrow-left');
+const arrowRight = document.querySelector('#arrow-right');
+let counter = 1;
+let size = carouselImages[counter].clientWidth;
+const carouselTimer = 4000;
+
+
+
+// Translate x positioning to correct first image
+carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px';
+
+// Init Carousel Loop
+startCarousel();
+
+// instead of the ES6 wat ()=> you can do function(){}
+arrowRight.addEventListener('click',()=>{
+  slideRight();
+});
+
+arrowLeft.addEventListener('click',()=>{
+  slideLeft();
+});
+
+carouselSlide.addEventListener('transitionend', ()=>{
+  // console.log('fired');
+  if (carouselImages[counter].id === 'lastClone') {
+    carouselSlide.style.transition = "none";
+    size = carouselImages[counter].clientWidth;
+    counter = carouselImages.length -2;
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
+  }
+
+  if (carouselImages[counter].id === 'firstClone') {
+    carouselSlide.style.transition = "none";
+    size = carouselImages[counter].clientWidth;
+    counter = carouselImages.length -counter;
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
+  }
+})
+
+function slideLeft() {
+  if(counter <= 0) return;
+  carouselSlide.style.transition = "transform 0.6s ease-in-out";
+  size = carouselImages[counter].clientWidth;
+  counter--;
+  carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
+}
+
+function slideRight() {
+  if(counter >= carouselImages.length-1) return;
+  carouselSlide.style.transition = "transform 0.6s ease-in-out";
+  size = carouselImages[counter].clientWidth;
+  counter++;
+  carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
+}
+
+function startCarousel() {
+  carouselLoop = setInterval(function(){
+    slideRight();
+  }, carouselTimer);
+
+  document.getElementById('arrow-left').onclick = function () {
+    clearInterval(carouselLoop);
+    carouselLoop = setInterval(function(){
+      slideLeft();
+    }, carouselTimer)
+  }
+
+  document.getElementById("arrow-right").onclick = function () {
+    clearInterval(carouselLoop);
+    carouselLoop = setInterval(function(){
+      slideRight();
+    }, carouselTimer)
+  }
+}
+
+
+
+
+// Old vanilla carousel with loop worked well but didn't have slide feature
 // let sliderImages = document.querySelectorAll(".slide");
 // const arrowLeft = document.querySelector("#arrow-left");
 // const arrowRight = document.querySelector("#arrow-right");
@@ -92,83 +174,3 @@
 
   
 // }
-
-
-
-const carouselSlide = document.querySelector('.carousel-slide');
-const carouselImages = document.querySelectorAll('.slide');
-const arrowLeft = document.querySelector('#arrow-left');
-const arrowRight = document.querySelector('#arrow-right');
-let counter = 1;
-let size = carouselImages[counter].clientWidth;
-const carouselTimer = 3000;
-
-
-
-// Translate x positioning to correct first image
-carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px';
-
-// Init Carousel Loop
-startCarousel();
-
-// instead of the ES6 wat ()=> you can do function(){}
-arrowRight.addEventListener('click',()=>{
-  slideRight();
-});
-
-arrowLeft.addEventListener('click',()=>{
-  slideLeft();
-});
-
-carouselSlide.addEventListener('transitionend', ()=>{
-  // console.log('fired');
-  if (carouselImages[counter].id === 'lastClone') {
-    carouselSlide.style.transition = "none";
-    size = carouselImages[counter].clientWidth;
-    counter = carouselImages.length -2;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
-  }
-
-  if (carouselImages[counter].id === 'firstClone') {
-    carouselSlide.style.transition = "none";
-    size = carouselImages[counter].clientWidth;
-    counter = carouselImages.length -counter;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
-  }
-})
-
-function slideLeft() {
-  if(counter <= 0) return;
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  size = carouselImages[counter].clientWidth;
-  counter--;
-  carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
-}
-
-function slideRight() {
-  if(counter >= carouselImages.length-1) return;
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  size = carouselImages[counter].clientWidth;
-  counter++;
-  carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
-}
-
-function startCarousel() {
-  carouselLoop = setInterval(function(){
-    slideRight();
-  }, carouselTimer);
-
-  document.getElementById('arrow-left').onclick = function () {
-    clearInterval(carouselLoop);
-    carouselLoop = setInterval(function(){
-      slideLeft();
-    }, carouselTimer)
-  }
-
-  document.getElementById("arrow-right").onclick = function () {
-    clearInterval(carouselLoop);
-    carouselLoop = setInterval(function(){
-      slideRight();
-    }, carouselTimer)
-  }
-}
