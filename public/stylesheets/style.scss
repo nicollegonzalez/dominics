@@ -27,6 +27,8 @@ h3 {
 
 #information-header{
   font-family: "Roboto Mono",sans-serif;
+  font-size: 11px;
+  font-weight: 700px;
   color: white;
   // font-weight: bold;
   display: flex;
@@ -35,12 +37,21 @@ h3 {
   transform: translateX(0px); 
   transition: transform 1s;
   transition-timing-function: ease-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.6;
 }
 
 #information-header.hamburger-opened{
   transform: translateX(-280px); 
   transition: transform 1s;
   transition-timing-function: ease-out;
+}
+
+#information-header p{
+  margin: 5px 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
 
 #wrapper {
@@ -86,6 +97,20 @@ h3 {
 }
 
 /* Hamburger Micro-interaction */
+.dot {
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  // 37px
+  // bottom: 8.4px;
+  // right: 12.6px;
+  bottom: 10.2px;
+  right: 14.7px;
+}
+
 .hamburger {
   height: 21px;
   width: 22px;
@@ -200,6 +225,7 @@ a.nav-menu-link {
   transform: translateX(0px); 
   transition: transform 1s;
   transition-timing-function: ease-out;
+  min-height: calc(100vh - 95px);
 }
 
 #mainContent.hamburger-opened {
@@ -447,7 +473,8 @@ div.location:hover {
 
 .location-information div a {
   color: black;
-  display: inline-block; }
+  display: inline-block; 
+}
 
 .contact{
   padding-bottom: 15px;
@@ -575,30 +602,23 @@ ul.nav-menu {
   line-height: 160%;
 }
 
-.about{
+.about, .career-content{
   min-height: calc(100vh - 95px);
   display:flex;
   flex-direction: column;
   // align-items: center;
   justify-content: center;
-  padding-left: 1.2em;
-  padding-right: 1.2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  // position: relative;
+  // bottom: 7vh;
 }
+
+
 
 .about p, .career-content p{
   font-size: 18px;
   line-height: 27px;
-}
-
-.about{
-  min-height: calc(100vh - 95px);
-  display:flex;
-  flex-direction: column;
-  // align-items: center;
-  // justify-content: center;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-bottom: 1.5em;
 }
 
 #about-outro{
@@ -615,15 +635,6 @@ ul.nav-menu {
   height: calc(70vh - 95px);
 }
 
-
-.career-content p{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-left: 1.2em;
-  padding-right: 1.2em;
-}
 
 #footer {
   display: flex;
@@ -693,10 +704,11 @@ ul.nav-menu {
 
 /* NavBar Big Change at min-wiidth: 767px */
 @media only screen and (min-width: 768px) {
-  #wrapper.hamburger-opened {
+  // #wrapper.hamburger-opened {
     // overflow: hidden;
     // height: 100vh;
-  }
+  // }
+
   #information-header.hamburger-opened{
     transform: translateX(0px); 
     transition: transform 2s;
@@ -771,6 +783,9 @@ ul.nav-menu {
     width: 100%; 
   }
   
+  #mainContent {
+    min-height: 100vh;
+  }
 
   #scrollingSegment {
     position: relative;

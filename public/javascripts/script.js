@@ -1,3 +1,4 @@
+const pathName = window.location.pathname;
 const hamburgers = document.querySelectorAll('.hamburger');
 const hamburgerSmallScreen = document.querySelector('.hamburger:last-of-type');
 const hamburgerLargeScreen = document.querySelector('.hamburger:first-of-type');
@@ -59,20 +60,31 @@ mainContent.addEventListener('click', function(e){
   navMenuLargeScreen.classList.add('hidden');
 });
 
+
 window.onload = function() {
   navMenuLargeScreen.style.top = (informationHeader.clientHeight - window.scrollY) +'px';
-}
-window.onscroll = function(){
-  // console.log("Window is scrolling");
-  if(window.scrollY <= informationHeader.clientHeight){
-    navMenuLargeScreen.style.top = (informationHeader.clientHeight - window.scrollY) +'px';
-  }else {
-    navMenuLargeScreen.style.top = 0 +'px';
+  
+  if( pathName == "/about" || pathName == "/careers"){
+    logo.classList.add("scrolled");
+    navBar.classList.toggle("scrolled");
   }
-
-  navBar.classList.toggle("scrolled", window.scrollY > navBar.clientHeight + informationHeader.clientHeight || window.pageYOffset > navBar.clientHeight + informationHeader.clientHeight);
-  logo.classList.toggle("scrolled", window.scrollY > navBar.clientHeight + informationHeader.clientHeight || window.pageYOffset > navBar.clientHeight + informationHeader.clientHeight);
 }
+
+// if( pathName != "/about" && pathName != "/careers"){
+  window.onscroll = function(){
+    // console.log("Window is scrolling");
+    if(window.scrollY <= informationHeader.clientHeight){
+      navMenuLargeScreen.style.top = (informationHeader.clientHeight - window.scrollY) +'px';
+    }else {
+      navMenuLargeScreen.style.top = 0 +'px';
+    }
+    
+    if( pathName != "/about" && pathName != "/careers"){
+      navBar.classList.toggle("scrolled", window.scrollY > navBar.clientHeight + informationHeader.clientHeight || window.pageYOffset > navBar.clientHeight + informationHeader.clientHeight);
+      logo.classList.toggle("scrolled", window.scrollY > navBar.clientHeight + informationHeader.clientHeight || window.pageYOffset > navBar.clientHeight + informationHeader.clientHeight);
+    }
+  }
+// }
 
 
 
@@ -100,7 +112,7 @@ function startMap() {
 
   for(let i=0; i<4; i++){
     const elementID = "map"+ (i+1);
-    console.log(elementID);
+    // console.log(elementID);
     if(document.getElementById(elementID)){
       const locationMap = new google.maps.Map(document.getElementById(elementID), 
       {
@@ -153,23 +165,27 @@ function startMap() {
 
 
 
-if(document.querySelectorAll('.slide')[1] != undefined){
-  const carouselSlide = document.querySelector('.carousel-slide');
-  const carouselImages = document.querySelectorAll('.slide');
-  const arrowLeft = document.querySelector('#arrow-left');
-  const arrowRight = document.querySelector('#arrow-right');
-  let counter = 1;
-  let size = carouselImages[counter].clientWidth;
-  const carouselTimer = 4000;
-
+// const pathName = window.location.pathname;
+let size;
+let counter;
+const carouselSlide = document.querySelector('.carousel-slide');
+const carouselImages = document.querySelectorAll('.slide');
+const arrowLeft = document.querySelector('#arrow-left');
+const arrowRight = document.querySelector('#arrow-right');
+const carouselTimer = 4000;
+if(pathName ==  "/"){
+  console.log(pathName);
+  counter = 1;
+  size = carouselImages[counter].clientWidth;
+  
   // Translate x positioning to correct first image
   if(carouselImages[counter] != undefined){
     carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px';
   }
 
-
   // Init Carousel Loop
   startCarousel();
+  // setTimeout(startCarousel(), 3000);
 
   // instead of the ES6 wat ()=> you can do function(){}
   arrowRight.addEventListener('click',()=>{
@@ -196,6 +212,7 @@ if(document.querySelectorAll('.slide')[1] != undefined){
       carouselSlide.style.transform = 'translateX(' + (-size * counter) +'px)';
     }
   })
+
 
   function slideLeft() {
     if(counter <= 0) return;
@@ -233,9 +250,4 @@ if(document.querySelectorAll('.slide')[1] != undefined){
     }
   }
 
-}
-
-
-
-
-
+};
