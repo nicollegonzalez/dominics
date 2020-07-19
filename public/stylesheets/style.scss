@@ -636,6 +636,13 @@ ul.nav-menu {
   // background-image: url(/images/facebooklogo.png);
 }
 
+.not-found-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (min-width: 350px) {
   .location-title-background {
     height: 51.19px; }
