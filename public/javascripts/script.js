@@ -55,7 +55,7 @@ mainContent.addEventListener('click', function(e){
   navBar.classList.remove('hamburger-opened');
   mainContent.classList.remove('hamburger-opened');
   logo.classList.remove('hamburger-opened');
-  footer.classList.toggle('hamburger-opened');
+  footer.classList.remove('hamburger-opened');
   navMenuLargeScreen.classList.add('hidden');
 });
 

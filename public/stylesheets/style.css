@@ -23,6 +23,7 @@ h3 {
   font-size: 30px; }
 
 #information-header {
+  font-family: "Roboto Mono",sans-serif;
   color: white;
   display: flex;
   flex-direction: column;
