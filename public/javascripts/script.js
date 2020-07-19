@@ -1,6 +1,7 @@
 const hamburgers = document.querySelectorAll('.hamburger');
 const hamburgerSmallScreen = document.querySelector('.hamburger:last-of-type');
 const hamburgerLargeScreen = document.querySelector('.hamburger:first-of-type');
+const informationHeader = document.querySelector('#information-header');
 const wrapper = document.querySelector('#wrapper');
 const navMenu = document.querySelector('#rightNav');
 const navMenuLargeScreen = document.querySelector('.nav-menu-large-screen');
@@ -21,6 +22,7 @@ const locations = [
 hamburgerSmallScreen.addEventListener('click', function(e){
   hamburgerSmallScreen.classList.toggle('hamburger-opened');
   hamburgerLargeScreen.classList.toggle('hamburger-opened');
+  informationHeader.classList.toggle('hamburger-opened');
   wrapper.classList.toggle('hamburger-opened');
   navMenu.classList.toggle('hamburger-opened');
   navBar.classList.toggle('hamburger-opened');
@@ -32,6 +34,7 @@ hamburgerSmallScreen.addEventListener('click', function(e){
 hamburgerLargeScreen.addEventListener('click', function(e){
   hamburgerSmallScreen.classList.toggle('hamburger-opened');
   hamburgerLargeScreen.classList.toggle('hamburger-opened');
+  informationHeader.classList.toggle('hamburger-opened');
   wrapper.classList.toggle('hamburger-opened');
   navMenu.classList.toggle('hamburger-opened');
   navBar.classList.toggle('hamburger-opened');
@@ -47,6 +50,7 @@ mainContent.addEventListener('click', function(e){
   hamburgerLargeScreen.classList.remove('hamburger-opened');
   mainContent.classList.remove('hamburger-opened');
   navMenu.classList.remove('hamburger-opened');
+  informationHeader.classList.remove('hamburger-opened');
   wrapper.classList.remove('hamburger-opened');
   navBar.classList.remove('hamburger-opened');
   mainContent.classList.remove('hamburger-opened');
@@ -54,15 +58,26 @@ mainContent.addEventListener('click', function(e){
   footer.classList.toggle('hamburger-opened');
   navMenuLargeScreen.classList.add('hidden');
 });
-  
+
+window.onload = function() {
+  navMenuLargeScreen.style.top = (informationHeader.clientHeight - window.scrollY) +'px';
+}
 window.onscroll = function(){
-  console.log("Window is scrolling");
-  navBar.classList.toggle("scrolled", window.scrollY > navBar.clientHeight || window.pageYOffset > navBar.clientHeight);
-  logo.classList.toggle("scrolled", window.scrollY > navBar.clientHeight || window.pageYOffset > navBar.clientHeight);
+  // console.log("Window is scrolling");
+  if(window.scrollY <= informationHeader.clientHeight){
+    navMenuLargeScreen.style.top = (informationHeader.clientHeight - window.scrollY) +'px';
+  }else {
+    navMenuLargeScreen.style.top = 0 +'px';
+  }
+
+  navBar.classList.toggle("scrolled", window.scrollY > navBar.clientHeight + informationHeader.clientHeight || window.pageYOffset > navBar.clientHeight + informationHeader.clientHeight);
+  logo.classList.toggle("scrolled", window.scrollY > navBar.clientHeight + informationHeader.clientHeight || window.pageYOffset > navBar.clientHeight + informationHeader.clientHeight);
 }
 
 
-startMap()
+
+
+startMap();
 
 function startMap() {
   // Initialize the map

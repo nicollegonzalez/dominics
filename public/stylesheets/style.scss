@@ -24,6 +24,21 @@ h3 {
   line-height: 27px;
   font-size: 30px; }
 
+#information-header{
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(0px); 
+  transition: transform 1s;
+  transition-timing-function: ease-out;
+}
+
+#information-header.hamburger-opened{
+  transform: translateX(-280px); 
+  transition: transform 1s;
+  transition-timing-function: ease-out;
+}
 
 #wrapper {
   display: flex;
@@ -676,8 +691,13 @@ ul.nav-menu {
 /* NavBar Big Change at min-wiidth: 767px */
 @media only screen and (min-width: 768px) {
   #wrapper.hamburger-opened {
-    overflow: hidden;
-    height: 100vh;
+    // overflow: hidden;
+    // height: 100vh;
+  }
+  #information-header.hamburger-opened{
+    transform: translateX(0px); 
+    transition: transform 2s;
+    transition-timing-function: ease-out;
   }
 
   #header {
@@ -731,9 +751,9 @@ ul.nav-menu {
     transition: transform 1s;
     transition-timing-function: ease-out;
     position: fixed;
-    top: 0;
+    top: 0px;
     width: 100%;
-    height: 100% ; 
+    height: 100vh; 
     background-color: rgba(205, 33, 42, 0.9);
     /* background-color: rgba(34,34,34,0.8); */
     display: flex;
