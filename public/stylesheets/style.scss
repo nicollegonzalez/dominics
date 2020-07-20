@@ -823,11 +823,14 @@ ul.nav-menu {
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  max-width: 233px;
   margin: 0 auto;
   padding-left: 14.5px;
+}
+
+.footer-social-content span{
+  min-width: 138px;
 }
 
 .footer-content li{
