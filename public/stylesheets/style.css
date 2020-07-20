@@ -132,6 +132,20 @@ h3 {
   padding: 0 16px;
   text-transform: uppercase; }
 
+.modal-trigger:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  opacity: .8; }
+
+.modal-trigger {
+  cursor: pointer;
+  -webkit-transition: opacity .2s, -webkit-box-shadow .2s;
+  transition: opacity .2s, -webkit-box-shadow .2s;
+  transition: box-shadow .2s, opacity .2s;
+  transition: box-shadow .2s, opacity .2s, -webkit-box-shadow .2s; }
+
+.modal-close {
+  cursor: pointer; }
+
 .waves-effect {
   position: relative;
   cursor: pointer;
