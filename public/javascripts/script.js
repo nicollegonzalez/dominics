@@ -65,7 +65,7 @@ window.onload = function() {
   
 
   navMenuLargeScreen.style.top = (informationHeader.clientHeight - window.scrollY) +'px';
-  if( pathName == "/about" || pathName == "/careers"){
+  if( pathName == "/about" || pathName == "/careers" || pathName == "/locations" ){
     logo.classList.add("scrolled");
     navBar.classList.toggle("scrolled");
   }
@@ -79,7 +79,7 @@ window.onscroll = function(){
     navMenuLargeScreen.style.top = 0 +'px';
   }
   
-  if( pathName != "/about" && pathName != "/careers"){
+  if( pathName != "/about" && pathName != "/careers" && pathName != "/locations"){
     navBar.classList.toggle("scrolled", window.scrollY > navBar.clientHeight + informationHeader.clientHeight || window.pageYOffset > navBar.clientHeight + informationHeader.clientHeight);
     logo.classList.toggle("scrolled", window.scrollY > navBar.clientHeight + informationHeader.clientHeight || window.pageYOffset > navBar.clientHeight + informationHeader.clientHeight);
   }
