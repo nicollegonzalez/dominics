@@ -506,6 +506,9 @@ form > * {
   background: #fff;
   color: #CD212A; }
 
+#map {
+  margin-bottom: 30px; }
+
 #map, #map1, #map2, #map3, #map4 {
   width: 100%;
   height: 450px;
@@ -564,7 +567,6 @@ ul.nav-menu {
   margin: 0 auto;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  line-height: 0;
   position: relative;
   top: 100px; }
 
@@ -573,7 +575,12 @@ ul.nav-menu {
   line-height: 27px; }
 
 .career-content p {
-  font-size: 18px; }
+  font-size: 18px;
+  line-height: 27px;
+  margin-block-start: 0.25em;
+  margin-block-end: 0.25em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; }
 
 #about-outro {
   background-image: url(/images/pizza4.JPG);
@@ -729,6 +736,11 @@ ul.nav-menu {
     transform: translateX(0px);
     transition: transform 1s;
     transition-timing-function: ease-out; } }
+
+@media only screen and (min-width: 1000px) {
+  .about, .career-content {
+    padding-left: 15%;
+    padding-right: 15%; } }
 
 @media only screen and (min-width: 1600px) {
   div.dominics-quote {
