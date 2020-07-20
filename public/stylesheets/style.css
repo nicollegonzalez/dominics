@@ -394,7 +394,9 @@ div.location:hover {
 .location-title-background {
   background-color: #444;
   flex: 1 1 auto;
-  padding: 1.25rem; }
+  padding: 1.25rem;
+  border-bottom-left-radius: calc(.25rem - 1px);
+  border-bottom-right-radius: calc(.25rem - 1px); }
 
 .location-spaced {
   height: 15vh;

@@ -496,6 +496,7 @@ div.location:hover {
   // display: block;
   text-align: center;
   text-decoration: none;
+  
 }
 
 .location-title-background {
@@ -511,6 +512,8 @@ div.location:hover {
   // box-sizing: border-box;
   flex: 1 1 auto;
   padding: 1.25rem;
+  border-bottom-left-radius: calc(.25rem - 1px);
+  border-bottom-right-radius: calc(.25rem - 1px);
 }
 
 .location-spaced {
