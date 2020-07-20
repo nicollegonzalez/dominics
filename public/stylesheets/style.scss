@@ -703,7 +703,7 @@ ul.nav-menu {
 }
 
 .career-content{
-  min-height: calc(100vh - 95px);
+  min-height: calc(100vh - 114px);
   display:flex;
   flex-direction: column;
   // align-items: center;
@@ -929,6 +929,10 @@ ul.nav-menu {
     // width: calc(100vw - 3vw - 3vw);
   }
 
+  .locations-content h3{
+    margin-block-start: 110px;
+  }
+
   .locations {
     display: flex;
     flex-wrap: wrap;
@@ -961,6 +965,10 @@ ul.nav-menu {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .about, .career-content{
+    top: 110px;
   }
 
   a.nav-menu-link {

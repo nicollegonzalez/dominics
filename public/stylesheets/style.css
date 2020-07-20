@@ -567,7 +567,7 @@ ul.nav-menu {
   top: 15px; }
 
 .career-content {
-  min-height: calc(100vh - 95px);
+  min-height: calc(100vh - 114px);
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -711,6 +711,8 @@ ul.nav-menu {
     font-size: 52.224px; }
   .dominics-quote p {
     max-width: 574px; }
+  .locations-content h3 {
+    margin-block-start: 110px; }
   .locations {
     display: flex;
     flex-wrap: wrap;
@@ -729,6 +731,8 @@ ul.nav-menu {
     display: flex;
     justify-content: center;
     align-items: center; }
+  .about, .career-content {
+    top: 110px; }
   a.nav-menu-link {
     text-align: center;
     border: 0;
