@@ -28,7 +28,7 @@ h3 {
 #information-header{
   font-family: "Roboto Mono",sans-serif;
   font-size: 11px;
-  font-weight: 700px;
+  font-weight: 400;
   color: white;
   // font-weight: bold;
   display: flex;
@@ -42,6 +42,19 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 2px;
   line-height: 1.6;
+  margin: 0 16px;
+}
+
+#information-header button{
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: capitalize;
+  letter-spacing: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+  padding: 0 5px;
 }
 
 #information-header.hamburger-opened{
@@ -52,8 +65,8 @@ h3 {
 
 #information-header p{
   margin: 5px 0;
-  // margin-block-start: 1em;
-  // margin-block-end: 1em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
 
 #wrapper {
@@ -85,9 +98,11 @@ h3 {
   transition-timing-function: ease-out;
 }
 
-#header button {
+#header button, #information-header button {
   background-color: transparent;
   border: none; }
+
+  
 
 #header .logo {
   max-width: 53%; }
@@ -389,60 +404,114 @@ a.nav-menu-link {
 }
 
 .locations {
-  margin: 1.25em 0;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding: 0 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  line-height: 27px;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-  width: calc(100vw - 15px - 15px)
+  // margin: 1.25em 0;
+  // margin-block-start: 0.83em;
+  // margin-block-end: 0.83em;
+  // margin-inline-start: 0px;
+  // margin-inline-end: 0px;
+  // padding: 0 15px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: center;
+  // line-height: 27px;
+  // font-weight: 700;
+  // font-style: normal;
+  // font-size: 20px;
+  // width: calc(100vw - 15px - 15px)
+  // These last two i didn't have before
   // width: 100vw;
   // overflow-x: hidden;
+  // margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  max-width: 924.5px;
 }
 
-div.location {
-  width: 100%; }
+.location {
+  // width: 100%;
+  // display: flex;
+  // flex-direction: ;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  margin-bottom: 1.5rem;
+  margin-right: 15px;
+  margin-left: 15px;
+}
 
 div.location:hover {
   opacity: 0.8; }
 
 .location {
-  position: relative;
-  background-image: url(/images/dominicsfourexterior.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: calc(100vw - 30px);
-  height: calc(100vw - 30px);
-  margin-bottom: 25px; }
+  // position: relative;
+  // background-image: url(/images/dominicsIII/interior.jpg);
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  // width: calc(100vw - 30px);
+  // height: calc(100vw - 30px);
+  // margin-bottom: 25px; 
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+}
+
+.location img{
+  width: 100%;
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+  vertical-align: middle;
+  border-style: none;
+}
 
 .location a {
-  display: block;
-  text-align: center;
-  height: 13%;
-  width: 100%;
-  padding: 87% 0 0 0;
-  position: relative;
-  z-index: 1;
-  text-decoration: none;
+  // display: block;
+  // text-align: center;
+  // height: 13%;
+  // width: 100%;
+  // padding: 87% 0 0 0;
+  // position: relative;
+  // z-index: 1;
+  // text-decoration: none;
   color: #fff;
-  /* background-color: #444; */ }
+  text-decoration: none;
+}
+
+
+.location-title-background h5 {
+  color: #fff;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  // display: block;
+  text-align: center;
+  text-decoration: none;
+}
 
 .location-title-background {
-  display: block;
-  width: 100%;
-  height: 16%;
-  position: absolute;
+  // display: block;
+  // width: 100%;
+  // height: 16%;
+  // position: absolute;
   background-color: #444;
-  bottom: 0;
-  z-index: 0; }
+  // top: 0;
+  // z-index: 0; 
+  // flex: 1 1 auto;
+  // padding: 1.25rem;
+  // box-sizing: border-box;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
 
 .location-spaced {
   height: 15vh;
@@ -473,10 +542,10 @@ div.location:hover {
   text-align: center; 
 }
 
-.location-information div a {
-  color: black;
-  display: inline-block; 
+#information-header button{
+  color: inherit;
 }
+
 
 .contact{
   padding-bottom: 15px;
@@ -604,23 +673,43 @@ ul.nav-menu {
   line-height: 160%;
 }
 
-.about, .career-content{
+.about{
   min-height: calc(100vh - 95px);
   display:flex;
   flex-direction: column;
+  margin: 0 auto;
   // align-items: center;
-  justify-content: center;
+  // justify-content: center;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  // position: relative;
-  // bottom: 7vh;
+  position: relative;
+  top: 100px;
+}
+
+.career-content{
+  min-height: calc(100vh - 104px);
+  display:flex;
+  flex-direction: column;
+  // align-items: center;
+  margin: 0 auto;
+  // justify-content: center;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  line-height: 0;
+  position: relative;
+  top: 100px;
 }
 
 
 
-.about p, .career-content p{
+.about p{
   font-size: 18px;
   line-height: 27px;
+}
+
+.career-content p {
+  font-size: 18px;
+  // line-height: 27px;
 }
 
 #about-outro{
@@ -675,15 +764,9 @@ ul.nav-menu {
 }
 
 @media only screen and (min-width: 350px) {
-  .location-title-background {
-    height: 51.19px; }
-  .location a {
-    padding: calc(100% - 40.19px) 0 0 0;
-    height: 40.19px; }
-  .location {
-    height: calc(100vw - 30px);
-    margin-bottom: 25px; }
-  }
+
+
+}
 
 @media only screen and (min-width: 485px) {
   .dominics-quote {
@@ -693,15 +776,8 @@ ul.nav-menu {
   }
 
 @media only screen and (min-width: 600px) {
-  div.location {
-    width: calc(50% - 30px);
-    height: calc(50% - 30px);
-    margin: 20px 10px; 
-  }
-  .location a {
-    padding: calc(100% - 40.19px) 0 0 0;
-    height: 40.19px; 
-  } 
+
+
 }
 
 /* NavBar Big Change at min-wiidth: 767px */
@@ -710,6 +786,10 @@ ul.nav-menu {
     // overflow: hidden;
     // height: 100vh;
   // }
+
+  #information-header{
+    margin: 0 24px;
+  }
 
   #information-header.hamburger-opened{
     transform: translateX(0px); 
@@ -786,7 +866,7 @@ ul.nav-menu {
   }
   
   #mainContent {
-    min-height: 100vh;
+    min-height: calc(100vh - 75px);
   }
 
   #scrollingSegment {
@@ -826,14 +906,42 @@ ul.nav-menu {
   }
 
   div.locations{
-    padding: 0 3vw;
-    width: calc(100vw - 3vw - 3vw);
+    // padding: 0 3vw;
+    // width: calc(100vw - 3vw - 3vw);
   }
 
-  div.location {
-    width: 340px;
-    height: 340px;
-    margin: 20px 10px;
+  .locations {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    // width: auto;
+    max-width: 768px;
+    justify-content: center;
+    // margin: 0 15px;
+    // margin-right: -15px;
+    // margin-left: -15px;
+  }
+
+
+  .location {
+    // width: 340px;
+    // height: 340px;
+    // margin: 20px 10px;
+    flex: 0 0 45.8%;
+    max-width: 45.8%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    margin-bottom: 30px;
+    // padding-right: 15px;
+    // padding-left: 15px;
+  }
+
+  .location-title-background h5{
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   a.nav-menu-link {
@@ -859,16 +967,11 @@ ul.nav-menu {
 }
 
 @media only screen and (min-width: 1140px) {
-  div.locations {
-    padding: 0 18vw; 
-    width: calc(100vw - 18vw - 18vw);
-  } }
+
+}
 
 @media only screen and (min-width: 1600px) {
-  .locations {
-    padding: 0 27vw; 
-    width: calc(100vw - 27vw - 27vw);
-  }
+
   div.dominics-quote {
     font-size: 64px; }
   div.dominics-quote p {
