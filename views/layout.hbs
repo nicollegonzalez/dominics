@@ -54,7 +54,7 @@
 
     <div id="wrapper">
       <header id="information-header">
-        <p>All restaurants now open for dine-in and take-out!<span><button alt="toggle COVID-19 updates">Click here for the latest COVID-19 updates</button></span></p>
+        <p>All restaurants now open for dine-in and take-out!<span><button alt="toggle COVID-19 updates" class="modal-tigger" id="covid-modal-trigger">Click here for the latest COVID-19 updates</button></span></p>
         {{!-- <p>Adjusted hours for each location below:</p>
         <p>Dominic's I Pizza and Pasta Mon-Fri 11AM - 10PM</p>
         <p>Dominic's II Pizza and Pasta Mon-Fri 11AM - 10PM</p>
@@ -82,7 +82,7 @@
           </p>
         </div>
         <div class="modal-footer modal-tigger">
-          <a class="modal-button modal-close waves-effect waves-red" href="#">Close</a>
+          <a id="covid-modal-close-button" class="modal-button modal-close waves-effect waves-red" href="#">Close</a>
         </div>
       </div>
       <nav role="navigation">
@@ -206,6 +206,7 @@
     <script src={{maps_api_url}}></script>
     <script type="text/javascript" src="/javascripts/script.js"></script>
     <script type="text/javascript" src="/javascripts/waves.js"></script>
+    <script type="text/javascript" src="/javascripts/modal.js"></script>
     
 
   <!--// CLOSE BODY //-->

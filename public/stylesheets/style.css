@@ -66,18 +66,17 @@ h3 {
 
 .modal {
   z-index: 25;
-  display: block;
-  opacity: 1;
-  top: 10%;
-  transform: scaleX(1) scaleY(1);
+  opacity: 0;
+  top: 4%;
+  transform: scale(0.8);
   padding: 0;
   height: 70%;
   width: 80%;
-  display: none;
   position: fixed;
   left: 0;
   right: 0;
-  background-color: #fafafa;
+  background-color: #cd212a;
+  color: white;
   max-height: 70%;
   margin: auto;
   overflow-y: auto;
@@ -151,11 +150,14 @@ h3 {
   cursor: pointer;
   display: inline-block;
   overflow: hidden;
+  -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
   vertical-align: middle;
   z-index: 1;
+  -webkit-transition: .3s ease-out;
   transition: .3s ease-out; }
 
 .waves-effect .waves-ripple {
@@ -167,7 +169,13 @@ h3 {
   margin-left: -10px;
   opacity: 0;
   background: rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform,opacity;
+  transition-property: transform,opacity, -webkit-transform;
+  -webkit-transform: scale(0);
   transform: scale(0);
   pointer-events: none; }
 
@@ -186,10 +194,14 @@ h3 {
   z-index: -1; }
 
 .waves-notransition {
+  -webkit-transition: none !important;
   transition: none !important; }
 
 .waves-circle {
-  transform: translateZ(0); }
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+  mask-image: radial-gradient(circle, white 100%, black 100%); }
 
 .waves-input-wrapper {
   border-radius: 0.2em;
@@ -206,7 +218,9 @@ h3 {
   width: 2.5em;
   height: 2.5em;
   line-height: 2.5em;
-  border-radius: 50%; }
+  border-radius: 50%;
+  -webkit-mask-image: none;
+  mask-image: none; }
 
 .waves-block {
   display: block; }
@@ -634,6 +648,7 @@ form > * {
   padding: 5px; }
 
 #deals-form input:focus, #deals-form input:active {
+  -webkit-appearance: none;
   border: 0px solid #cd212a;
   box-shadow: inset 0 0 2px #cd212a, 0 0 4px #cd212a;
   background-color: #fff;
