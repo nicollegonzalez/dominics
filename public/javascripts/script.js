@@ -174,7 +174,7 @@ const arrowLeft = document.querySelector('#arrow-left');
 const arrowRight = document.querySelector('#arrow-right');
 const carouselTimer = 4000;
 if(pathName ==  "/"){
-  console.log(pathName);
+  // console.log(pathName);
   counter = 1;
   size = carouselImages[counter].clientWidth;
   

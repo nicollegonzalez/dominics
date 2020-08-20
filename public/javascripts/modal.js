@@ -180,9 +180,14 @@ function closeModal() {
   if (!covidModalOpen) {
     document.body.style.overflow = '';
   }
-  setTimeout(()=> animateOut(),350);
-  
 
+  // setTimeout(()=> animateOut(),350)
+  // setTimeout(()=> covidModal.style.zIndex = "0",600);
+  const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+  wait(350).then(() => animateOut()).then(() => covidModal.style.zIndex = "0");
+
+  
   return;
 }
 
