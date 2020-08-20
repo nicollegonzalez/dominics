@@ -344,6 +344,10 @@ a.nav-menu-link {
   font-size: 20px;
   color: #fff; }
 
+a.nav-menu-link:hover {
+  opacity: 0.8;
+  text-decoration: underline; }
+
 #scrollingSegment {
   overflow-y: auto;
   overflow-x: hidden;

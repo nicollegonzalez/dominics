@@ -407,6 +407,11 @@ a.nav-menu-link {
   color: #fff;
 }
 
+a.nav-menu-link:hover{
+  opacity: 0.8;
+  text-decoration: underline;
+} 
+
 
 #scrollingSegment {
   overflow-y: auto;
