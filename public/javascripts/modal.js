@@ -135,7 +135,7 @@ function animateOut() {
  */
 
 
-function openModal(trigger) {
+function openModal() {
   if (covidModalOpen) {
     console.log("returning", !covidModalOpen, covidModalOpen);
     return;
@@ -144,8 +144,8 @@ function openModal(trigger) {
   covidModalOpen = true;
 
   // Set Z-Index  of currently covid modal
-  // overlay.style.zIndex = 100;
-  covidModal.style.zIndex = 101;
+  // overlay.style.zIndex = "100";
+  covidModal.style.zIndex = "101";
 
 
   if (defaults.preventScrolling) {
@@ -157,7 +157,7 @@ function openModal(trigger) {
 
   animateIn();
 
-  return this;
+  return;
 }
 
 /**
@@ -170,6 +170,10 @@ function closeModal() {
 
   covidModalOpen = false;
 
+    // Set Z-Index  of currently covid modal
+  // overlay.style.zIndex = "0";
+  // covidModal.style.zIndex = "5";
+
   covidModal.classList.remove('open');
 
   // Enable body scrolling only if there are no more modals open.
@@ -177,8 +181,9 @@ function closeModal() {
     document.body.style.overflow = '';
   }
   setTimeout(()=> animateOut(),350);
+  
 
-  return this;
+  return;
 }
 
 

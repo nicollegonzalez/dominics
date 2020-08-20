@@ -5,7 +5,8 @@ const Location = require('../models/location');
 
 const dbName = 'dominics';
 // mongoose.connect(`mongodb://localhost/${dbName}`,{ useUnifiedTopology: true, useNewUrlParser: true })
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true , useUnifiedTopology: true})
+// mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true , useUnifiedTopology: true})
+mongoose.connect(process.env.DB_URI, { useNewUrlParser: true , useUnifiedTopology: true})
 .then(x => {
   console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
 })
