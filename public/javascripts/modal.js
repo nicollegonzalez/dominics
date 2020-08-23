@@ -21,6 +21,8 @@ let covidModalOpen = false;
 let covidModalOpeningTrigger = undefined;
 // let overlayDiv = '<div class="modal-overlay" id="#overlay"></div>';
 
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
 
 
 /**
@@ -116,7 +118,7 @@ function animateOut() {
   if(covidModal.classList.contains('bottom-sheet')){
     covidModal.style.transitionProperty = "opacity,bottom";
     covidModal.style.bottom = "-100%";
-    covidModal.style.opacity = "0";
+    // covidModal.style.opacity = "0";
   }
   // Normal modal animation
   else {
@@ -125,8 +127,10 @@ function animateOut() {
     covidModal.style.transitionProperty = "top,opacity,transform";
     covidModal.style.top = "4%";
     covidModal.style.transform = "scale(0.8)";
-    covidModal.style.opacity = "0";
+    // covidModal.style.opacity = "0";
   }
+  covidModal.style.opacity = "0";
+  wait(255).then(() => covidModal.style.zIndex = "0");
 }
 
 /**
@@ -183,10 +187,10 @@ function closeModal() {
 
   // setTimeout(()=> animateOut(),350)
   // setTimeout(()=> covidModal.style.zIndex = "0",600);
-  const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
-
-  wait(350).then(() => animateOut()).then(() => covidModal.style.zIndex = "0");
-
+  // const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+  // wait(500).then(() => animateOut()).then(() => covidModal.style.zIndex = "0");
+  // wait(350).then(() => animateOut()).then(() => wait(250).then(() => covidModal.style.zIndex = "0"));
+  wait(350).then(() => animateOut());
   
   return;
 }
