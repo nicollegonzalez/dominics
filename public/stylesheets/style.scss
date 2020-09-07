@@ -790,14 +790,16 @@ div.location:hover {
 form {
   display: flex;
   flex-direction: column;
-  /* max-width: 300px; */ }
+  /* max-width: 300px; */ 
+}
 
 form > * {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px 0; }
+  padding: 15px 0; 
+}
 
 #deals-form {
   margin: 0 auto 30px auto;
@@ -805,7 +807,8 @@ form > * {
   width: 95%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center; 
+}
 
 #deals-form h3 {
   margin: 0 auto; 
@@ -816,7 +819,8 @@ form > * {
   color: #666;
   display: inline-block;
   margin-bottom: 10px;
-  text-align: center; }
+  text-align: center; 
+}
 
 #deals-form input,
 #deals-form button {
@@ -825,13 +829,15 @@ form > * {
   padding: 4px;
   width: 100%;
   max-width: 380px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px; 
+}
 
 #deals-form input {
   border: 1px solid #e6e6e6;
   outline: 0;
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1);
-  padding: 5px; }
+  padding: 5px; 
+}
 
 #deals-form input:focus, #deals-form input:active {
   -webkit-appearance: none;
@@ -839,7 +845,8 @@ form > * {
   box-shadow: inset 0 0 2px #cd212a, 0 0 4px #cd212a;
   background-color: #fff;
   outline-color: #cd212a;
-  outline-width: medium; }
+  outline-width: medium; 
+}
 
 #deals-form button {
   background: #CD212A;
@@ -853,14 +860,86 @@ form > * {
   text-decoration: none;
   text-transform: uppercase;
   transition: .3s ease background;
-  width: 100%; }
+  width: 100%; 
+}
 
 #deals-form button:hover {
   background: #fff;
   color: #CD212A;
-  transition: .3s ease background; }
+  transition: .3s ease background; 
+}
 
 #deals-form button:focus, #deals-form button:active {
+  outline-color: invert;
+  background: #fff;
+  color: #CD212A; 
+}
+
+
+
+
+#career-application-form {
+  margin: 0 auto 30px auto;
+  max-width: 380px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+#career-application-form h3 {
+  margin: 0 auto; 
+  padding: 0 0 15px 0;
+}
+
+#career-application-form label {
+  color: #666;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-align: center; }
+
+#career-application-form input,
+#career-application-form button {
+  box-sizing: border-box;
+  font-size: 14px;
+  padding: 4px;
+  width: 100%;
+  max-width: 380px;
+  margin-bottom: 20px; }
+
+#career-application-form input {
+  border: 1px solid #e6e6e6;
+  outline: 0;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1);
+  padding: 5px; }
+
+#career-application-form input:focus, #career-application-form input:active {
+  -webkit-appearance: none;
+  border: 0px solid #cd212a;
+  box-shadow: inset 0 0 2px #cd212a, 0 0 4px #cd212a;
+  background-color: #fff;
+  outline-color: #cd212a;
+  outline-width: medium; }
+
+#career-application-form button {
+  background: #CD212A;
+  border: 1px solid #CD212A;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s ease background;
+  width: 100%; }
+
+#career-application-form button:hover {
+  background: #fff;
+  color: #CD212A;
+  transition: .3s ease background; }
+
+#career-application-form button:focus, #career-application-form button:active {
   outline-color: invert;
   background: #fff;
   color: #CD212A; }
@@ -1340,6 +1419,10 @@ ul.nav-menu {
 }
 
 @media only screen and (min-width: 993px) {
+  .modal{
+    width: 55%;
+  }
+
   .about, .career-content {
     padding-left: 15%;
     padding-right: 15%;
