@@ -11,7 +11,10 @@ const mainContent = document.querySelector('#mainContent');
 const scrollContainer = document.getElementById("scrollingSegment");
 const navBar = document.querySelector('#header');
 const logo = document.querySelector('#header .logo');
-const footer= document.querySelector('#footer');
+const footer = document.querySelector('#footer');
+const careersApplicationBtn = document.querySelector('#careers-application-btn');
+const careersApplication = document.querySelector('#career-application-form');
+const printApplicationBtn = document.querySelector('#print-application-btn');
 
 const locations = [
   {title: "Dominic's Pizza & Pasta I", lat: 26.369428, lng:  -80.1726854, address: {street:"8177 Glades Rd #19", city:"Boca Raton", state:"Florida"}, number: '(561) 487-3186', addressURL: 'https://goo.gl/maps/TsiBJ26DMMoG2Uj66'},
@@ -59,6 +62,167 @@ mainContent.addEventListener('click', function(e){
   footer.classList.remove('hamburger-opened');
   navMenuLargeScreen.classList.add('hidden');
 });
+
+
+careersApplicationBtn.addEventListener('click', function(e){
+  careersApplication.classList.toggle('none');
+})
+
+console.log(careersApplication);
+console.log(careersApplicationBtn);
+console.log(printApplicationBtn);
+printApplicationBtn.addEventListener('click',function(e){
+  let form = document.getElementById("career-application-form");
+  let name = form.name.value;
+  let address = form.address.value;
+  let phoneNumber = form.phonenumber.value;
+  let cellPhone = form.cellnumber.value;
+  let position = form.position.value;
+  let wageRequirement = form.wagerequirement.value;
+  let fullPartTime = form.fullparttime.value;
+  let firstTimeInput = form.firsttimeinput.value;
+  let firstTimeYesInput = form.firsttimeyesinput.value;
+  let currentlyEmployed = form.currentlyemployed.value;
+  let currentlyEmployedYes = form.currentlyemployedyes.value;
+  let terminated = form.terminated.value;
+  let age = form.age.value;
+  let misdemeanorFelony = form.misdemeanorfelony.value;
+  let tobaccoAlcoholViolation = form.tobaccoalcoholviolation.value;
+  let drugsUse = form.drugsuse.value;
+  let drugsTest = form.drugstest.value;
+  let heavyLifting = form.heavylifting.value;
+  let healthConditions = form.healthconditions.value;
+  let highSchool = form.highschool.value;
+  let highSchoolStartDate = form.highschoolstartdate.value;
+  let highSchoolEndDate = form.highschoolenddate.value;
+  let highSchoolGraduate = form.highschoolgraduate.value;
+  let college = form.college.value;
+  let collegeStartDate = form.collegestartdate.value;
+  let collegeEndDate = form.collegeenddate.value;
+  let collegeGraduate = form.collegegraduate.value;
+  let tradeSchool = form.tradeschool.value;
+  let tradeSchoolStartDate = form.tradeschoolstartdate.value;
+  let tradeSchoolEndDate = form.tradeschoolenddate.value;
+  let tradeSchoolGraduate = form.tradeschoolgraduate.value;
+  let attendingSchool = form.attendingschool.value;
+  let previousEmploymentName1 = form.previousemploymentname1.value;
+  let previousEmploymentPosition1 = form.previousemploymentposition1.value;
+  let previousEmploymentWage1 = form.previousemploymentwage1.value;
+  let previousEmploymentStartDate1 = form.previousemploymentstartdate1.value;
+  let previousEmploymentEndDate1 = form.previousemploymentenddate1.value;
+  let previousEmploymentLeft1 = form.previousemploymentleft1.value;
+  let previousEmploymentResponsibilities1 = form.previousemploymentresponsibilities1.value;
+  let previousEmploymentContactPermision1 = form.previousemploymentcontactpermision1.value;
+  let previousEmploymentContactName1 = form.previousemploymentcontactname1.value;
+  let previousEmploymentContactNumber1 = form.previousemploymentcontactnumber1.value;
+  let previousEmploymentName2 = form.previousemploymentname2.value;
+  let previousEmploymentPosition2 = form.previousemploymentposition2.value;
+  let previousEmploymentWage2 = form.previousemploymentwage2.value;
+  let previousEmploymentStartDate2 = form.previousemploymentstartdate2.value;
+  let previousEmploymentEndDate2 = form.previousemploymentenddate2.value;
+  let previousEmploymentLeft2 = form.previousemploymentleft2.value;
+  let previousEmploymentResponsibilities2 = form.previousemploymentresponsibilities2.value;
+  let previousEmploymentContactPermision2 = form.previousemploymentcontactpermision2.value;
+  let previousEmploymentContactName2 = form.previousemploymentcontactname2.value;
+  let previousEmploymentContactNumber2 = form.previousemploymentcontactnumber2.value;
+  let previousEmploymentName3 = form.previousemploymentname3.value;
+  let previousEmploymentPosition3 = form.previousemploymentposition3.value;
+  let previousEmploymentWage3 = form.previousemploymentwage3.value;
+  let previousEmploymentStartDate3 = form.previousemploymentstartdate3.value;
+  let previousEmploymentEndDate3 = form.previousemploymentenddate3.value;
+  let previousEmploymentLeft3 = form.previousemploymentleft3.value;
+  let previousEmploymentResponsibilities3 = form.previousemploymentresponsibilities3.value;
+  let previousEmploymentContactPermision3 = form.previousemploymentcontactpermision3.value;
+  let previousEmploymentContactName3 = form.previousemploymentcontactname3.value;
+  let previousEmploymentContactNumber3 = form.previousemploymentcontactnumber3.value;
+  let refernceName1 = form.referncename1.value;
+  let refernceNumber1 = form.referncenumber1.value;
+  let refernceRelationship1 = form.referncerelationship1.value;
+  let refernceName2 = form.referncename2.value;
+  let refernceNumber2 = form.referncenumber2.value;
+  let refernceRelationship2 = form.referncerelationship2.value;
+  let refernceName3 = form.referncename3.value;
+  let refernceNumber3 = form.referncenumber3.value;
+  let refernceRelationship3 = form.referncerelationship3.value;
+  let whiteWine = form.whitewine.value;
+  let redWine = form.redwine.value;
+  let blushWine = form.blushwine.value;
+  let italianDishes = form.italiandishes.value;
+
+  console.log(name);
+  console.log(address);
+  console.log(phoneNumber);
+  console.log(cellPhone);
+  console.log(position);
+  console.log(wageRequirement);
+  console.log(fullPartTime);
+  console.log(firstTimeInput);
+  console.log(firstTimeYesInput);
+  console.log(currentlyEmployed);
+  console.log(currentlyEmployedYes);
+  console.log(terminated);
+  console.log(age);
+  console.log(misdemeanorFelony);
+  console.log(tobaccoAlcoholViolation);
+  console.log(drugsUse);
+  console.log(drugsTest);
+  console.log(heavyLifting);
+  console.log(healthConditions);
+  console.log(highSchool);
+  console.log(highSchoolStartDate);
+  console.log(highSchoolEndDate);
+  console.log(highSchoolGraduate);
+  console.log(college);
+  console.log(collegeStartDate);
+  console.log(collegeEndDate);
+  console.log(collegeGraduate);
+  console.log(tradeSchool);
+  console.log(tradeSchoolStartDate);
+  console.log(tradeSchoolEndDate);
+  console.log(tradeSchoolGraduate);
+  console.log(attendingSchool);
+  console.log(previousEmploymentName1);
+  console.log(previousEmploymentPosition1);
+  console.log(previousEmploymentWage1);
+  console.log(previousEmploymentStartDate1);
+  console.log(previousEmploymentEndDate1);
+  console.log(previousEmploymentLeft1);
+  console.log(previousEmploymentResponsibilities1);
+  console.log(previousEmploymentContactPermision1);
+  console.log(previousEmploymentContactName1);
+  console.log(previousEmploymentContactNumber1);
+  console.log(previousEmploymentName2);
+  console.log(previousEmploymentPosition2);
+  console.log(previousEmploymentWage2);
+  console.log(previousEmploymentStartDate2);
+  console.log(previousEmploymentEndDate2);
+  console.log(previousEmploymentLeft2);
+  console.log(previousEmploymentName3);
+  console.log(previousEmploymentPosition3);
+  console.log(previousEmploymentWage3);
+  console.log(previousEmploymentStartDate3);
+  console.log(previousEmploymentEndDate3);
+  console.log(previousEmploymentLeft3);
+  console.log(previousEmploymentResponsibilities3);
+  console.log(previousEmploymentContactPermision3);
+  console.log(previousEmploymentContactName3);
+  console.log(previousEmploymentContactNumber3);
+  console.log(refernceName1);
+  console.log(refernceNumber1);
+  console.log(refernceRelationship1);
+  console.log(refernceName2);
+  console.log(refernceNumber2);
+  console.log(refernceRelationship2);
+  console.log(refernceName3);
+  console.log(refernceNumber3);
+  console.log(refernceRelationship3);
+  console.log(whiteWine);
+  console.log(redWine);
+  console.log(blushWine);
+  console.log(italianDishes);
+
+  window.print();
+})
 
 
 window.onload = function() {
@@ -251,3 +415,11 @@ if(pathName ==  "/"){
   }
 
 };
+
+function myPrint(frm) {
+  var printdata = document.getElementById(frm);
+  newwin = window.open("");
+  newwin.document.write(printdata.outerHTML);
+  newwin.print();
+  newwin.close();
+}

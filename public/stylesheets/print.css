@@ -1,0 +1,85 @@
+/* *{
+  display: block;
+} */
+
+.none.print{
+  display: block!important;
+}
+
+body{
+  width: 100vw;
+  margin: 0;
+  float: none;
+  font-family: Georgia, serif;
+}
+
+header, #covid-modal, nav, #leftNav, #rightNav, footer, .career{
+  display:none;
+}
+
+div.none.print{
+  min-height: 1em;
+}
+
+label{
+  /* font-size: 12pt; */
+}
+
+input{
+  border: none;
+  border-bottom: 2px solid black;
+  min-height: 2em;
+}
+
+table, tbody, th, td {
+  border-collapse: collapse;
+}
+
+table{
+  margin: 0 2.5vw;
+}
+
+th, td{
+  width: calc(95vw/7);
+  height: 50px;
+  border: 1px solid black;
+}
+
+td{
+  height: 60px;
+}
+
+#career-application-form > *{
+  display: inline;
+}
+
+#social-security-input, #social-security-input-label{
+  display: inline;
+}
+
+#social-security-input{
+  color: white;
+}
+
+.print-line-break::after{
+  content: '\a'; 
+  white-space: pre;
+}
+
+/* .print-inline{
+  display: inline-block;
+} */
+
+h3{
+  /* margin: 10px 0 0 ; */
+}
+
+hr{
+  display: block;
+  height: 1px;
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-top: solid 1px #aaa;
+}
+

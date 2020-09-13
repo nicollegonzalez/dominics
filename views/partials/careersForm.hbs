@@ -1,201 +1,500 @@
-<form id="career-application-form" action="/deals-user-info" method="POST">
-    <h3>Employment Application</h3>
+<form id="career-application-form" class="none" method="post">
 
+    <h3>Employment Application</h3><br class="none print">
+    
+    <div class="none print"></div>
     <label for="name-input">Name:</label>
-    <input id="name-input" type="text" name="name"required>
+    <input id="name-input" type="text" name="name" size="50" maxlength="50"required>
 
-    {{!-- <label for="social-security-input">Social Security:</label> --}}
-    {{!-- <input id="social-security-input" type="text" name="social-security"required> --}}
+    <label id="social-security-input-label" for="social-security-input" class="none">Social Security:</label>
+    <input id="social-security-input" class="none" type="text" size="27" maxlength="4"readonly><br class="none print">
 
     <label for="address-input">Address:</label>
-    <input id="address-input" type="text" name="address"required>
+    <input id="address-input" type="text" name="address" size="33" maxlength="30"required>
+
+    <label for="city-input">City:</label>
+    <input id="city-input" type="text" name="city" size="19" maxlength="20"required>
+
+    <label for="state-input">State:</label>
+    <input id="state-input" type="text" name="state" size="5" maxlength="2"required>
+
+    <label for="zip-code-input">Zip Code:</label>
+    <input id="zip-code-input" type="text" name="zip-code" size="8" maxlength="6"required><br class="none print">
 
     <label for="phone-number-input">Phone Number:</label>
-    <input id="phone-number-input" type="text" name="phone-number"required>
+    <input id="phone-number-input" type="tel" name="phonenumber" size="15" maxlength="12"required>
 
     <label for="cell-number-input">Cell Number:</label>
-    <input id="cell-number-input" type="text" name="cell-number">
+    <input id="cell-number-input" type="tel" name="cellnumber" size="15" maxlength="12">
 
     <label for="email-input">Email:</label>
-    <input id="email-input" type="email" name="email" required>
+    <input id="email-input" type="email" name="email" size="32" maxlength="32"required><br class="none print">
 
     <label for="position-input">Position Applying For:</label>
-    <input id="position-input" type="text" name="position" required>
+    <input id="position-input" type="text" name="position" size="23" maxlength="20"required>
 
-    <label for="wage-requirement-input">Wage Desire:</label>
-    <input id="wage-requirement-input" type="text" name="wage-requirement" required>
+    <label for="full-part-time-input"> Full or Part Time:</label>
+    <input id="full-part-time-input" type="text" name="fullparttime" size="12" maxlength="10"required>
 
-    <label for="full-part-time-input">Full or Part Time:</label>
-    <input id="full-part-time-input" type="text" name="full-part-time" required>
+    <label for="wage-requirement-input">Wage Desired: $</label>
+    <input id="wage-requirement-input" type="text" name="wagerequirement" size="4" maxlength="2"required>
+    <label for="wage-requirement-input">/hr </label><br class="none print">
 
     <label for="first-time-input">Have you ever applied to this company before?</label>
-    <input id="first-time-input" type="text" name="first-time-input" required>
+    <input id="first-time-input"type="text" name="firsttimeinput" size="4" maxlength="4"required>
 
     <label for="first-time-yes-input">If Yes, what date and location?</label>
-    <input id="first-time-yes-input" type="text" name="first-time-yes-input" required>
+    <input id="first-time-yes-input" type="text" name="firsttimeyesinput" size="23" maxlength="23"><br class="none print">
 
-    <label for="currently-employed-input">Are you currently employed?</label>
-    <input id="currently-employed-input" type="text" name="currently-employed" required>
+    <label for="currently-employed-input" >Are you currently employed?</label>
+    <input id="currently-employed-input" type="text" name="currentlyemployed" size="4" maxlength="4"required>
 
     <label for="currently-employed-yes-input">If Yes, may we contact your employer?</label>
-    <input id="currently-employed-yes-input" type="text" name="currently-employed-yes">
+    <input id="currently-employed-yes-input" type="text" name="currentlyemployedyes" size="4" maxlength="4"><br class="none print">
 
     <label for="terminated-input">Have you ever been terminated? If so, please explain:</label>
-    <input id="terminated-input" type="text" name="terminated" required>
+    <input id="terminated-input"type="text" name="terminated" size="104" maxlength="100"required>
+
+    <div class="none print"></div>
+    <table class="none print">
+        <span class="none print">What is your avaliability? (Days and Time)</span>
+        <tr>
+            <th>Sunday</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <div class="none print"></div>
 
     <label for="age-input">Are you over the age of 18?</label>
-    <input id="age-input" type="text" name="age" required>
+    <input id="age-input"type="text" name="age" size="4" maxlength="4"required><br class="none print">
+
+    <label for="transportation-input" >If hired, do you have reliable transportation to work?</label>
+    <input id="transportation-input" type="text" name="transportation" size="4" maxlength="4"required><br class="none print">
 
     <label for="misdemeanor-felony-input">Have you been convicted of a misdemeanor or felony in the last 5 years? If so, please explain:</label>
-    <input id="misdemeanor-felony-input" type="text" name="misdemeanor-felony" required>
+    <input id="misdemeanor-felony-input" type="text" name="misdemeanorfelony" size="104" maxlength="100"required>
 
     <label for="tobacco-alcohol-violation-input">In the past, have you been disciplined for violating company policies forbiding the use of alcohol or tobacco products?</label>
-    <input id="tobacco-alcohol-violation-input" type="text" name="tobacco-alcohol-violation" required>
+    <input id="tobacco-alcohol-violation-input" type="text" name="tobaccoalcoholviolation" size="4" maxlength="4"required><br class="none print">
 
     <label for="drug-use-input">Do you use illegal drugs?</label>
-    <input id="drug-use-input" type="text" name="drugs-use" required>
+    <input id="drug-use-input" type="text" name="drugsuse" size="4" maxlength="4"required><br class="none print">
 
-    <label for="drug-test-input">If hired, are you be willing to take a drug test?</label>
-    <input id="drug-test-input" type="text" name="drugs-test" required>
+    <label for="drug-test-input">If hired, are you willing to take a drug test?</label>
+    <input id="drug-test-input" type="text" name="drugstest" size="4" maxlength="4"required><br class="none print">
 
     <label for="heavy-lifting-input">As an employee, you may be required to lift up to 50lbs or more. Are you capable of doing so on a daily basis?</label>
-    <input id="heavy-lifting-input" type="text" name="heavy-lifting" required>
+    <input id="heavy-lifting-input" type="text" name="heavylifting" size="4" maxlength="4"required><br class="none print">
 
     <label for="health-conditions-input">Do you have any health conditions that could effect the position you are applying for? Explain:</label>
-    <input id="health-conditions-input" type="text" name="health-conditions" required>
+    <input id="health-conditions-input" type="text" name="healthconditions" size="104" maxlength="100"required><br class="none print">
+
+    <hr class="none print">
+    <h3>Education</h3><br class="none print">
+
+    <div class="none print"></div>
+    <label for="high-school-input">High School:</label>
+    <input id="high-school-input" type="text" name="highschool">
+    <label for="high-school-dates-input">Dates:</label>
+    <input id="high-school-start-date-input" type="date" name="highschoolstartdate">
+    <span>-</span>
+    <input id="high-school-end-date-input" type="date" name="highschoolenddate"><br class="none print">
+    <label for="high-school-graduate-input">Did you graduate?</label>
+    <input id="high-school-graduate-input" type="text" name="highschoolgraduate" size="4" maxlength="3"><br class="none print">
+
+    <div class="none print"></div>
+    <label for="college-input">College:</label>
+    <input id="college-input" type="text" name="college">
+    <label for="college-dates-input">Dates:</label>
+    <input id="college-start-date-input" type="date" name="collegestartdate">
+    <span>-</span>
+    <input id="college-end-date-input" type="date" name="collegeenddate"><br class="none print">
+    <label for="college-graduate-input">Did you graduate?</label>
+    <input id="college-graduate-input" type="text" name="collegegraduate" size="4" maxlength="3"><br class="none print">
+
+    <div class="none print"></div>
+    <label for="trade-school-input">Trade School:</label>
+    <input id="trade-school-input" type="text" name="tradeschool">
+    <label for="trade-school-dates-input">Dates:</label>
+    <input id="trade-school-start-date-input" type="date" name="tradeschoolstartdate">
+    <span>-</span>
+    <input id="trade-school-end-date-input" type="date" name="tradeschoolenddate"><br class="none print">
+    <label for="trade-school-graduate-input">Did you graduate?</label>
+    <input id="trade-school-graduate-input" type="text" name="tradeschoolgraduate" size="4" maxlength="3"><br class="none print">
+
+    <div class="none print"></div>
+    <label for="attending-school-input">Are you currently attending school?</label>
+    <input id="attending-school-input" type="text" name="attendingschool" required><br class="none print">
+
+    <hr class="none print">
+    <h3>Previous Employment</h3><br class="none print">
+
+    <div class="none print"></div>
+    <label for="previous-employment-name-1-input">Name of Business:</label>
+    <input id="previous-employment-name-1-input" type="text" name="previousemploymentname1">
+    <label for="previous-employment-position-1-input">Position:</label>
+    <input id="previous-employment-position-1-input" type="text" name="previousemploymentposition1">
+    <label for="previous-employment-wage-1-input">Wage:</label>
+    <input id="previous-employment-wage-1-input" type="text" name="previousemploymentwage1">
+    <label for="previous-employment-start-date-1-input">Dates:</label>
+    <input id="previous-employment-start date-1-input" type="date" name="previousemploymentstartdate1">
+    <span>-</span>
+    <input id="previous-employment-end date-1-input" type="date" name="previousemploymentenddate1">
+    <label for="previous-employment-left-1-input">Reason for leaving:</label>
+    <input id="previous-employment-left-1-input" type="text" name="previousemploymentleft1">
+    <label for="previous-employment-responsibilities-1-input">Responsibilities:</label>
+    <input id="previous-employment-responsibilities-1-input" type="text" name="previousemploymentresponsibilities1" size="104" maxlength="100">
+    <label for="previous-employment-contact-permision-1-input">May we contact?</label>
+    <input id="previous-employment-contact-permision-1-input" type="text" name="previousemploymentcontactpermision1">
+    <label for="previous-employment-contact-name-1-input">Contact Name:</label>
+    <input id="previous-employment-contact-name-1-input" type="text" name="previousemploymentcontactname1">
+    <label for="previous-employment-contact-number-1-input">Contact Name:</label>
+    <input id="previous-employment-contact-number-1-input" type="text" name="previousemploymentcontactnumber1"><br class="none print">
+
+    <div class="none print"></div>
+    <label for="previous-employment-name-2-input">Name of Business:</label>
+    <input id="previous-employment-name-2-input" type="text" name="previousemploymentname2">
+    <label for="previous-employment-position-2-input">Position:</label>
+    <input id="previous-employment-position-2-input" type="text" name="previousemploymentposition2">
+    <label for="previous-employment-wage-2-input">Wage:</label>
+    <input id="previous-employment-wage-2-input" type="text" name="previousemploymentwage2">
+    <label for="previous-employment-start-date-2-input">Dates:</label>
+    <input id="previous-employment-start date-2-input" type="date" name="previousemploymentstartdate2">
+    <span>-</span>
+    <input id="previous-employment-end date-2-input" type="date" name="previousemploymentenddate2">
+    <label for="previous-employment-left-2-input">Reason for leaving:</label>
+    <input id="previous-employment-left-2-input" type="text" name="previousemploymentleft2">
+    <label for="previous-employment-responsibilities-2-input">Responsibilities:</label>
+    <input id="previous-employment-responsibilities-2-input" type="text" name="previousemploymentresponsibilities2" size="104" maxlength="100">
+    <label for="previous-employment-contact-permision-2-input">May we contact?</label>
+    <input id="previous-employment-contact-permision-2-input" type="text" name="previousemploymentcontactpermision2">
+    <label for="previous-employment-contact-name-2-input">Contact Name:</label>
+    <input id="previous-employment-contact-name-2-input" type="text" name="previousemploymentcontactname2">
+    <label for="previous-employment-contact-number-2-input">Contact Name:</label>
+    <input id="previous-employment-contact-number-2-input" type="text" name="previousemploymentcontactnumber2"><br class="none print">
+
+    <div class="none print"></div>
+    <label for="previous-employment-name-3-input">Name of Business:</label>
+    <input id="previous-employment-name-3-input" type="text" name="previousemploymentname3">
+    <label for="previous-employment-position-3-input">Position:</label>
+    <input id="previous-employment-position-3-input" type="text" name="previousemploymentposition3">
+    <label for="previous-employment-wage-3-input">Wage:</label>
+    <input id="previous-employment-wage-3-input" type="text" name="previousemploymentwage3">
+    <label for="previous-employment-start-date-3-input">Dates:</label>
+    <input id="previous-employment-start date-3-input" type="date" name="previousemploymentstartdate3">
+    <span>-</span>
+    <input id="previous-employment-end date-3-input" type="date" name="previousemploymentenddate3">
+    <label for="previous-employment-left-3-input">Reason for leaving:</label>
+    <input id="previous-employment-left-3-input" type="text" name="previousemploymentleft3">
+    <label for="previous-employment-responsibilities-3-input">Responsibilities:</label>
+    <input id="previous-employment-responsibilities-3-input" type="text" name="previousemploymentresponsibilities3" size="104" maxlength="100">
+    <label for="previous-employment-contact-permision-3-input">May we contact?</label>
+    <input id="previous-employment-contact-permision-3-input" type="text" name="previousemploymentcontactpermision3">
+    <label for="previous-employment-contact-name-3-input">Contact Name:</label>
+    <input id="previous-employment-contact-name-3-input" type="text" name="previousemploymentcontactname3">
+    <label for="previous-employment-contact-number-3-input">Contact Name:</label>
+    <input id="previous-employment-contact-number-3-input" type="text" name="previousemploymentcontactnumber3"><br class="none print">
+    
+    <hr class="none print">
+    <h4>Please list references of people you have known for at least one year:</h4><br class="none print">
+
+    <div class="none print"></div>
+    <label for="refernce-name-1-input">Name:</label>
+    <input id="refernce-name-1-input" type="text" name="referncename1"required>
+    <label for="refernce-number-1-input">Number:</label>
+    <input id="refernce-number-1-input" type="text" name="referncenumber1"required>
+    <label for="refernce-relationship-1-input">Relation to you:</label>
+    <input id="refernce-relationship-1-input" type="text" name="referncerelationship1"required><br class="none print">
+
+    <div class="none print"></div>
+    <label for="refernce-name-2-input">Name:</label>
+    <input id="refernce-name-2-input" type="text" name="referncename2">
+    <label for="refernce-number-2-input">Number:</label>
+    <input id="refernce-number-2-input" type="text" name="referncenumber2">
+    <label for="refernce-relationship-2-input">Relation to you:</label>
+    <input id="refernce-relationship-2-input" type="text" name="referncerelationship2"><br class="none print">
+
+    <div class="none print"></div>
+    <label for="refernce-name-3-input">Name:</label>
+    <input id="refernce-name-3-input" type="text" name="referncename3">
+    <label for="refernce-number-3-input">Number:</label>
+    <input id="refernce-number-3-input" type="text" name="referncenumber3">
+    <label for="refernce-relationship-3-input">Relation to you:</label>
+    <input id="refernce-relationship-3-input" type="text" name="referncerelationship3"><br class="none print">
+
+    <hr class="none print">
+    <h5>If applying to a server position you will need to be familiar with wine, champagne, and Italian menu items. <span>Please anwser the following:</span></h5><br class="none print">
+
+    <div class="none print"></div>
+    <label for="white-wine-input">Name 4 types of white wine:</label>
+    <input id="white-wine-input" type="text" name="whitewine"><br class="none print">
+    <label for="red-wine-input">Name 4 types of red wine:</label>
+    <input id="red-wine-input" type="text" name="redwine"><br class="none print">
+    <label for="blush-wine-input">Name 4 types of blush wine:</label>
+    <input id="blush-wine-input" type="text" name="blushwine"><br class="none print">
+    <label for="italian-dishes-input">Name 4 types of italian dishes:</label><br class="none print">
+    <input id="italian-dishes-input" type="text" name="italiandishes" size="103"><br class="none print">
+
+    <button id="save-application-btn" type="submit">Save</button>
+
+    <button id="print-application-btn" type="button">Print Application</button>
+</form>
+
+
+{{!-- <form id="career-application-form" class="none" method="post">
+    <h3>Employment Application</h3>
+
+    <div>
+         <label for="name-input">Name:</label>
+        <input id="name-input" type="text" name="name" size="50" maxlength="50"required>
+
+        <label id="social-security-input-label" for="social-security-input" class="none">Social Security:</label>
+        <input id="social-security-input" class="none" type="text" size="27" maxlength="4"readonly>
+    </div>
+    <div>
+        <label for="address-input">Address:</label>
+        <input id="address-input" type="text" name="address" size="33" maxlength="30"required>
+
+        <label for="city-input">City:</label>
+        <input id="city-input" type="text" name="city" size="19" maxlength="20"required>
+
+        <label for="state-input">State:</label>
+        <input id="state-input" type="text" name="state" size="5" maxlength="2"required>
+
+        <label for="zip-code-input">Zip Code:</label>
+        <input id="zip-code-input" type="text" name="zip-code" size="8" maxlength="6"required>
+    </div>
+
+    <div>
+        <label for="phone-number-input">Phone Number:</label>
+        <input id="phone-number-input" type="tel" name="phonenumber" size="15" maxlength="12"required>
+
+        <label for="cell-number-input">Cell Number:</label>
+        <input id="cell-number-input" type="tel" name="cellnumber" size="15" maxlength="12">
+
+        <label for="email-input">Email:</label>
+        <input id="email-input" type="email" name="email" size="32" maxlength="32"required>
+    </div>
+
+    <div>
+        <label for="position-input">Position Applying For:</label>
+        <input id="position-input" type="text" name="position" size="23" maxlength="20"required>
+
+        <label for="wage-requirement-input">Wage Desired: $</label>
+        <input id="wage-requirement-input" type="text" name="wagerequirement" size="4" maxlength="2"required>
+        <label for="wage-requirement-input">/hr </label>
+
+        <label for="full-part-time-input"> Full or Part Time:</label>
+        <input id="full-part-time-input" type="text" name="fullparttime" size="12" maxlength="10"required>
+    </div>
+
+    <div>
+        <label for="first-time-input">Have you ever applied to this company before?</label>
+        <input id="first-time-input"type="text" name="firsttimeinput" size="4" maxlength="4"required>
+
+        <label for="first-time-yes-input">If Yes, what date and location?</label>
+        <input id="first-time-yes-input" type="text" name="firsttimeyesinput" size="23" maxlength="23">
+    </div>
+
+    <div>
+        <label for="currently-employed-input" >Are you currently employed?</label>
+        <input id="currently-employed-input" type="text" name="currentlyemployed" size="4" maxlength="4"required>
+
+        <label for="currently-employed-yes-input">If Yes, may we contact your employer?</label>
+        <input id="currently-employed-yes-input" type="text" name="currentlyemployedyes" size="4" maxlength="4">
+    </div>
+
+    <div>
+        <label for="terminated-input">Have you ever been terminated? If so, please explain:</label>
+        <input id="terminated-input"type="text" name="terminated" size="104" maxlength="100"required>
+    </div>
+
+    <div>
+        <label for="age-input">Are you over the age of 18?</label>
+        <input id="age-input"type="text" name="age" size="4" maxlength="4"required>
+    </div>
+
+    <div>
+        <label for="transportation-input" >If hired, do you have reliable transportation to work?</label>
+        <input id="transportation-input" type="text" name="transportation" size="4" maxlength="4"required>
+    </div>
+
+    <div>
+        <label for="misdemeanor-felony-input">Have you been convicted of a misdemeanor or felony in the last 5 years? If so, please explain:</label>
+        <input id="misdemeanor-felony-input" type="text" name="misdemeanorfelony" size="104" maxlength="100"required>
+    </div>
+
+    <div>
+        <label for="tobacco-alcohol-violation-input">In the past, have you been disciplined for violating company policies forbiding the use of alcohol or tobacco products?</label>
+        <input id="tobacco-alcohol-violation-input" type="text" name="tobaccoalcoholviolation" size="4" maxlength="4"required>
+    </div>
+
+    <div>
+        <label for="drug-use-input">Do you use illegal drugs?</label>
+        <input id="drug-use-input" type="text" name="drugsuse" size="4" maxlength="4"required>
+    </div>
+
+    <div>
+        <label for="drug-test-input">If hired, are you willing to take a drug test?</label>
+        <input id="drug-test-input" type="text" name="drugstest" size="4" maxlength="4"required>
+    </div>
+
+    <div>
+        <label for="heavy-lifting-input">As an employee, you may be required to lift up to 50lbs or more. Are you capable of doing so on a daily basis?</label>
+        <input id="heavy-lifting-input" type="text" name="heavylifting" size="4" maxlength="4"required>
+    </div>
+
+    <div>
+        <label for="health-conditions-input">Do you have any health conditions that could effect the position you are applying for? Explain:</label>
+        <input id="health-conditions-input" type="text" name="healthconditions" size="104" maxlength="100"required>
+    </div>
 
     <h3>Education</h3>
 
     <label for="high-school-input">High School:</label>
-    <input id="high-school-input" type="text" name="high-school">
+    <input id="high-school-input" type="text" name="highschool">
     <label for="high-school-dates-input">Dates:</label>
-    <input id="high-school-start-date-input" type="date" name="high-school-start-date">
+    <input id="high-school-start-date-input" type="date" name="highschoolstartdate">
     <span>-</span>
-    <input id="high-school-end-date-input" type="date" name="high-school-end-date">
+    <input id="high-school-end-date-input" type="date" name="highschoolenddate">
     <label for="high-school-graduate-input">Did you graduate?</label>
-    <input id="high-school-graduate-input" type="text" name="high-school-graduate">
+    <input id="high-school-graduate-input" type="text" name="highschoolgraduate">
 
     <label for="college-input">College:</label>
     <input id="college-input" type="text" name="college">
     <label for="college-dates-input">Dates:</label>
-    <input id="college-start-date-input" type="date" name="college-start-date">
+    <input id="college-start-date-input" type="date" name="collegestartdate">
     <span>-</span>
-    <input id="college-end-date-input" type="date" name="college-end-date">
+    <input id="college-end-date-input" type="date" name="collegeenddate">
     <label for="college-graduate-input">Did you graduate?</label>
-    <input id="college-graduate-input" type="text" name="college-graduate">
+    <input id="college-graduate-input" type="text" name="collegegraduate">
 
     <label for="trade-school-input">Trade School:</label>
-    <input id="trade-school-input" type="text" name="trade-school">
+    <input id="trade-school-input" type="text" name="tradeschool">
     <label for="trade-school-dates-input">Dates:</label>
-    <input id="trade-school-start-date-input" type="date" name="trade-school-start-date">
+    <input id="trade-school-start-date-input" type="date" name="tradeschoolstartdate">
     <span>-</span>
-    <input id="trade-school-end-date-input" type="date" name="trade-school-end-date">
+    <input id="trade-school-end-date-input" type="date" name="tradeschoolenddate">
     <label for="trade-school-graduate-input">Did you graduate?</label>
-    <input id="trade-school-graduate-input" type="text" name="trade-school-graduate">
+    <input id="trade-school-graduate-input" type="text" name="tradeschoolgraduate">
 
     <label for="attending-school-input">Are you currently attending school?</label>
-    <input id="attending-school-input" type="text" name="attending-school" required>
+    <input id="attending-school-input" type="text" name="attendingschool" required>
 
     <h3>Previous Employment</h3>
 
     <label for="previous-employment-name-1-input">Name of Business:</label>
-    <input id="previous-employment-name-1-input" type="text" name="previous-employment-name-1">
+    <input id="previous-employment-name-1-input" type="text" name="previousemploymentname1">
     <label for="previous-employment-position-1-input">Position:</label>
-    <input id="previous-employment-position-1-input" type="text" name="previous-employment-position-1">
+    <input id="previous-employment-position-1-input" type="text" name="previousemploymentposition1">
     <label for="previous-employment-wage-1-input">Wage:</label>
-    <input id="previous-employment-wage-1-input" type="text" name="previous-employment-wage-1">
+    <input id="previous-employment-wage-1-input" type="text" name="previousemploymentwage1">
     <label for="previous-employment-start-date-1-input">Dates:</label>
-    <input id="previous-employment-start date-1-input" type="date" name="previous-employment-start-date-1">
+    <input id="previous-employment-start date-1-input" type="date" name="previousemploymentstartdate1">
     <span>-</span>
-    <input id="previous-employment-end date-1-input" type="date" name="previous-employment-end-date-1">
+    <input id="previous-employment-end date-1-input" type="date" name="previousemploymentenddate1">
     <label for="previous-employment-left-1-input">Reason for leaving:</label>
-    <input id="previous-employment-left-1-input" type="text" name="previous-employment-left-1">
+    <input id="previous-employment-left-1-input" type="text" name="previousemploymentleft1">
     <label for="previous-employment-responsibilities-1-input">Responsibilities:</label>
-    <input id="previous-employment-responsibilities-1-input" type="text" name="previous-employment-responsibilities-1">
+    <input id="previous-employment-responsibilities-1-input" type="text" name="previousemploymentresponsibilities1">
     <label for="previous-employment-contact-permision-1-input">May we contact?</label>
-    <input id="previous-employment-contact-permision-1-input" type="text" name="previous-employment-contact-permision-1">
+    <input id="previous-employment-contact-permision-1-input" type="text" name="previousemploymentcontactpermision1">
     <label for="previous-employment-contact-name-1-input">Contact Name:</label>
-    <input id="previous-employment-contact-name-1-input" type="text" name="previous-employment-contact-name-1">
+    <input id="previous-employment-contact-name-1-input" type="text" name="previousemploymentcontactname1">
     <label for="previous-employment-contact-number-1-input">Contact Name:</label>
-    <input id="previous-employment-contact-number-1-input" type="text" name="previous-employment-contact-number-1">
+    <input id="previous-employment-contact-number-1-input" type="text" name="previousemploymentcontactnumber1">
 
     <label for="previous-employment-name-2-input">Name of Business:</label>
-    <input id="previous-employment-name-2-input" type="text" name="previous-employment-name-2">
+    <input id="previous-employment-name-2-input" type="text" name="previousemploymentname2">
     <label for="previous-employment-position-2-input">Position:</label>
-    <input id="previous-employment-position-2-input" type="text" name="previous-employment-position-2">
+    <input id="previous-employment-position-2-input" type="text" name="previousemploymentposition2">
     <label for="previous-employment-wage-2-input">Wage:</label>
-    <input id="previous-employment-wage-2-input" type="text" name="previous-employment-wage-2">
+    <input id="previous-employment-wage-2-input" type="text" name="previousemploymentwage2">
     <label for="previous-employment-start-date-2-input">Dates:</label>
-    <input id="previous-employment-start date-2-input" type="date" name="previous-employment-start-date-2">
+    <input id="previous-employment-start date-2-input" type="date" name="previousemploymentstartdate2">
     <span>-</span>
-    <input id="previous-employment-end date-2-input" type="date" name="previous-employment-end-date-2">
+    <input id="previous-employment-end date-2-input" type="date" name="previousemploymentenddate2">
     <label for="previous-employment-left-2-input">Reason for leaving:</label>
-    <input id="previous-employment-left-2-input" type="text" name="previous-employment-left-2">
+    <input id="previous-employment-left-2-input" type="text" name="previousemploymentleft2">
     <label for="previous-employment-responsibilities-2-input">Responsibilities:</label>
-    <input id="previous-employment-responsibilities-2-input" type="text" name="previous-employment-responsibilities-2">
+    <input id="previous-employment-responsibilities-2-input" type="text" name="previousemploymentresponsibilities2">
     <label for="previous-employment-contact-permision-2-input">May we contact?</label>
-    <input id="previous-employment-contact-permision-2-input" type="text" name="previous-employment-contact-permision-2">
+    <input id="previous-employment-contact-permision-2-input" type="text" name="previousemploymentcontactpermision2">
     <label for="previous-employment-contact-name-2-input">Contact Name:</label>
-    <input id="previous-employment-contact-name-2-input" type="text" name="previous-employment-contact-name-2">
+    <input id="previous-employment-contact-name-2-input" type="text" name="previousemploymentcontactname2">
     <label for="previous-employment-contact-number-2-input">Contact Name:</label>
-    <input id="previous-employment-contact-number-2-input" type="text" name="previous-employment-contact-number-2">
+    <input id="previous-employment-contact-number-2-input" type="text" name="previousemploymentcontactnumber2">
 
     <label for="previous-employment-name-3-input">Name of Business:</label>
-    <input id="previous-employment-name-3-input" type="text" name="previous-employment-name-3">
+    <input id="previous-employment-name-3-input" type="text" name="previousemploymentname3">
     <label for="previous-employment-position-3-input">Position:</label>
-    <input id="previous-employment-position-3-input" type="text" name="previous-employment-position-3">
+    <input id="previous-employment-position-3-input" type="text" name="previousemploymentposition3">
     <label for="previous-employment-wage-3-input">Wage:</label>
-    <input id="previous-employment-wage-3-input" type="text" name="previous-employment-wage-3">
+    <input id="previous-employment-wage-3-input" type="text" name="previousemploymentwage3">
     <label for="previous-employment-start-date-3-input">Dates:</label>
-    <input id="previous-employment-start date-3-input" type="date" name="previous-employment-start-date-3">
+    <input id="previous-employment-start date-3-input" type="date" name="previousemploymentstartdate3">
     <span>-</span>
-    <input id="previous-employment-end date-3-input" type="date" name="previous-employment-end-date-3">
+    <input id="previous-employment-end date-3-input" type="date" name="previousemploymentenddate3">
     <label for="previous-employment-left-3-input">Reason for leaving:</label>
-    <input id="previous-employment-left-3-input" type="text" name="previous-employment-left-3">
+    <input id="previous-employment-left-3-input" type="text" name="previousemploymentleft3">
     <label for="previous-employment-responsibilities-3-input">Responsibilities:</label>
-    <input id="previous-employment-responsibilities-3-input" type="text" name="previous-employment-responsibilities-3">
+    <input id="previous-employment-responsibilities-3-input" type="text" name="previousemploymentresponsibilities3">
     <label for="previous-employment-contact-permision-3-input">May we contact?</label>
-    <input id="previous-employment-contact-permision-3-input" type="text" name="previous-employment-contact-permision-3">
+    <input id="previous-employment-contact-permision-3-input" type="text" name="previousemploymentcontactpermision3">
     <label for="previous-employment-contact-name-3-input">Contact Name:</label>
-    <input id="previous-employment-contact-name-3-input" type="text" name="previous-employment-contact-name-3">
+    <input id="previous-employment-contact-name-3-input" type="text" name="previousemploymentcontactname3">
     <label for="previous-employment-contact-number-3-input">Contact Name:</label>
-    <input id="previous-employment-contact-number-3-input" type="text" name="previous-employment-contact-number-3">
+    <input id="previous-employment-contact-number-3-input" type="text" name="previousemploymentcontactnumber3">
     
     <h4>Please list references of people you have known for at least one year:</h4>
 
     <label for="refernce-name-1-input">Name:</label>
-    <input id="refernce-name-1-input" type="text" name="refernce-name-1"required>
+    <input id="refernce-name-1-input" type="text" name="referncename1"required>
     <label for="refernce-number-1-input">Number:</label>
-    <input id="refernce-number-1-input" type="text" name="refernce-number-1"required>
+    <input id="refernce-number-1-input" type="text" name="referncenumber1"required>
     <label for="refernce-relationship-1-input">Relation to you:</label>
-    <input id="refernce-relationship-1-input" type="text" name="refernce-relationship-1"required>
+    <input id="refernce-relationship-1-input" type="text" name="referncerelationship1"required>
 
     <label for="refernce-name-2-input">Name:</label>
-    <input id="refernce-name-2-input" type="text" name="refernce-name-2">
+    <input id="refernce-name-2-input" type="text" name="referncename2">
     <label for="refernce-number-2-input">Number:</label>
-    <input id="refernce-number-2-input" type="text" name="refernce-number-2">
+    <input id="refernce-number-2-input" type="text" name="referncenumber2">
     <label for="refernce-relationship-2-input">Relation to you:</label>
-    <input id="refernce-relationship-2-input" type="text" name="refernce-relationship-2">
+    <input id="refernce-relationship-2-input" type="text" name="referncerelationship2">
 
     <label for="refernce-name-3-input">Name:</label>
-    <input id="refernce-name-3-input" type="text" name="refernce-name-3">
+    <input id="refernce-name-3-input" type="text" name="referncename3">
     <label for="refernce-number-3-input">Number:</label>
-    <input id="refernce-number-3-input" type="text" name="refernce-number-3">
+    <input id="refernce-number-3-input" type="text" name="referncenumber3">
     <label for="refernce-relationship-3-input">Relation to you:</label>
-    <input id="refernce-relationship-3-input" type="text" name="refernce-relationship-3">
+    <input id="refernce-relationship-3-input" type="text" name="referncerelationship3">
 
     <h5>If applying to a server position you will need to be familiar with wine, champagne, and Italian menu items. <span>Please anwser the following:</span></h5>
 
     <label for="white-wine-input">Name 4 types of white wine:</label>
-    <input id="white-wine-input" type="text" name="white-wine">
+    <input id="white-wine-input" type="text" name="whitewine">
     <label for="red-wine-input">Name 4 types of red wine:</label>
-    <input id="red-wine-input" type="text" name="red-wine">
+    <input id="red-wine-input" type="text" name="redwine">
     <label for="blush-wine-input">Name 4 types of blush wine:</label>
-    <input id="blush-wine-input" type="text" name="blush-wine">
+    <input id="blush-wine-input" type="text" name="blushwine">
     <label for="italian-dishes-input">Name 4 types of italian dishes:</label>
-    <input id="italian-dishes-input" type="text" name="italian-dishes">
-    
+    <input id="italian-dishes-input" type="text" name="italiandishes">
 
+    <button id="save-application-btn" type="submit">Save</button>
 
-    <button type="submit">Print Application</button>
-</form>
+    <button id="print-application-btn" type="button">Print Application</button>
+</form> --}}

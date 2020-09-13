@@ -190,7 +190,7 @@ function closeModal() {
   // const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
   // wait(500).then(() => animateOut()).then(() => covidModal.style.zIndex = "0");
   // wait(350).then(() => animateOut()).then(() => wait(250).then(() => covidModal.style.zIndex = "0"));
-  wait(360).then(() => animateOut());
+  wait(350).then(() => animateOut());
   
   return;
 }
