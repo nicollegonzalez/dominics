@@ -1063,6 +1063,11 @@ ul.nav-menu {
     width: 613.59px; }
   #mainContent .dominics-intro p, #mainContent .location-intro p {
     font-size: 69.03px; }
+  .location img {
+    max-height: 234.13px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 73%; }
   .dominics-quote {
     font-size: 52.224px; }
   .dominics-quote p {

@@ -720,6 +720,7 @@ div.location:hover {
   border-top-right-radius: calc(.25rem - 1px);
   vertical-align: middle;
   border-style: none;
+
 }
 
 .location a {
@@ -1373,6 +1374,13 @@ ul.nav-menu {
 
   #mainContent .dominics-intro p, #mainContent .location-intro p {
     font-size: 69.03px;
+  }
+
+  .location img{
+    max-height: 234.13px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 73%;
   }
 
   .dominics-quote {
