@@ -48,6 +48,9 @@ h3 {
   border-radius: 2px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
+#careers-application-btn{
+  background-color: #CD212A;
+}
 
 .locations-content h3{
   margin-block-start: 15px;
@@ -733,7 +736,9 @@ div.location:hover {
   border-top-right-radius: calc(.25rem - 1px);
   vertical-align: middle;
   border-style: none;
-
+  object-fit: cover;
+  object-position: 50% 73%;
+  height: calc((100vw - 16px) / 1.50228505531);
 }
 
 .location a {
@@ -1047,7 +1052,7 @@ ul.nav-menu {
 }
 
 .career-content{
-  // min-height: calc(100vh - 95px - 90px);
+  min-height: calc(70vh - 96px);
   display:flex;
   flex-direction: column;
   // align-items: center;
@@ -1081,9 +1086,8 @@ ul.nav-menu {
   margin-inline-end: 0px;
 }
 
-#about-intro{
+#about-intro,#career-intro{
   // background-image: url(/images/pizza4.JPG);
-  background-image: url(/images/dominicsIII/DominicsPizzaPastaIII-13.jpg);
   filter: grayscale(1);
   background-repeat: no-repeat;
   background-size: cover;
@@ -1095,6 +1099,14 @@ ul.nav-menu {
   text-align: center;
   width: 100vw;
   height: calc(100vw/1.50225338007);
+}
+#about-intro{
+  // background-image: url(/images/pizza4.JPG);
+  background-image: url(/images/dominicsIII/DominicsPizzaPastaIII-13.jpg);
+}
+
+#career-intro{
+  background-image: url(/images/dominicsIII/DominicsPizzaPastaIII-12.jpg);
 }
 
 
@@ -1458,15 +1470,15 @@ ul.nav-menu {
 
   .career-content{
     // top: 110px;
-    margin-top: 110px;
+    margin-top: 30px;
   }
 
-  #careers-application-btn{
-    background-color: #CD212A;
-  }
-
-  #about-intro{
+  #about-intro,{
     height: 100vh;
+  }
+
+  #career-intro{
+    height: 60vh;
   }
 
   a.nav-menu-link {
