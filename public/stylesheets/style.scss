@@ -33,6 +33,7 @@ h3 {
 }
 
 .btn-large {
+  text-transform: uppercase;
   text-decoration: none;
   color: #fff;
   background-color: #26a69a;
@@ -442,7 +443,8 @@ a.nav-menu-link:hover{
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  background-color: cornflowerblue;
+  // background-color: cornflowerblue;
+  background-color: transparent;
   flex-basis: auto;
 }
 
@@ -495,6 +497,17 @@ a.nav-menu-link:hover{
   width: 100vw;
   // height: 100vh;
   height: calc(100vh - 75px - 10px - 10px);
+}
+
+.gallary{
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thumbnail{
+  width: 15vw;
 }
 
 #mainContent .dominics-intro div.logo, #mainContent .location-intro div.logo {
@@ -826,7 +839,7 @@ form > * {
 }
 
 #deals-form {
-  margin: 0 auto 30px auto;
+  margin: 30px auto;
   max-width: 380px;
   width: 95%;
   display: flex;
@@ -1021,7 +1034,7 @@ ul.nav-menu {
 }
 
 .about{
-  min-height: calc(100vh - 95px);
+  min-height: calc(100vh - 96px - 98px);
   display:flex;
   flex-direction: column;
   margin: 0 auto;
@@ -1030,7 +1043,7 @@ ul.nav-menu {
   padding-left: 1.5em;
   padding-right: 1.5em;
   position: relative;
-  top: 15px;
+  top: 35px;
 }
 
 .career-content{
@@ -1068,8 +1081,10 @@ ul.nav-menu {
   margin-inline-end: 0px;
 }
 
-#about-outro{
-  background-image: url(/images/pizza4.JPG);
+#about-intro{
+  // background-image: url(/images/pizza4.JPG);
+  background-image: url(/images/dominicsIII/DominicsPizzaPastaIII-13.jpg);
+  filter: grayscale(1);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1079,7 +1094,7 @@ ul.nav-menu {
   align-items: center;
   text-align: center;
   width: 100vw;
-  height: calc(70vh - 95px);
+  height: calc(100vw/1.50225338007);
 }
 
 
@@ -1429,14 +1444,29 @@ ul.nav-menu {
     align-items: center;
   }
 
-  .about, .career-content{
+  .gallary{
+    // min-height: calc(80vh - 95px);
+    width: 90vw;
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .thumbnail{
+    width: 15vw;
+  }
+
+  .career-content{
     // top: 110px;
     margin-top: 110px;
   }
 
   #careers-application-btn{
-    // position: relative;
-    // top: 15px;
+    background-color: #CD212A;
+  }
+
+  #about-intro{
+    height: 100vh;
   }
 
   a.nav-menu-link {
