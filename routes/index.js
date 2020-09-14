@@ -39,7 +39,7 @@ router.get('/locations/:location', (req, res, next) => {
       console.log(theLocation.locationAddress.addressURL);
       console.log("*******",theLocation,"*******");
       console.log("*******",theLocation.lunchMenu,"*******");
-      console.log("*******Menu:",theLocation.menu,"*******");
+      console.log("Menu:",theLocation.menu);
       res.render(`location-views/location`, {location: theLocation});
     })
     .catch(error => {

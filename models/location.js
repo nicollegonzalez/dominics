@@ -11,6 +11,7 @@ const locationSchema = new Schema({
   locationNumber: String,
   locationImage: String,
   mapURL: String,
+  menu: String,
   lunchMenu: String,
   dinnerMenu: String,
   cateringMenu: String,

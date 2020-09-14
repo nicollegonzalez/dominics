@@ -512,7 +512,7 @@ a.nav-menu-link:hover{
 }
 
 .thumbnail{
-  width: 15vw;
+  width: 90vw;
 }
 
 #mainContent .dominics-intro div.logo, #mainContent .location-intro div.logo {
@@ -1282,6 +1282,10 @@ ul.nav-menu {
     font-size: 38.8px; }
   .dominics-quote p {
     max-width: 544px; } 
+
+  .thumbnail{
+    width: 45vw;
+  }
   }
 
 @media only screen and (min-width: 540px) {
@@ -1473,7 +1477,7 @@ ul.nav-menu {
   }
 
   .thumbnail{
-    width: 15vw;
+    width: 30vw;
   }
 
   .career-content{

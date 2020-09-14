@@ -425,7 +425,7 @@ a.nav-menu-link:hover {
   flex-wrap: wrap; }
 
 .thumbnail {
-  width: 15vw; }
+  width: 90vw; }
 
 #mainContent .dominics-intro div.logo, #mainContent .location-intro div.logo {
   display: flex;
@@ -1007,7 +1007,9 @@ ul.nav-menu {
   .dominics-quote {
     font-size: 38.8px; }
   .dominics-quote p {
-    max-width: 544px; } }
+    max-width: 544px; }
+  .thumbnail {
+    width: 45vw; } }
 
 /* NavBar Big Change at min-wiidth: 767px */
 @media only screen and (min-width: 768px) {
@@ -1116,7 +1118,7 @@ ul.nav-menu {
     display: flex;
     flex-wrap: wrap; }
   .thumbnail {
-    width: 15vw; }
+    width: 30vw; }
   .career-content {
     margin-top: 30px; }
   .about {

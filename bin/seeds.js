@@ -24,7 +24,7 @@ const locations = [
     locationNumber: "1",
     locationImage: '/images/dominicsI/DominicsPizzaPastaI-9.jpg',
     mapURL: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14298.693055152396!2d-80.1726854!3d26.369428!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6e8712880c79d03d!2sDominic&#39;s%20I%20Pizza%20and%20Pasta!5e0!3m2!1sen!2sus!4v1583482760710!5m2!1sen!2sus',
-    menu: 'http://www.dominicsdigitalmenu.com/Boca/',
+    menu: '/images/dominics-one/lunch-menu.pdf',
     lunchMenu: '/images/dominics-one/lunch-menu.pdf',
     dinnerMenu: '/images/dominics-one/dinner-menu.pdf',
     childrenMenu: '/images/dominics-one/children-menu.pdf',
