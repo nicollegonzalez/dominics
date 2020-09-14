@@ -53,8 +53,10 @@ h3 {
 }
 
 .locations-content h3{
-  margin-block-start: 15px;
+  // margin-block-start: 15px;
 }
+
+
 
 #information-header{
   font-family: "Roboto Mono",sans-serif;
@@ -1421,7 +1423,11 @@ ul.nav-menu {
   }
 
   .locations-content h3{
-    margin-block-start: 110px;
+    // margin-block-start: 110px;
+  }
+
+  #career-intro, .locations-content #map{
+    margin-block-start: 96px;
   }
 
   .locations {

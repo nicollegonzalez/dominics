@@ -44,9 +44,6 @@ h3 {
 #careers-application-btn {
   background-color: #CD212A; }
 
-.locations-content h3 {
-  margin-block-start: 15px; }
-
 #information-header {
   font-family: "Roboto Mono",sans-serif;
   font-size: 11px;
@@ -1093,8 +1090,8 @@ ul.nav-menu {
     font-size: 52.224px; }
   .dominics-quote p {
     max-width: 574px; }
-  .locations-content h3 {
-    margin-block-start: 110px; }
+  #career-intro, .locations-content #map {
+    margin-block-start: 96px; }
   .locations {
     display: flex;
     flex-wrap: wrap;

@@ -297,6 +297,10 @@ if(pathName.indexOf("/locations/") !== -1){
   }
 };
 
+// if(pathName.indexOf("/locations/dominics") !== -1){
+//   console.log()
+// }
+
 
 
 window.onload = function() {

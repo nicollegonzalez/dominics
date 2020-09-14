@@ -37,6 +37,9 @@ router.get('/locations/:location', (req, res, next) => {
     .then(theLocation => {
       console.log(theLocation.mapURL);
       console.log(theLocation.locationAddress.addressURL);
+      console.log("*******",theLocation,"*******");
+      console.log("*******",theLocation.lunchMenu,"*******");
+      console.log("*******Menu:",theLocation.menu,"*******");
       res.render(`location-views/location`, {location: theLocation});
     })
     .catch(error => {
