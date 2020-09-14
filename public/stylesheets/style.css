@@ -619,7 +619,7 @@ div.location:hover {
   background-color: #CD212A;
   color: #fff;
   display: block;
-  padding: 35px 0;
+  padding: 30px 0;
   text-align: center;
   text-decoration: none;
   letter-spacing: 2px;
@@ -831,14 +831,12 @@ ul.nav-menu {
   line-height: 160%; }
 
 .about {
-  min-height: calc(100vh - 96px - 98px);
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 30px auto 0 auto;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  position: relative;
-  top: 35px; }
+  position: relative; }
 
 .career-content {
   min-height: calc(70vh - 96px);
@@ -1124,8 +1122,8 @@ ul.nav-menu {
     width: 15vw; }
   .career-content {
     margin-top: 30px; }
-  #about-intro {
-    height: 100vh; }
+  .about {
+    min-height: calc(100vh - 96px - 98px); }
   #career-intro {
     height: 60vh; }
   a.nav-menu-link {
