@@ -14,8 +14,10 @@ const logo = document.querySelector('#header .logo');
 const footer = document.querySelector('#footer');
 const careersApplicationBtn = document.querySelector('#careers-application-btn');
 const careersApplication = document.querySelector('#career-application-form');
+const inputs = document.getElementsByTagName('input');
 const printApplicationBtn = document.querySelector('#print-application-btn');
 const locationGallary = document.querySelector('.gallary');
+
 
 const locations = [
   {title: "Dominic's Pizza & Pasta I", lat: 26.369428, lng:  -80.1726854, address: {street:"8177 Glades Rd #19", city:"Boca Raton", state:"Florida"}, number: '(561) 487-3186', addressURL: 'https://goo.gl/maps/TsiBJ26DMMoG2Uj66'},
@@ -65,167 +67,261 @@ mainContent.addEventListener('click', function(e){
 });
 
 
-if(careersApplicationBtn){
+if(pathName.indexOf("/careers") !== -1){
   careersApplicationBtn.addEventListener('click', function(e){
     careersApplication.classList.toggle('none');
   })
   
-  console.log(careersApplication);
-  console.log(careersApplicationBtn);
-  console.log(printApplicationBtn);
   printApplicationBtn.addEventListener('click',function(e){
-    let form = document.getElementById("career-application-form");
-    let name = form.name.value;
-    let address = form.address.value;
-    let phoneNumber = form.phonenumber.value;
-    let cellPhone = form.cellnumber.value;
-    let position = form.position.value;
-    let wageRequirement = form.wagerequirement.value;
-    let fullPartTime = form.fullparttime.value;
-    let firstTimeInput = form.firsttimeinput.value;
-    let firstTimeYesInput = form.firsttimeyesinput.value;
-    let currentlyEmployed = form.currentlyemployed.value;
-    let currentlyEmployedYes = form.currentlyemployedyes.value;
-    let terminated = form.terminated.value;
-    let age = form.age.value;
-    let misdemeanorFelony = form.misdemeanorfelony.value;
-    let tobaccoAlcoholViolation = form.tobaccoalcoholviolation.value;
-    let drugsUse = form.drugsuse.value;
-    let drugsTest = form.drugstest.value;
-    let heavyLifting = form.heavylifting.value;
-    let healthConditions = form.healthconditions.value;
-    let highSchool = form.highschool.value;
-    let highSchoolStartDate = form.highschoolstartdate.value;
-    let highSchoolEndDate = form.highschoolenddate.value;
-    let highSchoolGraduate = form.highschoolgraduate.value;
-    let college = form.college.value;
-    let collegeStartDate = form.collegestartdate.value;
-    let collegeEndDate = form.collegeenddate.value;
-    let collegeGraduate = form.collegegraduate.value;
-    let tradeSchool = form.tradeschool.value;
-    let tradeSchoolStartDate = form.tradeschoolstartdate.value;
-    let tradeSchoolEndDate = form.tradeschoolenddate.value;
-    let tradeSchoolGraduate = form.tradeschoolgraduate.value;
-    let attendingSchool = form.attendingschool.value;
-    let previousEmploymentName1 = form.previousemploymentname1.value;
-    let previousEmploymentPosition1 = form.previousemploymentposition1.value;
-    let previousEmploymentWage1 = form.previousemploymentwage1.value;
-    let previousEmploymentStartDate1 = form.previousemploymentstartdate1.value;
-    let previousEmploymentEndDate1 = form.previousemploymentenddate1.value;
-    let previousEmploymentLeft1 = form.previousemploymentleft1.value;
-    let previousEmploymentResponsibilities1 = form.previousemploymentresponsibilities1.value;
-    let previousEmploymentContactPermision1 = form.previousemploymentcontactpermision1.value;
-    let previousEmploymentContactName1 = form.previousemploymentcontactname1.value;
-    let previousEmploymentContactNumber1 = form.previousemploymentcontactnumber1.value;
-    let previousEmploymentName2 = form.previousemploymentname2.value;
-    let previousEmploymentPosition2 = form.previousemploymentposition2.value;
-    let previousEmploymentWage2 = form.previousemploymentwage2.value;
-    let previousEmploymentStartDate2 = form.previousemploymentstartdate2.value;
-    let previousEmploymentEndDate2 = form.previousemploymentenddate2.value;
-    let previousEmploymentLeft2 = form.previousemploymentleft2.value;
-    let previousEmploymentResponsibilities2 = form.previousemploymentresponsibilities2.value;
-    let previousEmploymentContactPermision2 = form.previousemploymentcontactpermision2.value;
-    let previousEmploymentContactName2 = form.previousemploymentcontactname2.value;
-    let previousEmploymentContactNumber2 = form.previousemploymentcontactnumber2.value;
-    let previousEmploymentName3 = form.previousemploymentname3.value;
-    let previousEmploymentPosition3 = form.previousemploymentposition3.value;
-    let previousEmploymentWage3 = form.previousemploymentwage3.value;
-    let previousEmploymentStartDate3 = form.previousemploymentstartdate3.value;
-    let previousEmploymentEndDate3 = form.previousemploymentenddate3.value;
-    let previousEmploymentLeft3 = form.previousemploymentleft3.value;
-    let previousEmploymentResponsibilities3 = form.previousemploymentresponsibilities3.value;
-    let previousEmploymentContactPermision3 = form.previousemploymentcontactpermision3.value;
-    let previousEmploymentContactName3 = form.previousemploymentcontactname3.value;
-    let previousEmploymentContactNumber3 = form.previousemploymentcontactnumber3.value;
-    let refernceName1 = form.referncename1.value;
-    let refernceNumber1 = form.referncenumber1.value;
-    let refernceRelationship1 = form.referncerelationship1.value;
-    let refernceName2 = form.referncename2.value;
-    let refernceNumber2 = form.referncenumber2.value;
-    let refernceRelationship2 = form.referncerelationship2.value;
-    let refernceName3 = form.referncename3.value;
-    let refernceNumber3 = form.referncenumber3.value;
-    let refernceRelationship3 = form.referncerelationship3.value;
-    let whiteWine = form.whitewine.value;
-    let redWine = form.redwine.value;
-    let blushWine = form.blushwine.value;
-    let italianDishes = form.italiandishes.value;
-  
-    console.log(name);
-    console.log(address);
-    console.log(phoneNumber);
-    console.log(cellPhone);
-    console.log(position);
-    console.log(wageRequirement);
-    console.log(fullPartTime);
-    console.log(firstTimeInput);
-    console.log(firstTimeYesInput);
-    console.log(currentlyEmployed);
-    console.log(currentlyEmployedYes);
-    console.log(terminated);
-    console.log(age);
-    console.log(misdemeanorFelony);
-    console.log(tobaccoAlcoholViolation);
-    console.log(drugsUse);
-    console.log(drugsTest);
-    console.log(heavyLifting);
-    console.log(healthConditions);
-    console.log(highSchool);
-    console.log(highSchoolStartDate);
-    console.log(highSchoolEndDate);
-    console.log(highSchoolGraduate);
-    console.log(college);
-    console.log(collegeStartDate);
-    console.log(collegeEndDate);
-    console.log(collegeGraduate);
-    console.log(tradeSchool);
-    console.log(tradeSchoolStartDate);
-    console.log(tradeSchoolEndDate);
-    console.log(tradeSchoolGraduate);
-    console.log(attendingSchool);
-    console.log(previousEmploymentName1);
-    console.log(previousEmploymentPosition1);
-    console.log(previousEmploymentWage1);
-    console.log(previousEmploymentStartDate1);
-    console.log(previousEmploymentEndDate1);
-    console.log(previousEmploymentLeft1);
-    console.log(previousEmploymentResponsibilities1);
-    console.log(previousEmploymentContactPermision1);
-    console.log(previousEmploymentContactName1);
-    console.log(previousEmploymentContactNumber1);
-    console.log(previousEmploymentName2);
-    console.log(previousEmploymentPosition2);
-    console.log(previousEmploymentWage2);
-    console.log(previousEmploymentStartDate2);
-    console.log(previousEmploymentEndDate2);
-    console.log(previousEmploymentLeft2);
-    console.log(previousEmploymentName3);
-    console.log(previousEmploymentPosition3);
-    console.log(previousEmploymentWage3);
-    console.log(previousEmploymentStartDate3);
-    console.log(previousEmploymentEndDate3);
-    console.log(previousEmploymentLeft3);
-    console.log(previousEmploymentResponsibilities3);
-    console.log(previousEmploymentContactPermision3);
-    console.log(previousEmploymentContactName3);
-    console.log(previousEmploymentContactNumber3);
-    console.log(refernceName1);
-    console.log(refernceNumber1);
-    console.log(refernceRelationship1);
-    console.log(refernceName2);
-    console.log(refernceNumber2);
-    console.log(refernceRelationship2);
-    console.log(refernceName3);
-    console.log(refernceNumber3);
-    console.log(refernceRelationship3);
-    console.log(whiteWine);
-    console.log(redWine);
-    console.log(blushWine);
-    console.log(italianDishes);
-  
     window.print();
   })
-}
+
+  console.log(typeof(inputs));
+  console.log((inputs.length));
+  
+  for(let i = 0; i < inputs.length; i++){
+    inputs[i].addEventListener('keyup', function(e){
+      let parentElement = inputs[i].parentElement;
+      console.log(parentElement);
+      if(document.querySelector('#first-time-input').value.toUpperCase() === "YES"){
+        document.querySelector('#first-time-yes-input').classList.remove("none");
+        console.log(document.querySelector('#first-time-yes-input').previousElementSibling);//.classList.remove("none");
+        document.querySelector('#first-time-yes-input').previousElementSibling.classList.remove("none");
+      }else{
+        document.querySelector('#first-time-yes-input').classList.add("none");
+        document.querySelector('#first-time-yes-input').previousElementSibling.classList.add("none");
+      }
+      if(document.querySelector('#currently-employed-input').value.toUpperCase() === "YES"){
+        document.querySelector('#currently-employed-yes-input').classList.remove("none");
+        console.log(document.querySelector('#currently-employed-yes-inpu').previousElementSibling);//.classList.remove("none");
+        document.querySelector('#currently-employed-yes-inpu').previousElementSibling.classList.remove("none");
+      }else{
+        document.querySelector('#currently-employed-yes-input').classList.add("none");
+        document.querySelector('#currently-employed-yes-input').previousElementSibling.classList.add("none");
+      }
+      if(document.querySelector('#high-school-input').value !== ""){
+        console.log(document.querySelector('#high-school-input').value);
+        document.querySelector('#high-school-start-date-input').classList.remove("none");
+        document.querySelector('#high-school-start-date-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#high-school-start-date-input').nextElementSibling.classList.remove("none");
+        document.querySelector('#high-school-end-date-input').classList.remove("none");
+      }else{
+        document.querySelector('#high-school-start-date-input').classList.add("none");
+        document.querySelector('#high-school-start-date-input').previousElementSibling.classList.add("none");
+        document.querySelector('#high-school-start-date-input').nextElementSibling.classList.add("none");
+        document.querySelector('#high-school-end-date-input').classList.add("none");
+      }
+      if(document.querySelector('#college-input').value !== ""){
+        console.log(document.querySelector('#college-input').value);
+        document.querySelector('#college-start-date-input').classList.remove("none");
+        document.querySelector('#college-start-date-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#college-start-date-input').nextElementSibling.classList.remove("none");
+        document.querySelector('#college-end-date-input').classList.remove("none");
+        document.querySelector('#college-graduate-input').classList.remove("none");
+        document.querySelector('#college-graduate-input').previousElementSibling.classList.remove("none");
+      }else{
+        document.querySelector('#college-start-date-input').classList.add("none");
+        document.querySelector('#college-start-date-input').previousElementSibling.classList.add("none");
+        document.querySelector('#college-start-date-input').nextElementSibling.classList.add("none");
+        document.querySelector('#college-end-date-input').classList.add("none");
+        document.querySelector('#college-graduate-input').classList.add("none");
+        document.querySelector('#college-graduate-input').previousElementSibling.classList.add("none");
+      }
+      if(document.querySelector('#trade-school-input').value !== ""){
+        console.log(document.querySelector('#trade-school-input').value);
+        document.querySelector('#trade-school-start-date-input').classList.remove("none");
+        document.querySelector('#trade-school-start-date-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#trade-school-start-date-input').nextElementSibling.classList.remove("none");
+        document.querySelector('#trade-school-end-date-input').classList.remove("none");
+        document.querySelector('#trade-school-graduate-input').classList.remove("none");
+        document.querySelector('#trade-school-graduate-input').previousElementSibling.classList.remove("none");
+      }else{
+        document.querySelector('#trade-school-start-date-input').classList.add("none");
+        document.querySelector('#trade-school-start-date-input').previousElementSibling.classList.add("none");
+        document.querySelector('#trade-school-start-date-input').nextElementSibling.classList.add("none");
+        document.querySelector('#trade-school-end-date-input').classList.add("none");
+        document.querySelector('#trade-school-graduate-input').classList.add("none");
+        document.querySelector('#trade-school-graduate-input').previousElementSibling.classList.add("none");
+      }
+      if(document.querySelector('#previous-employment-name-1-input').value !== ""){
+        console.log(document.querySelector('#previous-employment-name-1-input').value);
+        document.querySelector('#previous-employment-position-1-input').classList.remove("none");
+        document.querySelector('#previous-employment-position-1-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-wage-1-input').classList.remove("none");
+        document.querySelector('#previous-employment-wage-1-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-wage-1-input').nextElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-start-date-1-input').classList.remove("none");
+        document.querySelector('#previous-employment-start-date-1-input').nextElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-end-date-1-input').classList.remove("none");
+        document.querySelector('#previous-employment-left-1-input').classList.remove("none");
+        document.querySelector('#previous-employment-left-1-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-responsibilities-1-input').classList.remove("none");
+        document.querySelector('#previous-employment-responsibilities-1-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-contact-permision-1-input').classList.remove("none");
+        document.querySelector('#previous-employment-contact-permision-1-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-contact-name-1-input').classList.remove("none");
+        document.querySelector('#previous-employment-contact-name-1-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-contact-number-1-input').classList.remove("none");
+        document.querySelector('#previous-employment-contact-number-1-input').previousElementSibling.classList.remove("none");
+        // document.querySelector('#').classList.remove("none");
+        // document.querySelector('#').nextElementSibling.classList.remove("none");
+        
+      }else{
+        document.querySelector('#previous-employment-position-1-input').classList.add("none");
+        document.querySelector('#previous-employment-position-1-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-wage-1-input').classList.add("none");
+        document.querySelector('#previous-employment-wage-1-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-wage-1-input').nextElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-start-date-1-input').classList.add("none");
+        // document.querySelector('#previous-employment-start-date-1-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-start-date-1-input').nextElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-end-date-1-input').classList.add("none");
+        document.querySelector('#previous-employment-left-1-input').classList.add("none");
+        document.querySelector('#previous-employment-left-1-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-responsibilities-1-input').classList.add("none");
+        document.querySelector('#previous-employment-responsibilities-1-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-contact-permision-1-input').classList.add("none");
+        document.querySelector('#previous-employment-contact-permision-1-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-contact-name-1-input').classList.add("none");
+        document.querySelector('#previous-employment-contact-name-1-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-contact-number-1-input').classList.add("none");
+        document.querySelector('#previous-employment-contact-number-1-input').previousElementSibling.classList.add("none");
+      }
+      if(document.querySelector('#previous-employment-name-2-input').value !== ""){
+        console.log(document.querySelector('#previous-employment-name-2-input').value);
+        document.querySelector('#previous-employment-position-2-input').classList.remove("none");
+        document.querySelector('#previous-employment-position-2-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-wage-2-input').classList.remove("none");
+        document.querySelector('#previous-employment-wage-2-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-wage-2-input').nextElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-start-date-2-input').classList.remove("none");
+        document.querySelector('#previous-employment-start-date-2-input').nextElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-end-date-2-input').classList.remove("none");
+        document.querySelector('#previous-employment-left-2-input').classList.remove("none");
+        document.querySelector('#previous-employment-left-2-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-responsibilities-2-input').classList.remove("none");
+        document.querySelector('#previous-employment-responsibilities-2-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-contact-permision-2-input').classList.remove("none");
+        document.querySelector('#previous-employment-contact-permision-2-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-contact-name-2-input').classList.remove("none");
+        document.querySelector('#previous-employment-contact-name-2-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-contact-number-2-input').classList.remove("none");
+        document.querySelector('#previous-employment-contact-number-2-input').previousElementSibling.classList.remove("none");
+        // document.querySelector('#').classList.remove("none");
+        // document.querySelector('#').nextElementSibling.classList.remove("none");
+        
+      }else{
+        document.querySelector('#previous-employment-position-2-input').classList.add("none");
+        document.querySelector('#previous-employment-position-2-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-wage-2-input').classList.add("none");
+        document.querySelector('#previous-employment-wage-2-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-wage-2-input').nextElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-start-date-2-input').classList.add("none");
+        // document.querySelector('#previous-employment-start-date-2-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-start-date-2-input').nextElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-end-date-2-input').classList.add("none");
+        document.querySelector('#previous-employment-left-2-input').classList.add("none");
+        document.querySelector('#previous-employment-left-2-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-responsibilities-2-input').classList.add("none");
+        document.querySelector('#previous-employment-responsibilities-2-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-contact-permision-2-input').classList.add("none");
+        document.querySelector('#previous-employment-contact-permision-2-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-contact-name-2-input').classList.add("none");
+        document.querySelector('#previous-employment-contact-name-2-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-contact-number-2-input').classList.add("none");
+        document.querySelector('#previous-employment-contact-number-2-input').previousElementSibling.classList.add("none");
+      }
+      if(document.querySelector('#previous-employment-name-3-input').value !== ""){
+        console.log(document.querySelector('#previous-employment-name-3-input').value);
+        document.querySelector('#previous-employment-position-3-input').classList.remove("none");
+        document.querySelector('#previous-employment-position-3-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-wage-3-input').classList.remove("none");
+        document.querySelector('#previous-employment-wage-3-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-wage-3-input').nextElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-start-date-3-input').classList.remove("none");
+        document.querySelector('#previous-employment-start-date-3-input').nextElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-end-date-3-input').classList.remove("none");
+        document.querySelector('#previous-employment-left-3-input').classList.remove("none");
+        document.querySelector('#previous-employment-left-3-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-responsibilities-3-input').classList.remove("none");
+        document.querySelector('#previous-employment-responsibilities-3-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-contact-permision-3-input').classList.remove("none");
+        document.querySelector('#previous-employment-contact-permision-3-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-contact-name-3-input').classList.remove("none");
+        document.querySelector('#previous-employment-contact-name-3-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#previous-employment-contact-number-3-input').classList.remove("none");
+        document.querySelector('#previous-employment-contact-number-3-input').previousElementSibling.classList.remove("none");
+        // document.querySelector('#').classList.remove("none");
+        // document.querySelector('#').nextElementSibling.classList.remove("none");
+        
+      }else{
+        document.querySelector('#previous-employment-position-3-input').classList.add("none");
+        document.querySelector('#previous-employment-position-3-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-wage-3-input').classList.add("none");
+        document.querySelector('#previous-employment-wage-3-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-wage-3-input').nextElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-start-date-3-input').classList.add("none");
+        // document.querySelector('#previous-employment-start-date-3-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-start-date-3-input').nextElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-end-date-3-input').classList.add("none");
+        document.querySelector('#previous-employment-left-3-input').classList.add("none");
+        document.querySelector('#previous-employment-left-3-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-responsibilities-3-input').classList.add("none");
+        document.querySelector('#previous-employment-responsibilities-3-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-contact-permision-3-input').classList.add("none");
+        document.querySelector('#previous-employment-contact-permision-3-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-contact-name-3-input').classList.add("none");
+        document.querySelector('#previous-employment-contact-name-3-input').previousElementSibling.classList.add("none");
+        document.querySelector('#previous-employment-contact-number-3-input').classList.add("none");
+        document.querySelector('#previous-employment-contact-number-3-input').previousElementSibling.classList.add("none");
+      }
+      if(document.querySelector('#refernce-name-1-input').value !== ""){
+        document.querySelector('#refernce-number-1-input').classList.remove("none");
+        document.querySelector('#refernce-number-1-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#refernce-relationship-1-input').classList.remove("none");
+        document.querySelector('#refernce-relationship-1-input').previousElementSibling.classList.remove("none");
+        // document.querySelector('#').classList.remove("none");
+        // document.querySelector('#').nextElementSibling.classList.remove("none");
+        
+      }else{
+        document.querySelector('#refernce-number-1-input').classList.add("none");
+        document.querySelector('#refernce-number-1-input').previousElementSibling.classList.add("none");
+        document.querySelector('#refernce-relationship-1-input').classList.add("none");
+        document.querySelector('#refernce-relationship-1-input').previousElementSibling.classList.add("none");
+      }
+      if(document.querySelector('#refernce-name-2-input').value !== ""){
+        document.querySelector('#refernce-number-2-input').classList.remove("none");
+        document.querySelector('#refernce-number-2-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#refernce-relationship-2-input').classList.remove("none");
+        document.querySelector('#refernce-relationship-2-input').previousElementSibling.classList.remove("none");
+        // document.querySelector('#').classList.remove("none");
+        // document.querySelector('#').nextElementSibling.classList.remove("none");
+        
+      }else{
+        document.querySelector('#refernce-number-2-input').classList.add("none");
+        document.querySelector('#refernce-number-2-input').previousElementSibling.classList.add("none");
+        document.querySelector('#refernce-relationship-2-input').classList.add("none");
+        document.querySelector('#refernce-relationship-2-input').previousElementSibling.classList.add("none");
+      }
+      if(document.querySelector('#refernce-name-3-input').value !== ""){
+        document.querySelector('#refernce-number-3-input').classList.remove("none");
+        document.querySelector('#refernce-number-3-input').previousElementSibling.classList.remove("none");
+        document.querySelector('#refernce-relationship-3-input').classList.remove("none");
+        document.querySelector('#refernce-relationship-3-input').previousElementSibling.classList.remove("none");
+        // document.querySelector('#').classList.remove("none");
+        // document.querySelector('#').nextElementSibling.classList.remove("none");
+        
+      }else{
+        document.querySelector('#refernce-number-3-input').classList.add("none");
+        document.querySelector('#refernce-number-3-input').previousElementSibling.classList.add("none");
+        document.querySelector('#refernce-relationship-3-input').classList.add("none");
+        document.querySelector('#refernce-relationship-3-input').previousElementSibling.classList.add("none");
+      }
+        
+    });
+  };
+}  
+
 
 
 if(pathName.indexOf("/locations/") !== -1){

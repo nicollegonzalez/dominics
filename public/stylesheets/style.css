@@ -719,16 +719,23 @@ form > * {
   color: #CD212A; }
 
 #career-application-form {
-  margin: 30px auto 30px auto;
+  margin: 0 auto;
   max-width: 380px;
-  width: 95%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: flex-start;
+  flex-wrap: wrap; }
 
 #career-application-form h3 {
   margin: 0 auto;
+  margin-block-end: 0;
+  margin-block-start: 1em;
   padding: 0 0 15px 0; }
+
+#career-application-form h5, #career-application-form h4 {
+  margin-block-end: 0;
+  margin-block-start: 1.67em; }
 
 #career-application-form label {
   color: #666;
@@ -749,7 +756,15 @@ form > * {
   border: 1px solid #e6e6e6;
   outline: 0;
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1);
-  padding: 5px; }
+  padding: 5px;
+  width: calc(100vw - 1.5em - 1.5em); }
+
+#career-application-form input[type|="month"] {
+  width: calc((100vw - 1.5em - 1.5em - 12px) / 2);
+  max-width: calc((380px - 12px)/2); }
+
+#career-application-form .date-range label {
+  width: 100%; }
 
 #career-application-form input:focus, #career-application-form input:active {
   -webkit-appearance: none;
@@ -782,6 +797,12 @@ form > * {
   outline-color: invert;
   background: #fff;
   color: #CD212A; }
+
+#career-application-form .form-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0; }
 
 #map {
   margin-bottom: 30px; }
@@ -844,7 +865,7 @@ ul.nav-menu {
   padding-right: 1.5em; }
 
 #careers-application-btn {
-  margin-top: 15px; }
+  margin: 15px; }
 
 .about p {
   font-size: 18px;
