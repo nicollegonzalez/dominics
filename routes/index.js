@@ -5,6 +5,7 @@ const Recaptcha = require('express-recaptcha').RecaptchaV3;
 //import Recaptcha from 'express-recaptcha'
 const recaptcha = new Recaptcha('SITE_KEY', 'SECRET_KEY');
 
+
 const Location = require('../models/location');
 const Customer = require('../models/customer');
 

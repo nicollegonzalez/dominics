@@ -182,6 +182,8 @@ if(pathName.indexOf("/careers") !== -1){
 
     },100);
 
+
+
   });
 
   // console.log(typeof(inputs));
@@ -758,10 +760,7 @@ if(pathName ==  "/"){
 
 };
 
-// function myPrint(frm) {
-//   var printdata = document.getElementById(frm);
-//   newwin = window.open("");
-//   newwin.document.write(printdata.outerHTML);
-//   newwin.print();
-//   newwin.close();
-// }
+
+
+
+

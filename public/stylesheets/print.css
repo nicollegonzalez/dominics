@@ -7,7 +7,7 @@
 }
 
 body{
-  width: 100vw;
+  /* width: 730px; */
   margin: 0;
   float: none;
   font-family: Georgia, serif;
@@ -66,6 +66,9 @@ div.none.print img {
   filter: grayscale();
 }
 
+#career-application-form{
+  /* position: relative; */
+}
 
 #career-application-form > *{
   display: inline;
@@ -90,6 +93,12 @@ div.none.print img {
   flex-direction: column;
   flex-wrap: wrap;
   padding: 0;
+}
+
+#career-application-form h3:first-of-type{
+  color: red;
+  break-before: all;
+  position: relative;
 }
 
 #career-application-form textarea {
