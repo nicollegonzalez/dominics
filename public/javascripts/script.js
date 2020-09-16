@@ -73,11 +73,119 @@ if(pathName.indexOf("/careers") !== -1){
   })
   
   printApplicationBtn.addEventListener('click',function(e){
-    window.print();
-  })
+    console.log("HERE 1!!!");
+    function adjustHeight(textareaElement, minHeight) {
+      // compute the height difference which is caused by border and outline
+      var outerHeight = parseInt(window.getComputedStyle(textareaElement).height, 10);
+      console.log("&&&&&&& Outer Height", outerHeight);
+      if(outerHeight >= 17){
+      
+        var diff = outerHeight - textareaElement.clientHeight;
+        console.log("$$$$$$$",diff);
+  
+        // set the height to 0 in case of it has to be shrinked
+        textareaElement.style.height = 0;
+      
+        // set the correct height
+        // el.scrollHeight is the full height of the content, not just the visible part
+        console.log("$$$$$$$$$ Scroll Height", textareaElement.scrollHeight);
+        textareaElement.style.height = Math.max(minHeight, textareaElement.scrollHeight - (diff * 2)) + 'px';
+        console.log("$%$%$%$%:",textareaElement.style.height);
+      }
+    }
 
-  console.log(typeof(inputs));
-  console.log((inputs.length));
+
+    var textAreas = [].slice.call(document.querySelectorAll('textarea'));
+
+    textAreas.forEach(function(el) {
+
+      // we need box-sizing: border-box, if the textarea has padding
+      el.style.boxSizing = el.style.mozBoxSizing = 'border-box';
+
+      // we don't need any scrollbars, do we? :)
+      el.style.overflowY = 'hidden';
+
+      // the minimum height initiated through the "rows" attribute
+      var minHeight = 17;
+      console.log("&%&$&$&%&^&$ Min Height:", minHeight);
+      // el.addEventListener('input', function() {
+      //     adjustHeight(el, minHeight);
+      // });
+
+      // // we have to readjust when window size changes (e.g. orientation change)
+      // window.addEventListener('resize', function() {
+      //     adjustHeight(el, minHeight);
+      // });
+
+      // we adjust height to the initial content
+      adjustHeight(el, minHeight);
+
+    });
+
+    window.print();
+
+    setTimeout(function () {
+      console.log("AFTER PRINTING!!!!");
+      console.log("HERE 2!!!");
+      function adjustHeight(textareaElement, minHeight) {
+        // compute the height difference which is caused by border and outline
+        var outerHeight = parseInt(window.getComputedStyle(textareaElement).height, 10);
+        console.log("outerHeight",outerHeight);
+        if(outerHeight < 195 ){
+          outerHeight = 195;
+          console.log("outerHeight NEW***",outerHeight);
+          // textareaElement.clientHeight = 106;
+          console.log("clientHeight:", textareaElement.clientHeight);
+        }
+        if(outerHeight >= 195){
+          var diff = outerHeight - (outerHeight - 2);
+          console.log("diff",diff);
+    
+          // set the height to 0 in case of it has to be shrinked
+          textareaElement.style.height = 0;
+        
+          // set the correct height
+          // el.scrollHeight is the full height of the content, not just the visible part
+          textareaElement.style.height = Math.max(minHeight, textareaElement.scrollHeight + diff) + 'px';
+        }
+      }
+  
+  
+      // we use the textarea tag as a marker
+      var textAreas = [].slice.call(document.querySelectorAll('textarea'));
+  
+      // iterate through all the textareas on the page
+      textAreas.forEach(function(el) {
+  
+          // we need box-sizing: border-box, if the textarea has padding
+          el.style.boxSizing = el.style.mozBoxSizing = 'border-box';
+  
+          // we don't need any scrollbars, do we? :)
+          el.style.overflowY = 'hidden';
+  
+          // the minimum height initiated through the "rows" attribute
+          var minHeight = 108;
+  
+          // el.addEventListener('input', function() {
+          //     adjustHeight(el, minHeight);
+          // });
+  
+          // // we have to readjust when window size changes (e.g. orientation change)
+          // window.addEventListener('resize', function() {
+          //     adjustHeight(el, minHeight);
+          // });
+  
+          // we adjust height to the initial content
+          adjustHeight(el, minHeight);
+  
+      });
+
+    },100);
+
+  });
+
+  // console.log(typeof(inputs));
+  // console.log((inputs.length));
   
   for(let i = 0; i < inputs.length; i++){
     inputs[i].addEventListener('keyup', function(e){
@@ -320,6 +428,66 @@ if(pathName.indexOf("/careers") !== -1){
         
     });
   };
+
+
+  (function() {
+    function adjustHeight(textareaElement, minHeight) {
+      console.log("HERE 3!!!");
+      // compute the height difference which is caused by border and outline
+      var outerHeight = parseInt(window.getComputedStyle(textareaElement).height, 10);
+      console.log("outerHeight",outerHeight);
+      if(outerHeight < 108){
+        outerHeight = 108;
+      }
+      if(outerHeight >= 108){
+        console.log("outerHeight*",outerHeight);
+        var diff = outerHeight - textareaElement.clientHeight;
+        // console.log("diff",diff);
+  
+        // set the height to 0 in case of it has to be shrinked
+        textareaElement.style.height = 0;
+      
+        // set the correct height
+        // el.scrollHeight is the full height of the content, not just the visible part
+        // console.log("Scroll Height:",textareaElement.scrollHeight);
+        textareaElement.style.height = Math.max(minHeight, textareaElement.scrollHeight + diff) + 'px';
+      }
+    }
+
+
+    // we use the textarea tag as a marker
+    var textAreas = [].slice.call(document.querySelectorAll('textarea'));
+
+    // iterate through all the textareas on the page
+    textAreas.forEach(function(el) {
+
+        // we need box-sizing: border-box, if the textarea has padding
+        el.style.boxSizing = el.style.mozBoxSizing = 'border-box';
+
+        // we don't need any scrollbars, do we? :)
+        el.style.overflowY = 'hidden';
+
+        // the minimum height initiated through the "rows" attribute
+        var minHeight = 108;
+        console.log("minHeight",minHeight)
+
+        el.addEventListener('input', function() {
+            adjustHeight(el, minHeight);
+            console.log("input",minHeight)
+        });
+
+        // we have to readjust when window size changes (e.g. orientation change)
+        window.addEventListener('resize', function() {
+            adjustHeight(el, minHeight);
+            console.log("resize",minHeight)
+        });
+
+        // we adjust height to the initial content
+        adjustHeight(el, minHeight);
+
+    });
+  }());
+
 }  
 
 
@@ -590,10 +758,10 @@ if(pathName ==  "/"){
 
 };
 
-function myPrint(frm) {
-  var printdata = document.getElementById(frm);
-  newwin = window.open("");
-  newwin.document.write(printdata.outerHTML);
-  newwin.print();
-  newwin.close();
-}
+// function myPrint(frm) {
+//   var printdata = document.getElementById(frm);
+//   newwin = window.open("");
+//   newwin.document.write(printdata.outerHTML);
+//   newwin.print();
+//   newwin.close();
+// }

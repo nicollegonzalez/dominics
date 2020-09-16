@@ -22,13 +22,16 @@ div.none.print{
 }
 
 label{
-  /* font-size: 12pt; */
+  margin-top: 1em;
 }
 
 input{
   border: none;
   border-bottom: 2px solid black;
-  min-height: 1.5em;
+  min-height: 2em; 
+  background-color: white;
+  /* font-size: 1em; */
+  font-family: Georgia, serif;
 }
 
 table, tbody, th, td {
@@ -49,9 +52,68 @@ td{
   height: 60px;
 }
 
+div.none.print h3, div.none.print img {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1em;
+}
+
+div.none.print img {
+  max-width: 350px;
+  max-height: 90px;
+  object-fit: cover;
+  filter: grayscale();
+}
+
+
 #career-application-form > *{
   display: inline;
 }
+
+#career-application-form label{
+  margin-top: 0.5em;
+}
+#career-application-form button{
+  display: none;
+}
+
+#career-application-form .form-group{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+#career-application-form .form-group.column{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+#career-application-form textarea {
+  width: 100vw;
+  /* height: 28px; */
+  font-size: 16px;
+  cursor: text;
+  font: 400 13.3333px Georgia, serif;
+  border: none;
+  border-bottom: 2px solid black;
+  resize: none;
+}
+
+#career-application-form .date-range{
+  display: flex;
+  flex-direction: row;
+}
+
+#career-application-form input[type|="month"] {
+  width: calc((100vw - 1.5em - 1.5em - 12px) / 2);
+  max-width: calc((310px)/2);
+  font-size: 1em;
+}
+
 
 #social-security-input, #social-security-input-label{
   display: inline;
@@ -82,4 +144,5 @@ hr{
   border: none;
   border-top: solid 1px #aaa;
 }
+
 
