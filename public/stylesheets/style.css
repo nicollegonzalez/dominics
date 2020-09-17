@@ -803,7 +803,8 @@ form > * {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0; }
+  padding: 0;
+  width: 100%; }
 
 #map {
   margin-bottom: 30px; }

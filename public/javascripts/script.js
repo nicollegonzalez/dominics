@@ -203,8 +203,8 @@ if(pathName.indexOf("/careers") !== -1){
       }
       if(document.querySelector('#currently-employed-input').value.toUpperCase() === "YES"){
         document.querySelector('#currently-employed-yes-input').classList.remove("none");
-        console.log(document.querySelector('#currently-employed-yes-inpu').previousElementSibling);//.classList.remove("none");
-        document.querySelector('#currently-employed-yes-inpu').previousElementSibling.classList.remove("none");
+        // console.log(document.querySelector('#currently-employed-yes-input').previousElementSibling);//.classList.remove("none");
+        document.querySelector('#currently-employed-yes-input').previousElementSibling.classList.remove("none");
       }else{
         document.querySelector('#currently-employed-yes-input').classList.add("none");
         document.querySelector('#currently-employed-yes-input').previousElementSibling.classList.add("none");

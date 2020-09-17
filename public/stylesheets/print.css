@@ -1,13 +1,19 @@
 /* *{
   display: block;
 } */
+@page {
+  size: letter;
+}
 
 .none.print{
   display: block!important;
 }
 
+
+
 body{
   /* width: 730px; */
+  width: 100%;
   margin: 0;
   float: none;
   font-family: Georgia, serif;
@@ -52,7 +58,12 @@ td{
   height: 60px;
 }
 
-div.none.print h3, div.none.print img {
+h1, h2, h3, h4, h5, label {
+  page-break-after: never;
+}
+
+
+h3#employment-application-title, div.none.print img {
   width: 50%;
   margin: 0 auto;
   text-align: center;
@@ -88,6 +99,10 @@ div.none.print img {
   padding: 0;
 }
 
+#career-application-form div.form-group, table{
+  page-break-inside: avoid;
+}
+
 #career-application-form .form-group.column{
   display: flex;
   flex-direction: column;
@@ -95,11 +110,12 @@ div.none.print img {
   padding: 0;
 }
 
-#career-application-form h3:first-of-type{
-  color: red;
+/* #career-application-form h3:first-of-type{
+  color: purple;
   break-before: all;
   position: relative;
-}
+} */
+
 
 #career-application-form textarea {
   width: 100vw;
@@ -132,10 +148,6 @@ div.none.print img {
   color: white;
 }
 
-.print-line-break::after{
-  content: '\a'; 
-  white-space: pre;
-}
 
 /* .print-inline{
   display: inline-block;
