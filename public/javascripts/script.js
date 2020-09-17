@@ -173,7 +173,7 @@ if(pathName.indexOf("/careers") !== -1){
   
       });
 
-    },500);
+    },1500);
 
 
 
