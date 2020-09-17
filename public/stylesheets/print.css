@@ -101,7 +101,8 @@ div.none.print img {
   padding: 0;
 }
 
-#career-application-form div.form-group, table{
+/* #career-application-form div.form-group, */
+table, label{
   page-break-inside: avoid;
 }
 
