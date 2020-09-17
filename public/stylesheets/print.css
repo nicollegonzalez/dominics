@@ -23,6 +23,7 @@ body{
 
 .print-page{
   height: 100%;
+  max-width: 100%;
 }
 
 header, #covid-modal, nav, #leftNav, #rightNav, footer, .career{
