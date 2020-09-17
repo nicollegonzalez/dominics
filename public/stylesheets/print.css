@@ -110,11 +110,11 @@ div.none.print img {
   padding: 0;
 }
 
-/* #career-application-form h3:first-of-type{
+#career-application-form h3:first-of-type{
   color: purple;
-  break-before: all;
-  position: relative;
-} */
+  /* break-before: all; */
+  /* position: relative; */
+}
 
 
 #career-application-form textarea {

@@ -100,7 +100,7 @@ if(pathName.indexOf("/careers") !== -1){
     textAreas.forEach(function(el) {
 
       // we need box-sizing: border-box, if the textarea has padding
-      el.style.boxSizing = el.style.mozBoxSizing = 'border-box';
+      el.style.boxSizing = el.style.mozBoxSizing =  el.style.webkitBoxSizing = 'border-box';
 
       // we don't need any scrollbars, do we? :)
       el.style.overflowY = 'hidden';
