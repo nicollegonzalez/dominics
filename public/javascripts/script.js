@@ -108,22 +108,14 @@ if(pathName.indexOf("/careers") !== -1){
       // the minimum height initiated through the "rows" attribute
       var minHeight = 17;
       console.log("&%&$&$&%&^&$ Min Height:", minHeight);
-      // el.addEventListener('input', function() {
-      //     adjustHeight(el, minHeight);
-      // });
-
-      // // we have to readjust when window size changes (e.g. orientation change)
-      // window.addEventListener('resize', function() {
-      //     adjustHeight(el, minHeight);
-      // });
-
-      // we adjust height to the initial content
+      
       adjustHeight(el, minHeight);
 
     });
-    setTimeout(() => {
-      window.print();
-    }, 50);
+
+
+    window.print();
+    
 
     setTimeout(function () {
       console.log("AFTER PRINTING!!!!");
@@ -181,7 +173,7 @@ if(pathName.indexOf("/careers") !== -1){
   
       });
 
-    },100);
+    },1000);
 
 
 

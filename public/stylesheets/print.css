@@ -60,7 +60,7 @@ td{
 }
 
 h1, h2, h3, h4, h5, label {
-  page-break-after: never;
+  page-break-after: avoid;
 }
 
 
