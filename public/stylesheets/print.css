@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, label {
 }
 
 
-h3#employment-application-title, div.none.print img {
+#employment-application-title, div.none.print img {
   width: 50%;
   margin: 0 auto;
   text-align: center;
