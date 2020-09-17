@@ -7,7 +7,7 @@
 }
 
 .none.print{
-  display: inline-block!important;
+  display: inline;
 }
 
 
@@ -31,7 +31,12 @@ header, #covid-modal, nav, #leftNav, #rightNav, footer, .career{
 }
 
 div.none.print{
-  min-height: 1em;
+  min-height: 0.5em;
+}
+
+div.none.print.line{
+  display: block;
+  /* height: 1em; */
 }
 
 label{
@@ -72,10 +77,12 @@ h1, h2, h3, h4, h5, label {
 
 
 #employment-application-title, div.none.print img {
+  display: block;
   width: 50%;
   margin: 0 auto;
   text-align: center;
   font-size: 1em;
+
 }
 
 div.none.print img {
@@ -131,7 +138,7 @@ table, label{
 
 #career-application-form textarea {
   width: 100%;
-  /* height: 28px; */
+  min-height: 22px;
   font-size: 16px;
   cursor: text;
   font: 400 13.3333px Georgia, serif;

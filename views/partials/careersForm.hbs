@@ -68,7 +68,7 @@
             <input id="currently-employed-input" type="text" name="currentlyemployed" size="4" maxlength="4"required>
 
             <label for="currently-employed-yes-input" class="none print">If Yes, may we contact your employer?</label>
-            <input id="currently-employed-yes-input" class="none print" type="text" name="currentlyemployedyes" size="4" maxlength="4">
+            <input id="currently-employed-yes-input" class="none print" type="text" name="currentlyemployedyes" size="4" maxlength="3">
         </div>
 
         <div class="form-group">
@@ -163,8 +163,8 @@
                 {{!-- </div> --}}
 
                 {{!-- <div class="form-group"> --}}
-                    <label for="high-school-graduate-input">Did you graduate high school?</label>
-                    <input id="high-school-graduate-input" type="text" name="highschoolgraduate" size="3" maxlength="3">
+                    <label for="high-school-graduate-input" class="none print">Did you graduate high school?</label>
+                    <input id="high-school-graduate-input" class="none print" type="text" name="highschoolgraduate" size="3" maxlength="3">
                 </div>
             </div>
         </div>
@@ -210,14 +210,14 @@
             </div>
         </div>
 
-        <div class="none print"></div>
+        <div class="none print line"></div>
         <div class="form-group show">
             <label for="attending-school-input">Are you currently attending school?</label>
             <input id="attending-school-input" type="text" name="attendingschool" size="4" maxlength="4" required>
         </div>
         <div class="form-group show">
             <label for="special-skills-input">Special Skills?</label>
-            <input id="special-skills-input" type="text" name="specialSkills" size="89">
+            <textarea id="special-skills-input" type="text" name="terminated" rows="2" cols="100" required></textarea>
         </div>
 
 
@@ -229,44 +229,47 @@
         <div class="form-group">
             <div class="form-group">
                 <label for="previous-employment-name-1-input">Name of Business:</label>
-                <input id="previous-employment-name-1-input" type="text" name="previousemploymentname1">
+                <input id="previous-employment-name-1-input" type="text" name="previousemploymentname1" size="70" maxlength="70">
             </div>
             <div class="form-group">
                 <label for="previous-employment-position-1-input" class="none print">Position:</label>
                 <input id="previous-employment-position-1-input" class="none print" type="text" name="previousemploymentposition1">
                 <label for="previous-employment-wage-1-input" class="none print">Wage:</label>
                 <input id="previous-employment-wage-1-input" class="none print" type="text" name="previousemploymentwage1">
-                <label for="previous-employment-start-date-1-input" class="none print">Dates:</label>
             </div>
             <div class="form-group">
                 <div class="date-range">
+                    <label for="previous-employment-start-date-1-input" class="none print">Dates:</label>
                     <input id="previous-employment-start-date-1-input" class="none print" type="month" name="previousemploymentstartdate1">
                     <span class="none print">-</span>
                     <input id="previous-employment-end-date-1-input" class="none print" type="month" name="previousemploymentenddate1">
             
                     <label for="previous-employment-left-1-input" class="none print">Reason for leaving:</label>
-                    <input id="previous-employment-left-1-input" class="none print" type="text" name="previousemploymentleft1">
+                    <input id="previous-employment-left-1-input" class="none print" type="text" name="previousemploymentleft1" size="31">
                 </div>
             </div>
+            <div class="none print line"></div>
             <div class="form-group">
                 <label for="previous-employment-responsibilities-1-input" class="none print">Responsibilities:</label>
-                <input id="previous-employment-responsibilities-1-input" class="none print" type="text" name="previousemploymentresponsibilities1" size="104" maxlength="100">
+                <textarea id="previous-employment-responsibilities-1-input" class="none print" type="text" name="previousemploymentresponsibilities1" rows="2" cols="100"></textarea>
             </div>
+            
             <div class="form-group">
                 <label for="previous-employment-contact-permision-1-input" class="none print">May we contact?</label>
-                <input id="previous-employment-contact-permision-1-input" class="none print" type="text" name="previousemploymentcontactpermision1" size="3" maxlength="3">
+                <input id="previous-employment-contact-permision-1-input" class="none print" type="text" name="previousemploymentcontactpermision1" size="4" maxlength="3">
                 <label for="previous-employment-contact-name-1-input" class="none print">Contact Name:</label>
                 <input id="previous-employment-contact-name-1-input" class="none print" type="text" name="previousemploymentcontactname1">
                 <label for="previous-employment-contact-number-1-input" class="none print">Contact Number:</label>
-                <input id="previous-employment-contact-number-1-input" class="none print" type="tel" name="previousemploymentcontactnumber1">
+                <input id="previous-employment-contact-number-1-input" class="none print" type="tel" name="previousemploymentcontactnumber1" size="10" maxlength="10">
             </div>
         </div>
 
-        <div class="none print"></div>
+        <div class="none print line"></div>
+        <div class="none print line"></div>
         <div class="form-group">
             <div class="form-group">
                 <label for="previous-employment-name-2-input">Name of Business:</label>
-                <input id="previous-employment-name-2-input" type="text" name="previousemploymentname2">
+                <input id="previous-employment-name-2-input" type="text" name="previousemploymentname2" size="70" maxlength="70">
             </div>
             <div class="form-group">
                 <label for="previous-employment-position-2-input" class="none print">Position:</label>
@@ -275,35 +278,37 @@
                 <input id="previous-employment-wage-2-input" class="none print" type="text" name="previousemploymentwage2">
             </div>
             <div class="form-group">
-                <label for="previous-employment-start-date-2-input" class="none print">Dates:</label>
                 <div class="date-range">
+                    <label for="previous-employment-start-date-2-input" class="none print">Dates:</label>
                     <input id="previous-employment-start-date-2-input" class="none print" type="month" name="previousemploymentstartdate2">
                     <span class="none print">-</span>
                     <input id="previous-employment-end-date-2-input" class="none print" type="month" name="previousemploymentenddate2">
                
                     <label for="previous-employment-left-2-input" class="none print">Reason for leaving:</label>
-                    <input id="previous-employment-left-2-input" class="none print" type="text" name="previousemploymentleft2">
+                    <input id="previous-employment-left-2-input" class="none print" type="text" name="previousemploymentleft2" size="31">
                 </div>
             </div>
+            <div class="none print line"></div>
             <div class="form-group">
                 <label for="previous-employment-responsibilities-2-input" class="none print">Responsibilities:</label>
-                <input id="previous-employment-responsibilities-2-input" class="none print" type="text" name="previousemploymentresponsibilities2" size="104" maxlength="100">
+                <textarea id="previous-employment-responsibilities-2-input" class="none print" type="text" name="previousemploymentresponsibilities2" rows="2" cols="100"></textarea>
             </div>
             <div class="form-group">
-                <label for="previous-employment-contact-permision-2-input" class="none print">May we contact?</label>
-                <input id="previous-employment-contact-permision-2-input" class="none print" type="text" name="previousemploymentcontactpermision2">
+                <label for="previous-employment-contact-permision-2-input" class="none print" >May we contact?</label>
+                <input id="previous-employment-contact-permision-2-input" class="none print" type="text" name="previousemploymentcontactpermision2" size="4" maxlength="3">
                 <label for="previous-employment-contact-name-2-input" class="none print">Contact Name:</label>
                 <input id="previous-employment-contact-name-2-input" class="none print" type="text" name="previousemploymentcontactname2">
                 <label for="previous-employment-contact-number-2-input" class="none print">Contact Number:</label>
-                <input id="previous-employment-contact-number-2-input" class="none print" type="tel" name="previousemploymentcontactnumber2">
+                <input id="previous-employment-contact-number-2-input" class="none print" type="tel" name="previousemploymentcontactnumber2" size="10" maxlength="10">
             </div>
         </div>
 
-        <div class="none print"></div>
+        <div class="none print line"></div>
+        <div class="none print line"></div>
         <div class="form-group">
             <div class="form-group">
                 <label for="previous-employment-name-3-input">Name of Business:</label>
-                <input id="previous-employment-name-3-input" type="text" name="previousemploymentname3">
+                <input id="previous-employment-name-3-input" type="text" name="previousemploymentname3" size="70" maxlength="70">
             </div>
             <div class="form-group">
                 <label for="previous-employment-position-3-input" class="none print">Position:</label>
@@ -312,28 +317,29 @@
                 <input id="previous-employment-wage-3-input" class="none print" type="text" name="previousemploymentwage3">
             </div>
             <div class="form-group">
-                <label for="previous-employment-start-date-3-input" class="none print">Dates:</label>
                 <div class="date-range">
+                    <label for="previous-employment-start-date-3-input" class="none print">Dates:</label>
                     <input id="previous-employment-start-date-3-input" class="none print" type="month" name="previousemploymentstartdate3">
                     <span class="none print">-</span>
                     <input id="previous-employment-end-date-3-input" class="none print" type="month" name="previousemploymentenddate3">
                 
 
                 <label for="previous-employment-left-3-input" class="none print">Reason for leaving:</label>
-                <input id="previous-employment-left-3-input" class="none print" type="text" name="previousemploymentleft3">
+                <input id="previous-employment-left-3-input" class="none print" type="text" name="previousemploymentleft3" size="31">
                 </div>
             </div>
+            <div class="none print line"></div>
             <div class="form-group">
                 <label for="previous-employment-responsibilities-3-input" class="none print">Responsibilities:</label>
-                <input id="previous-employment-responsibilities-3-input" class="none print" type="text" name="previousemploymentresponsibilities3" size="104" maxlength="100">
+                <textarea id="previous-employment-responsibilities-3-input" class="none print" type="text" name="previousemploymentresponsibilities3" rows="2" cols="100"></textarea>
             </div>
             <div class="form-group">
                 <label for="previous-employment-contact-permision-3-input" class="none print">May we contact?</label>
-                <input id="previous-employment-contact-permision-3-input" class="none print" type="text" name="previousemploymentcontactpermision3">
+                <input id="previous-employment-contact-permision-3-input" class="none print" type="text" name="previousemploymentcontactpermision3" size="4" maxlength="3">
                 <label for="previous-employment-contact-name-3-input" class="none print">Contact Name:</label>
                 <input id="previous-employment-contact-name-3-input" class="none print" type="text" name="previousemploymentcontactname3">
                 <label for="previous-employment-contact-number-3-input" class="none print">Contact Number:</label>
-                <input id="previous-employment-contact-number-3-input" class="none print" type="tel" name="previousemploymentcontactnumber3">
+                <input id="previous-employment-contact-number-3-input" class="none print" type="tel" name="previousemploymentcontactnumber3" size="10" maxlength="10">
             </div>
         </div>
 
@@ -381,12 +387,19 @@
 
             {{!-- <div class="none print"></div> --}}
             <div class="form-group column">
-                <label for="white-wine-input">List 4 types of white wine:</label>
-                <input id="white-wine-input" type="text" name="whitewine">
-                <label for="red-wine-input">List 4 types of red wine:</label>
-                <input id="red-wine-input" type="text" name="redwine">
-                <label for="blush-wine-input">List 4 types of blush wine:</label>
-                <input id="blush-wine-input" type="text" name="blushwine">
+                <div class="form-group">
+                    <label for="white-wine-input">List 4 types of white wine:</label>
+                    <input id="white-wine-input" type="text" name="whitewine" size="76">
+                </div>
+                <div class="form-group">
+                    <label for="red-wine-input">List 4 types of red wine:</label>
+                    <input id="red-wine-input" type="text" name="redwine" size="78">
+                </div>
+                <div class="form-group">
+                    <label for="blush-wine-input">List 4 types of blush wine:</label>
+                    <input id="blush-wine-input" type="text" name="blushwine" size="76">
+                </div>
+                <div class="none print line"></div>
                 <label for="italian-dishes-input">List 4 types of italian dishes:</label>
                 <input id="italian-dishes-input" type="text" name="italiandishes" size="103">
             </div>

@@ -208,6 +208,8 @@ if(pathName.indexOf("/careers") !== -1){
         document.querySelector('#high-school-start-date-input').previousElementSibling.classList.remove("none");
         document.querySelector('#high-school-start-date-input').nextElementSibling.classList.remove("none");
         document.querySelector('#high-school-end-date-input').classList.remove("none");
+        document.querySelector('#high-school-graduate-input').classList.remove("none");
+        document.querySelector('#high-school-graduate-input').previousElementSibling.classList.remove("none");
       }else{
         document.querySelector('#high-school-start-date-input').classList.add("none");
         document.querySelector('#high-school-start-date-input').previousElementSibling.classList.add("none");
@@ -252,7 +254,7 @@ if(pathName.indexOf("/careers") !== -1){
         document.querySelector('#previous-employment-position-1-input').previousElementSibling.classList.remove("none");
         document.querySelector('#previous-employment-wage-1-input').classList.remove("none");
         document.querySelector('#previous-employment-wage-1-input').previousElementSibling.classList.remove("none");
-        document.querySelector('#previous-employment-wage-1-input').nextElementSibling.classList.remove("none");
+        // document.querySelector('#previous-employment-wage-1-input').nextElementSibling.classList.remove("none");
         document.querySelector('#previous-employment-start-date-1-input').classList.remove("none");
         document.querySelector('#previous-employment-start-date-1-input').nextElementSibling.classList.remove("none");
         document.querySelector('#previous-employment-end-date-1-input').classList.remove("none");
@@ -274,7 +276,7 @@ if(pathName.indexOf("/careers") !== -1){
         document.querySelector('#previous-employment-position-1-input').previousElementSibling.classList.add("none");
         document.querySelector('#previous-employment-wage-1-input').classList.add("none");
         document.querySelector('#previous-employment-wage-1-input').previousElementSibling.classList.add("none");
-        document.querySelector('#previous-employment-wage-1-input').nextElementSibling.classList.add("none");
+        // document.querySelector('#previous-employment-wage-1-input').nextElementSibling.classList.add("none");
         document.querySelector('#previous-employment-start-date-1-input').classList.add("none");
         // document.querySelector('#previous-employment-start-date-1-input').previousElementSibling.classList.add("none");
         document.querySelector('#previous-employment-start-date-1-input').nextElementSibling.classList.add("none");
@@ -296,7 +298,7 @@ if(pathName.indexOf("/careers") !== -1){
         document.querySelector('#previous-employment-position-2-input').previousElementSibling.classList.remove("none");
         document.querySelector('#previous-employment-wage-2-input').classList.remove("none");
         document.querySelector('#previous-employment-wage-2-input').previousElementSibling.classList.remove("none");
-        document.querySelector('#previous-employment-wage-2-input').nextElementSibling.classList.remove("none");
+        // document.querySelector('#previous-employment-wage-2-input').nextElementSibling.classList.remove("none");
         document.querySelector('#previous-employment-start-date-2-input').classList.remove("none");
         document.querySelector('#previous-employment-start-date-2-input').nextElementSibling.classList.remove("none");
         document.querySelector('#previous-employment-end-date-2-input').classList.remove("none");
@@ -318,7 +320,7 @@ if(pathName.indexOf("/careers") !== -1){
         document.querySelector('#previous-employment-position-2-input').previousElementSibling.classList.add("none");
         document.querySelector('#previous-employment-wage-2-input').classList.add("none");
         document.querySelector('#previous-employment-wage-2-input').previousElementSibling.classList.add("none");
-        document.querySelector('#previous-employment-wage-2-input').nextElementSibling.classList.add("none");
+        // document.querySelector('#previous-employment-wage-2-input').nextElementSibling.classList.add("none");
         document.querySelector('#previous-employment-start-date-2-input').classList.add("none");
         // document.querySelector('#previous-employment-start-date-2-input').previousElementSibling.classList.add("none");
         document.querySelector('#previous-employment-start-date-2-input').nextElementSibling.classList.add("none");
@@ -362,7 +364,7 @@ if(pathName.indexOf("/careers") !== -1){
         document.querySelector('#previous-employment-position-3-input').previousElementSibling.classList.add("none");
         document.querySelector('#previous-employment-wage-3-input').classList.add("none");
         document.querySelector('#previous-employment-wage-3-input').previousElementSibling.classList.add("none");
-        document.querySelector('#previous-employment-wage-3-input').nextElementSibling.classList.add("none");
+        // document.querySelector('#previous-employment-wage-3-input').nextElementSibling.classList.add("none");
         document.querySelector('#previous-employment-start-date-3-input').classList.add("none");
         // document.querySelector('#previous-employment-start-date-3-input').previousElementSibling.classList.add("none");
         document.querySelector('#previous-employment-start-date-3-input').nextElementSibling.classList.add("none");
