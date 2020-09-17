@@ -121,8 +121,9 @@ if(pathName.indexOf("/careers") !== -1){
       adjustHeight(el, minHeight);
 
     });
-
-    window.print();
+    setTimeout(() => {
+      window.print();
+    }, 50);
 
     setTimeout(function () {
       console.log("AFTER PRINTING!!!!");

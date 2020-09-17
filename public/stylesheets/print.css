@@ -17,6 +17,7 @@ body{
   margin: 0;
   float: none;
   font-family: Georgia, serif;
+  font-size: 16px;
 }
 
 header, #covid-modal, nav, #leftNav, #rightNav, footer, .career{
