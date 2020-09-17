@@ -160,9 +160,9 @@
                     <input id="high-school-start-date-input" class="none print" type="month" name="highschoolstartdate">
                     <span class="none print">-</span>
                     <input id="high-school-end-date-input" class="none print" type="month" name="highschoolenddate">
-                </div>
+                {{!-- </div> --}}
 
-                <div class="form-group">
+                {{!-- <div class="form-group"> --}}
                     <label for="high-school-graduate-input">Did you graduate high school?</label>
                     <input id="high-school-graduate-input" type="text" name="highschoolgraduate" size="3" maxlength="3">
                 </div>
@@ -181,8 +181,8 @@
                     <input id="college-start-date-input" class="none print" type="month" name="collegestartdate">
                     <span class="none print">-</span>
                     <input id="college-end-date-input" class="none print" type="month" name="collegeenddate">
-                </div>
-                <div class="form-group">
+                {{!-- </div> --}}
+                {{!-- <div class="form-group"> --}}
                     <label for="college-graduate-input" class="none print">Did you graduate college?</label>
                     <input id="college-graduate-input" class="none print" type="text" name="collegegraduate" size="3" maxlength="3">
                 </div>
@@ -202,8 +202,8 @@
                     <input id="trade-school-start-date-input" class="none print" type="month" name="tradeschoolstartdate">
                     <span class="none print">-</span>
                     <input id="trade-school-end-date-input" class="none print" type="month" name="tradeschoolenddate">
-                </div>
-                <div class="form-group">
+                {{!-- </div> --}}
+                {{!-- <div class="form-group"> --}}
                     <label for="trade-school-graduate-input" class="none print">Did you graduate trade school?</label>
                     <input id="trade-school-graduate-input" class="none print" type="text" name="tradeschoolgraduate" size="3" maxlength="3">
                 </div>
@@ -217,7 +217,7 @@
         </div>
         <div class="form-group show">
             <label for="special-skills-input">Special Skills?</label>
-            <input id="special-skills-input" type="text" name="specialSkills" size="90">
+            <input id="special-skills-input" type="text" name="specialSkills" size="89">
         </div>
 
 
@@ -227,28 +227,39 @@
 
         {{!-- <div class="none print"></div> --}}
         <div class="form-group">
-            <label for="previous-employment-name-1-input">Name of Business:</label>
-            <input id="previous-employment-name-1-input" type="text" name="previousemploymentname1">
-            <label for="previous-employment-position-1-input" class="none print">Position:</label>
-            <input id="previous-employment-position-1-input" class="none print" type="text" name="previousemploymentposition1">
-            <label for="previous-employment-wage-1-input" class="none print">Wage:</label>
-            <input id="previous-employment-wage-1-input" class="none print" type="text" name="previousemploymentwage1">
-            <label for="previous-employment-start-date-1-input" class="none print">Dates:</label>
-            <div class="date-range">
-                <input id="previous-employment-start-date-1-input" class="none print" type="month" name="previousemploymentstartdate1">
-                <span class="none print">-</span>
-                <input id="previous-employment-end-date-1-input" class="none print" type="month" name="previousemploymentenddate1">
+            <div class="form-group">
+                <label for="previous-employment-name-1-input">Name of Business:</label>
+                <input id="previous-employment-name-1-input" type="text" name="previousemploymentname1">
             </div>
-            <label for="previous-employment-left-1-input" class="none print">Reason for leaving:</label>
-            <input id="previous-employment-left-1-input" class="none print" type="text" name="previousemploymentleft1">
-            <label for="previous-employment-responsibilities-1-input" class="none print">Responsibilities:</label>
-            <input id="previous-employment-responsibilities-1-input" class="none print" type="text" name="previousemploymentresponsibilities1" size="104" maxlength="100">
-            <label for="previous-employment-contact-permision-1-input" class="none print">May we contact?</label>
-            <input id="previous-employment-contact-permision-1-input" class="none print" type="text" name="previousemploymentcontactpermision1">
-            <label for="previous-employment-contact-name-1-input" class="none print">Contact Name:</label>
-            <input id="previous-employment-contact-name-1-input" class="none print" type="text" name="previousemploymentcontactname1">
-            <label for="previous-employment-contact-number-1-input" class="none print">Contact Number:</label>
-            <input id="previous-employment-contact-number-1-input" class="none print" type="tel" name="previousemploymentcontactnumber1">
+            <div class="form-group">
+                <label for="previous-employment-position-1-input" class="none print">Position:</label>
+                <input id="previous-employment-position-1-input" class="none print" type="text" name="previousemploymentposition1">
+                <label for="previous-employment-wage-1-input" class="none print">Wage:</label>
+                <input id="previous-employment-wage-1-input" class="none print" type="text" name="previousemploymentwage1">
+                <label for="previous-employment-start-date-1-input" class="none print">Dates:</label>
+            </div>
+            <div class="form-group">
+                <div class="date-range">
+                    <input id="previous-employment-start-date-1-input" class="none print" type="month" name="previousemploymentstartdate1">
+                    <span class="none print">-</span>
+                    <input id="previous-employment-end-date-1-input" class="none print" type="month" name="previousemploymentenddate1">
+            
+                    <label for="previous-employment-left-1-input" class="none print">Reason for leaving:</label>
+                    <input id="previous-employment-left-1-input" class="none print" type="text" name="previousemploymentleft1">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="previous-employment-responsibilities-1-input" class="none print">Responsibilities:</label>
+                <input id="previous-employment-responsibilities-1-input" class="none print" type="text" name="previousemploymentresponsibilities1" size="104" maxlength="100">
+            </div>
+            <div class="form-group">
+                <label for="previous-employment-contact-permision-1-input" class="none print">May we contact?</label>
+                <input id="previous-employment-contact-permision-1-input" class="none print" type="text" name="previousemploymentcontactpermision1" size="3" maxlength="3">
+                <label for="previous-employment-contact-name-1-input" class="none print">Contact Name:</label>
+                <input id="previous-employment-contact-name-1-input" class="none print" type="text" name="previousemploymentcontactname1">
+                <label for="previous-employment-contact-number-1-input" class="none print">Contact Number:</label>
+                <input id="previous-employment-contact-number-1-input" class="none print" type="tel" name="previousemploymentcontactnumber1">
+            </div>
         </div>
 
         <div class="none print"></div>
