@@ -37,9 +37,10 @@ label{
 input{
   border: none;
   border-bottom: 2px solid black;
-  min-height: 2em; 
+  min-height: 1.7em; 
   background-color: white;
   font-family: Georgia, serif;
+  font-size: 16px;
 }
 
 table, tbody, th, td {
@@ -121,7 +122,7 @@ table, label{
 #career-application-form input[type|="month"] {
   width: calc((100% - 1.5em - 1.5em - 12px) / 2);
   max-width: calc((310px)/2);
-  font-size: 1em;
+  font-size: 16px;
 }
 
 #social-security-input, #social-security-input-label{
