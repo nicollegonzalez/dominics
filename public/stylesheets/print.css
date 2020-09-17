@@ -62,6 +62,7 @@ td{
 
 h1, h2, h3, h4, h5, label {
   page-break-after: avoid;
+  break-after: avoid;
 }
 
 
@@ -104,6 +105,7 @@ div.none.print img {
 /* #career-application-form div.form-group, */
 table, label{
   page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 #career-application-form .form-group.column{
@@ -113,8 +115,10 @@ table, label{
   padding: 0;
 }
 
-#career-application-form h3:first-of-type{
+/* #career-application-form h3:first-of-type */
+#career-application-form .education{
   color: purple;
+  break-before: always;
   /* break-before: all; */
   /* position: relative; */
 }
