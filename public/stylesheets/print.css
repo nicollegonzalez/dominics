@@ -7,7 +7,7 @@
 }
 
 .none.print{
-  display: block!important;
+  display: inline-block!important;
 }
 
 
