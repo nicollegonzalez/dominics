@@ -1,9 +1,6 @@
-/* *{
-  display: block;
-} */
+
 @page {
   size: letter;
-  /* margin: 0; */
 }
 
 .none.print{
@@ -13,7 +10,6 @@
 
 
 body{
-  /* width: 730px; */
   width: fit-content;
   margin: 0;
   float: none;
@@ -21,11 +17,6 @@ body{
   font-size: 16px;
   border: 1px solid black;
 }
-
-/* .print-page{
-  height: 750px;
-  max-width: 100%;
-} */
 
 header, #covid-modal, nav, #leftNav, #rightNav, footer, .career{
   display:none;
@@ -37,7 +28,6 @@ div.none.print{
 
 div.none.print.line{
   display: block;
-  /* height: 1em; */
 }
 
 label{
@@ -49,16 +39,11 @@ input{
   border-bottom: 2px solid black;
   min-height: 2em; 
   background-color: white;
-  /* font-size: 1em; */
   font-family: Georgia, serif;
 }
 
 table, tbody, th, td {
   border-collapse: collapse;
-}
-
-table{
-  /* margin: 0 2.5%; */
 }
 
 th, td{
@@ -76,7 +61,6 @@ h1, h2, h3, h4, h5, label {
   break-after: avoid;
 }
 
-
 #employment-application-title, div.none.print img {
   display: block;
   width: 50%;
@@ -93,10 +77,6 @@ div.none.print img {
   filter: grayscale();
 }
 
-#career-application-form{
-  /* position: relative; */
-}
-
 #career-application-form > *{
   display: inline;
 }
@@ -109,13 +89,6 @@ div.none.print img {
   display: none;
 }
 
-#career-application-form .form-group{
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 0; */
-}
-
 /* #career-application-form div.form-group, */
 table, label{
   page-break-inside: avoid;
@@ -123,20 +96,13 @@ table, label{
 }
 
 #career-application-form .form-group.column{
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding: 0; */
 }
 
 /* #career-application-form h3:first-of-type */
 #career-application-form .education{
   color: purple;
   break-before: always;
-  /* break-before: all; */
-  /* position: relative; */
 }
-
 
 #career-application-form textarea {
   width: 100%;
@@ -150,8 +116,6 @@ table, label{
 }
 
 #career-application-form .date-range{
-  /* display: flex;
-  flex-direction: row; */
 }
 
 #career-application-form input[type|="month"] {
@@ -159,7 +123,6 @@ table, label{
   max-width: calc((310px)/2);
   font-size: 1em;
 }
-
 
 #social-security-input, #social-security-input-label{
   display: inline;
@@ -169,22 +132,17 @@ table, label{
   color: white;
 }
 
-
-/* .print-inline{
-  display: inline-block;
-} */
-
 h3{
   /* margin: 10px 0 0 ; */
 }
 
-hr{
+/* hr{
   display: block;
   height: 1px;
   background: transparent;
   width: 100%;
   border: none;
   border-top: solid 1px #aaa;
-}
+} */
 
 
