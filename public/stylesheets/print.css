@@ -22,10 +22,10 @@ body{
   border: 1px solid black;
 }
 
-.print-page{
-  height: 100%;
+/* .print-page{
+  height: 750px;
   max-width: 100%;
-}
+} */
 
 header, #covid-modal, nav, #leftNav, #rightNav, footer, .career{
   display:none;
@@ -58,11 +58,11 @@ table, tbody, th, td {
 }
 
 table{
-  margin: 0 2.5%;
+  /* margin: 0 2.5%; */
 }
 
 th, td{
-  width: calc(95%/7);
+  width: calc(100%/7);
   height: 50px;
   border: 1px solid black;
 }
@@ -103,6 +103,7 @@ div.none.print img {
 
 #career-application-form label{
   margin-top: 0.5em;
+  font-size: 14px;
 }
 #career-application-form button{
   display: none;
