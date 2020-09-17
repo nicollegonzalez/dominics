@@ -21,6 +21,10 @@ body{
   font-size: 16px;
 }
 
+.print-page{
+  min-height: 100%;
+}
+
 header, #covid-modal, nav, #leftNav, #rightNav, footer, .career{
   display:none;
 }
@@ -96,10 +100,10 @@ div.none.print img {
 }
 
 #career-application-form .form-group{
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0;
+  padding: 0; */
 }
 
 /* #career-application-form div.form-group, */
@@ -109,10 +113,10 @@ table, label{
 }
 
 #career-application-form .form-group.column{
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0;
+  padding: 0; */
 }
 
 /* #career-application-form h3:first-of-type */
@@ -136,8 +140,8 @@ table, label{
 }
 
 #career-application-form .date-range{
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
 }
 
 #career-application-form input[type|="month"] {
