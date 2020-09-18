@@ -513,6 +513,7 @@ a.nav-menu-link:hover{
 
 .thumbnail{
   width: 90vw;
+  height: calc(90vw / 1.50225338007);
 }
 
 #mainContent .dominics-intro div.logo, #mainContent .location-intro div.logo {
@@ -1316,7 +1317,8 @@ ul.nav-menu {
     max-width: 544px; } 
 
   .thumbnail{
-    width: 45vw;
+    // width: 45vw;
+    height: calc(45vw / 1.50225338007);
   }
   }
 
@@ -1510,6 +1512,7 @@ ul.nav-menu {
 
   .thumbnail{
     width: 30vw;
+    height: calc(30vw / 1.50225338007);;
   }
 
   .career-content{
