@@ -1316,16 +1316,20 @@ ul.nav-menu {
   .dominics-quote p {
     max-width: 544px; } 
 
-  .thumbnail{
-    width: 45vw;
-    height: calc(45vw / 1.50225338007);
-  }
+  // .thumbnail{
+  //   width: 45vw;
+  //   height: calc(45vw / 1.50225338007);
+  // }
   }
 
-@media only screen and (min-width: 540px) {
+@media only screen and (min-width: 600px) {
   // .about{
   //   min-height: calc(100vh - 96px - 98px)!important;
   // }
+  .thumbnail{
+      width: 45vw;
+      height: calc(45vw / 1.50225338007);
+    }
 }
 
 /* NavBar Big Change at min-wiidth: 767px */
