@@ -24,6 +24,7 @@ header, #covid-modal, nav, #leftNav, #rightNav, footer, .career{
 
 div.none.print{
   min-height: 0.5em;
+  width: 100%;
 }
 
 div.none.print.line{
@@ -47,8 +48,12 @@ table, tbody, th, td {
   border-collapse: collapse;
 }
 
+table, tbody, tr{
+  width: 100%;
+}
+
 th, td{
-  width: calc(100vw/7);
+  width: 16vw;
   height: 50px;
   border: 1px solid black;
 }
