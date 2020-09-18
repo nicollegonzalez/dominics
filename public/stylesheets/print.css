@@ -15,7 +15,7 @@ body{
   float: none;
   font-family: Georgia, serif;
   font-size: 16px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 header, #covid-modal, nav, #leftNav, #rightNav, footer, .career{
@@ -29,6 +29,12 @@ div.none.print{
 
 div.none.print.line{
   display: block;
+}
+
+div.none.print.line.thick{
+  height: 12px;
+  /* background-color: black; */
+  border-bottom: 4px solid black;
 }
 
 label{
@@ -89,7 +95,7 @@ div.none.print img {
 
 #career-application-form label{
   margin-top: 0.5em;
-  font-size: 14px;
+  font-size: 13px;
 }
 #career-application-form button{
   display: none;
