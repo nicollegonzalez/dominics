@@ -418,7 +418,7 @@ a.nav-menu-link:hover {
   width: 100vw;
   height: calc(100vh - 75px - 10px - 10px); }
 
-.gallary {
+.gallery {
   width: 90vw;
   margin: 0 auto;
   display: flex;
@@ -1140,7 +1140,7 @@ ul.nav-menu {
     display: flex;
     justify-content: center;
     align-items: center; }
-  .gallary {
+  .gallery {
     width: 90vw;
     margin: 0 auto 30px auto;
     display: flex;

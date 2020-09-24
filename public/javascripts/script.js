@@ -16,7 +16,7 @@ const careersApplicationBtn = document.querySelector('#careers-application-btn')
 const careersApplication = document.querySelector('#career-application-form');
 const inputs = document.getElementsByTagName('input');
 const printApplicationBtn = document.querySelector('#print-application-btn');
-const locationGallary = document.querySelector('.gallary');
+const locationGallery = document.querySelector('.gallery');
 
 
 const locations = [
@@ -492,7 +492,7 @@ if(pathName.indexOf("/careers") !== -1){
 if(pathName.indexOf("/locations/") !== -1){
   if(pathName.indexOf("/locations/dominicsIV") !== -1){
     // console.log("HI IV");
-    locationGallary.innerHTML += `
+    locationGallery.innerHTML += `
     <img src="/images/dominicsIV/DominicsPizzaPastaIV-1.jpg" alt="" class="thumbnail">
     <img src="/images/dominicsIV/DominicsPizzaPastaIV-2.jpg" alt="" class="thumbnail">
     <img src="/images/dominicsIV/DominicsPizzaPastaIV-3.jpg" alt="" class="thumbnail">
@@ -518,7 +518,7 @@ if(pathName.indexOf("/locations/") !== -1){
   }
   else if(pathName.indexOf("/locations/dominicsIII") !== -1){
     // console.log("HI III");
-    locationGallary.innerHTML += `
+    locationGallery.innerHTML += `
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-1.jpg" alt="" class="thumbnail">
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-2.jpg" alt="" class="thumbnail">
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-3.jpg" alt="" class="thumbnail">
@@ -533,7 +533,7 @@ if(pathName.indexOf("/locations/") !== -1){
   }
   else if(pathName.indexOf("/locations/dominicsII") !== -1){
     // console.log("HI II");
-    locationGallary.innerHTML += `
+    locationGallery.innerHTML += `
     <img src="/images/dominicsII/DominicsPizzaPastaII-1.jpg" alt="" class="thumbnail">
     <img src="/images/dominicsII/DominicsPizzaPastaII-2.jpg" alt="" class="thumbnail">
     <img src="/images/dominicsII/DominicsPizzaPastaII-3.jpg" alt="" class="thumbnail">
@@ -544,7 +544,7 @@ if(pathName.indexOf("/locations/") !== -1){
     `
   }
   else if(pathName.indexOf("/locations/dominicsI") !== -1){
-    locationGallary.innerHTML += `
+    locationGallery.innerHTML += `
     <img src="/images/dominicsI/DominicsPizzaPastaI-1.jpg" alt="" class="thumbnail">
     <img src="/images/dominicsI/DominicsPizzaPastaI-2.jpg" alt="" class="thumbnail">
     <img src="/images/dominicsI/DominicsPizzaPastaI-3.jpg" alt="" class="thumbnail">

@@ -504,7 +504,7 @@ a.nav-menu-link:hover{
   height: calc(100vh - 75px - 10px - 10px);
 }
 
-.gallary{
+.gallery{
   width: 90vw;
   margin: 0 auto;
   display: flex;
@@ -581,10 +581,18 @@ a.nav-menu-link:hover{
 }
 
 #slide3 {
-  background-image: url(/images/pizza2.JPG);
+  background-image: url(/images/eggplant.JPG);
 }
 
 #slide4 {
+  background-image: url(/images/calms.JPG);
+}
+
+#slide5 {
+  background-image: url(/images/mushrooms.JPG);
+}
+
+#slide6 {
   background-image: url(/images/pizza1.JPG);
 }
 
@@ -1506,7 +1514,7 @@ ul.nav-menu {
     align-items: center;
   }
 
-  .gallary{
+  .gallery{
     // min-height: calc(80vh - 95px);
     width: 90vw;
     margin: 0 auto 30px auto;
