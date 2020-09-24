@@ -73,24 +73,24 @@ if(pathName.indexOf("/careers") !== -1){
   })
   
   printApplicationBtn.addEventListener('click',function(e){
-    console.log("HERE 1!!!");
+    // console.log("HERE 1!!!");
     function adjustHeight(textareaElement, minHeight) {
       // compute the height difference which is caused by border and outline
       var outerHeight = parseInt(window.getComputedStyle(textareaElement).height, 10);
-      console.log("&&&&&&& Outer Height", outerHeight);
+      // console.log("&&&&&&& Outer Height", outerHeight);
       if(outerHeight >= 17){
       
         var diff = outerHeight - textareaElement.clientHeight;
-        console.log("$$$$$$$",diff);
+        // console.log("$$$$$$$",diff);
   
         // set the height to 0 in case of it has to be shrinked
         textareaElement.style.height = 0;
       
         // set the correct height
         // el.scrollHeight is the full height of the content, not just the visible part
-        console.log("$$$$$$$$$ Scroll Height", textareaElement.scrollHeight);
+        // console.log("$$$$$$$$$ Scroll Height", textareaElement.scrollHeight);
         textareaElement.style.height = Math.max(minHeight, textareaElement.scrollHeight - (diff * 2)) + 'px';
-        console.log("$%$%$%$%:",textareaElement.style.height);
+        // console.log("$%$%$%$%:",textareaElement.style.height);
       }
     }
 
@@ -107,7 +107,7 @@ if(pathName.indexOf("/careers") !== -1){
 
       // the minimum height initiated through the "rows" attribute
       var minHeight = 17;
-      console.log("&%&$&$&%&^&$ Min Height:", minHeight);
+      // console.log("&%&$&$&%&^&$ Min Height:", minHeight);
       
       adjustHeight(el, minHeight);
 
@@ -118,21 +118,21 @@ if(pathName.indexOf("/careers") !== -1){
     
 
     setTimeout(function () {
-      console.log("AFTER PRINTING!!!!");
-      console.log("HERE 2!!!");
+      // console.log("AFTER PRINTING!!!!");
+      // console.log("HERE 2!!!");
       function adjustHeight(textareaElement, minHeight) {
         // compute the height difference which is caused by border and outline
         var outerHeight = parseInt(window.getComputedStyle(textareaElement).height, 10);
-        console.log("outerHeight",outerHeight);
+        // console.log("outerHeight",outerHeight);
         if(outerHeight < 195 ){
           outerHeight = 195;
-          console.log("outerHeight NEW***",outerHeight);
+          // console.log("outerHeight NEW***",outerHeight);
           // textareaElement.clientHeight = 106;
-          console.log("clientHeight:", textareaElement.clientHeight);
+          // console.log("clientHeight:", textareaElement.clientHeight);
         }
         if(outerHeight >= 195){
           var diff = outerHeight - (outerHeight - 2);
-          console.log("diff",diff);
+          // console.log("diff",diff);
     
           // set the height to 0 in case of it has to be shrinked
           textareaElement.style.height = 0;
@@ -185,10 +185,10 @@ if(pathName.indexOf("/careers") !== -1){
   for(let i = 0; i < inputs.length; i++){
     inputs[i].addEventListener('keyup', function(e){
       let parentElement = inputs[i].parentElement;
-      console.log(parentElement);
+      // console.log(parentElement);
       if(document.querySelector('#first-time-input').value.toUpperCase() === "YES"){
         document.querySelector('#first-time-yes-input').classList.remove("none");
-        console.log(document.querySelector('#first-time-yes-input').previousElementSibling);//.classList.remove("none");
+        // console.log(document.querySelector('#first-time-yes-input').previousElementSibling);//.classList.remove("none");
         document.querySelector('#first-time-yes-input').previousElementSibling.classList.remove("none");
       }else{
         document.querySelector('#first-time-yes-input').classList.add("none");
@@ -203,7 +203,7 @@ if(pathName.indexOf("/careers") !== -1){
         document.querySelector('#currently-employed-yes-input').previousElementSibling.classList.add("none");
       }
       if(document.querySelector('#high-school-input').value !== ""){
-        console.log(document.querySelector('#high-school-input').value);
+        // console.log(document.querySelector('#high-school-input').value);
         document.querySelector('#high-school-start-date-input').classList.remove("none");
         document.querySelector('#high-school-start-date-input').previousElementSibling.classList.remove("none");
         document.querySelector('#high-school-start-date-input').nextElementSibling.classList.remove("none");
@@ -217,7 +217,7 @@ if(pathName.indexOf("/careers") !== -1){
         document.querySelector('#high-school-end-date-input').classList.add("none");
       }
       if(document.querySelector('#college-input').value !== ""){
-        console.log(document.querySelector('#college-input').value);
+        // console.log(document.querySelector('#college-input').value);
         document.querySelector('#college-start-date-input').classList.remove("none");
         document.querySelector('#college-start-date-input').previousElementSibling.classList.remove("none");
         document.querySelector('#college-start-date-input').nextElementSibling.classList.remove("none");
@@ -233,7 +233,7 @@ if(pathName.indexOf("/careers") !== -1){
         document.querySelector('#college-graduate-input').previousElementSibling.classList.add("none");
       }
       if(document.querySelector('#trade-school-input').value !== ""){
-        console.log(document.querySelector('#trade-school-input').value);
+        // console.log(document.querySelector('#trade-school-input').value);
         document.querySelector('#trade-school-start-date-input').classList.remove("none");
         document.querySelector('#trade-school-start-date-input').previousElementSibling.classList.remove("none");
         document.querySelector('#trade-school-start-date-input').nextElementSibling.classList.remove("none");
@@ -249,7 +249,7 @@ if(pathName.indexOf("/careers") !== -1){
         document.querySelector('#trade-school-graduate-input').previousElementSibling.classList.add("none");
       }
       if(document.querySelector('#previous-employment-name-1-input').value !== ""){
-        console.log(document.querySelector('#previous-employment-name-1-input').value);
+        // console.log(document.querySelector('#previous-employment-name-1-input').value);
         document.querySelector('#previous-employment-position-1-input').classList.remove("none");
         document.querySelector('#previous-employment-position-1-input').previousElementSibling.classList.remove("none");
         document.querySelector('#previous-employment-wage-1-input').classList.remove("none");
@@ -293,7 +293,7 @@ if(pathName.indexOf("/careers") !== -1){
         document.querySelector('#previous-employment-contact-number-1-input').previousElementSibling.classList.add("none");
       }
       if(document.querySelector('#previous-employment-name-2-input').value !== ""){
-        console.log(document.querySelector('#previous-employment-name-2-input').value);
+        // console.log(document.querySelector('#previous-employment-name-2-input').value);
         document.querySelector('#previous-employment-position-2-input').classList.remove("none");
         document.querySelector('#previous-employment-position-2-input').previousElementSibling.classList.remove("none");
         document.querySelector('#previous-employment-wage-2-input').classList.remove("none");
@@ -337,7 +337,7 @@ if(pathName.indexOf("/careers") !== -1){
         document.querySelector('#previous-employment-contact-number-2-input').previousElementSibling.classList.add("none");
       }
       if(document.querySelector('#previous-employment-name-3-input').value !== ""){
-        console.log(document.querySelector('#previous-employment-name-3-input').value);
+        // console.log(document.querySelector('#previous-employment-name-3-input').value);
         document.querySelector('#previous-employment-position-3-input').classList.remove("none");
         document.querySelector('#previous-employment-position-3-input').previousElementSibling.classList.remove("none");
         document.querySelector('#previous-employment-wage-3-input').classList.remove("none");
@@ -429,15 +429,15 @@ if(pathName.indexOf("/careers") !== -1){
 
   (function() {
     function adjustHeight(textareaElement, minHeight) {
-      console.log("HERE 3!!!");
+      // console.log("HERE 3!!!");
       // compute the height difference which is caused by border and outline
       var outerHeight = parseInt(window.getComputedStyle(textareaElement).height, 10);
-      console.log("outerHeight",outerHeight);
+      // console.log("outerHeight",outerHeight);
       if(outerHeight < 108){
         outerHeight = 108;
       }
       if(outerHeight >= 108){
-        console.log("outerHeight*",outerHeight);
+        // console.log("outerHeight*",outerHeight);
         var diff = outerHeight - textareaElement.clientHeight;
         // console.log("diff",diff);
   
@@ -466,17 +466,17 @@ if(pathName.indexOf("/careers") !== -1){
 
         // the minimum height initiated through the "rows" attribute
         var minHeight = 108;
-        console.log("minHeight",minHeight)
+        // console.log("minHeight",minHeight)
 
         el.addEventListener('input', function() {
             adjustHeight(el, minHeight);
-            console.log("input",minHeight)
+            // console.log("input",minHeight)
         });
 
         // we have to readjust when window size changes (e.g. orientation change)
         window.addEventListener('resize', function() {
             adjustHeight(el, minHeight);
-            console.log("resize",minHeight)
+            // console.log("resize",minHeight)
         });
 
         // we adjust height to the initial content
@@ -491,7 +491,7 @@ if(pathName.indexOf("/careers") !== -1){
 
 if(pathName.indexOf("/locations/") !== -1){
   if(pathName.indexOf("/locations/dominicsIV") !== -1){
-    console.log("HI IV");
+    // console.log("HI IV");
     locationGallary.innerHTML += `
     <img src="/images/dominicsIV/DominicsPizzaPastaIV-1.jpg" alt="" class="thumbnail">
     <img src="/images/dominicsIV/DominicsPizzaPastaIV-2.jpg" alt="" class="thumbnail">
@@ -517,7 +517,7 @@ if(pathName.indexOf("/locations/") !== -1){
     `;
   }
   else if(pathName.indexOf("/locations/dominicsIII") !== -1){
-    console.log("HI III");
+    // console.log("HI III");
     locationGallary.innerHTML += `
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-1.jpg" alt="" class="thumbnail">
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-2.jpg" alt="" class="thumbnail">
@@ -532,7 +532,7 @@ if(pathName.indexOf("/locations/") !== -1){
     `
   }
   else if(pathName.indexOf("/locations/dominicsII") !== -1){
-    console.log("HI II");
+    // console.log("HI II");
     locationGallary.innerHTML += `
     <img src="/images/dominicsII/DominicsPizzaPastaII-1.jpg" alt="" class="thumbnail">
     <img src="/images/dominicsII/DominicsPizzaPastaII-2.jpg" alt="" class="thumbnail">
@@ -544,7 +544,6 @@ if(pathName.indexOf("/locations/") !== -1){
     `
   }
   else if(pathName.indexOf("/locations/dominicsI") !== -1){
-    console.log("HI I");
     locationGallary.innerHTML += `
     <img src="/images/dominicsI/DominicsPizzaPastaI-1.jpg" alt="" class="thumbnail">
     <img src="/images/dominicsI/DominicsPizzaPastaI-2.jpg" alt="" class="thumbnail">
