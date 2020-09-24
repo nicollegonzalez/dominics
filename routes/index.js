@@ -66,13 +66,19 @@ router.post('/deals-user-info',(req, res, next) => {
   // if (!req.recaptcha.error) {
     // success code
     const { name, email} = req.body;
+    const resturant = req.headers.referer;
 
   Customer.exists({email: email}, function(err, result) {
     if (err) {
       res.send(err);
     } else {
       if (!result ) {
-        const newCustomer = new Customer({ name, email});
+        // console.log(req.body);
+        // console.log(req.params);
+        // console.log("$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%",req.headers.referer,"$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%");
+        // console.log(req.query);
+        console.log(resturant);
+        const newCustomer = new Customer({ name, email, resturant});
         newCustomer.save()
         .then((customer) => {
           console.log('Done saving customer')
