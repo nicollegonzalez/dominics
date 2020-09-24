@@ -6,7 +6,7 @@ const Schema   = mongoose.Schema;
 const customerSchema = new Schema({
   name: String,
   email: String,
-  resturant: String,
+  restaurant: String,
 }, {
   timestamps: {
     createdAt: "created_at",
