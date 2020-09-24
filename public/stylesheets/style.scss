@@ -1322,7 +1322,7 @@ ul.nav-menu {
   // }
   }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 620px) {
   // .about{
   //   min-height: calc(100vh - 96px - 98px)!important;
   // }
@@ -1516,7 +1516,9 @@ ul.nav-menu {
 
   .thumbnail{
     width: 30vw;
-    height: calc(30vw / 1.50225338007);;
+    height: calc(30vw / 1.50225338007);
+    // max-width: 450px;
+    // max-height: calc(450vw / 1.50225338007);
   }
 
   .career-content{
