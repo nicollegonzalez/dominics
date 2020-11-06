@@ -61,6 +61,7 @@ if (pathName.indexOf("/locations/") !== -1) {
     <img src="/images/dominicsIV/DominicsPizzaPastaIV-1.jpg" alt="" class="gallery-slide firstClone">
     `;
 
+    // set innnerHTML
     gallerySlide.innerHTML = gallerySlideInnerHTML;
 
     // console.log(gallerySlide);
@@ -96,6 +97,7 @@ if (pathName.indexOf("/locations/") !== -1) {
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-1.jpg" alt="" class="gallery-slide firstClone">
     `;
 
+    // set innnerHTML
     gallerySlide.innerHTML = gallerySlideInnerHTML;
   } else if (pathName.indexOf("/locations/dominicsII") !== -1) {
     // console.log("HI II");
@@ -123,6 +125,7 @@ if (pathName.indexOf("/locations/") !== -1) {
     <img src="/images/dominicsII/DominicsPizzaPastaII-1.jpg" alt="" class="gallery-slide firstClone">
     `;
 
+    // set innnerHTML
     gallerySlide.innerHTML = gallerySlideInnerHTML;
   } else if (pathName.indexOf("/locations/dominicsI") !== -1) {
     galleryThumbnails.innerHTML += `
@@ -151,6 +154,7 @@ if (pathName.indexOf("/locations/") !== -1) {
     <img src="/images/dominicsI/DominicsPizzaPastaI-1.jpg" alt="" class="gallery-slide firstClone">
     `;
 
+    // set innnerHTML
     gallerySlide.innerHTML = gallerySlideInnerHTML;
   }
 }
