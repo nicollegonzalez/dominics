@@ -1597,11 +1597,21 @@ ul.nav-menu {
     background-repeat: no-repeat;
   }
 
+  // img.gallery-slide[active="false"] {
+  //   opacity: 0.3;
+  // }
+
+  img.thumbnail[active="true"] {
+    opacity: 0.3;
+  }
+
   .gallery-thumbnails {
+    // opacity: 0.6;
     margin: 0 auto;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    cursor: pointer;
   }
 
   .thumbnail {

@@ -1191,11 +1191,14 @@ ul.nav-menu {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; }
+  img.thumbnail[active="true"] {
+    opacity: 0.3; }
   .gallery-thumbnails {
     margin: 0 auto;
     overflow-x: scroll;
     overflow-y: hidden;
-    white-space: nowrap; }
+    white-space: nowrap;
+    cursor: pointer; }
   .thumbnail {
     width: 70px;
     height: 70px;

@@ -7,6 +7,9 @@ const arrowLeft = document.querySelector("#arrow-left");
 const arrowRight = document.querySelector("#arrow-right");
 const carouselTimer = 4000;
 let translateX;
+let currentThumbnail;
+let previousThumbnail;
+let currentGallerySlide;
 
 window.addEventListener("load", (event) => {
   console.log("Finished loading");
@@ -139,8 +142,18 @@ window.addEventListener("load", (event) => {
 
     function slideLeft() {
       if (counter <= 0) return;
+      else if (counter <= 1) {
+        currentThumbnail =
+          galleryThumbnails.children[carouselImages.length - 3];
+        previousThumbnail = galleryThumbnails.children[0];
+      } else {
+        currentThumbnail = galleryThumbnails.children[counter - 2];
+        previousThumbnail = galleryThumbnails.children[counter - 1];
+      }
       carouselSlide.style.transition = "transform 0.6s ease-in-out";
       size = carouselImages[counter].clientWidth;
+      currentThumbnail.setAttribute("active", "true");
+      previousThumbnail.setAttribute("active", "false");
       counter--;
       translateX = -size * counter + size / 2;
       carouselSlide.style.transform = "translateX(" + translateX + "px)";
@@ -148,9 +161,16 @@ window.addEventListener("load", (event) => {
 
     function slideRight() {
       if (counter >= carouselImages.length - 1) return;
-      // console.log(carouselSlide);
+      else if (counter >= carouselImages.length - 2) {
+        currentThumbnail = galleryThumbnails.children[0];
+      } else {
+        currentThumbnail = galleryThumbnails.children[counter];
+      }
       carouselSlide.style.transition = "transform 0.6s ease-in-out";
       size = carouselImages[counter].clientWidth;
+      previousThumbnail = galleryThumbnails.children[counter - 1];
+      currentThumbnail.setAttribute("active", "true");
+      previousThumbnail.setAttribute("active", "false");
       counter++;
       translateX = -size * counter + size / 2;
       carouselSlide.style.transform = "translateX(" + translateX + "px)";
