@@ -1,160 +1,160 @@
 const pathName = window.location.pathname;
-const locationGallery = document.querySelector(".gallery");
-const gallerySlide = document.querySelector(".gallery-carousel-slide");
-const galleryThumbnails = document.querySelector(".gallery-thumbnails");
-let galleryLength;
-let gallerySlideInnerHTML;
+// const locationGallery = document.querySelector(".gallery");
+// const gallerySlide = document.querySelector(".gallery-carousel-slide");
+// const galleryThumbnails = document.querySelector(".gallery-thumbnails");
+// let galleryLength;
+// let gallerySlideInnerHTML;
 
-if (pathName.indexOf("/locations/") !== -1) {
-  if (pathName.indexOf("/locations/dominicsIV") !== -1) {
-    // console.log("HI IV");
+// if (pathName.indexOf("/locations/") !== -1) {
+//   if (pathName.indexOf("/locations/dominicsIV") !== -1) {
+//     // console.log("HI IV");
 
-    galleryThumbnails.innerHTML += `
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-1.jpg" alt="" class="thumbnail" active="true">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-2.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-3.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-4.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-5.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-6.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-7.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-8.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-9.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-10.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-11.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-12.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-13.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-14.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-15.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-16.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-18.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-23.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-25.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-26.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-27.jpg" alt="" class="thumbnail" active="false">
-    `;
+//     galleryThumbnails.innerHTML += `
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-1.jpg" alt="" class="thumbnail" active="true">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-2.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-3.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-4.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-5.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-6.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-7.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-8.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-9.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-10.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-11.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-12.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-13.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-14.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-15.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-16.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-18.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-23.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-25.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-26.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-27.jpg" alt="" class="thumbnail" active="false">
+//     `;
 
-    galleryLength = galleryThumbnails.childElementCount;
+//     galleryLength = galleryThumbnails.childElementCount;
 
-    gallerySlideInnerHTML = `
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-27.jpg" alt="" class="gallery-slide lastClone" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-1.jpg" alt="" class="gallery-slide" active="true">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-2.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-3.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-4.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-5.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-6.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-7.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-8.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-9.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-10.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-11.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-12.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-13.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-14.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-15.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-16.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-18.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-23.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-25.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-26.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-27.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIV/DominicsPizzaPastaIV-1.jpg" alt="" class="gallery-slide firstClone" active="false">
-    `;
+//     gallerySlideInnerHTML = `
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-27.jpg" alt="" class="gallery-slide lastClone" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-1.jpg" alt="" class="gallery-slide" active="true">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-2.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-3.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-4.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-5.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-6.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-7.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-8.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-9.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-10.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-11.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-12.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-13.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-14.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-15.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-16.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-18.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-23.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-25.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-26.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-27.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIV/DominicsPizzaPastaIV-1.jpg" alt="" class="gallery-slide firstClone" active="false">
+//     `;
 
-    // set innnerHTML
-    gallerySlide.innerHTML = gallerySlideInnerHTML;
+//     // set innnerHTML
+//     gallerySlide.innerHTML = gallerySlideInnerHTML;
 
-    // console.log(gallerySlide);
-  } else if (pathName.indexOf("/locations/dominicsIII") !== -1) {
-    // console.log("HI III");
-    galleryThumbnails.innerHTML += `
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-1.jpg" alt="" class="thumbnail" active="true">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-2.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-3.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-4.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-5.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-6.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-7.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-8.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-9.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-10.jpg" alt="" class="thumbnail" active="false">
-    `;
+//     // console.log(gallerySlide);
+//   } else if (pathName.indexOf("/locations/dominicsIII") !== -1) {
+//     // console.log("HI III");
+//     galleryThumbnails.innerHTML += `
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-1.jpg" alt="" class="thumbnail" active="true">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-2.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-3.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-4.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-5.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-6.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-7.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-8.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-9.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-10.jpg" alt="" class="thumbnail" active="false">
+//     `;
 
-    galleryLength = galleryThumbnails.childElementCount;
+//     galleryLength = galleryThumbnails.childElementCount;
 
-    gallerySlideInnerHTML = `
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-10.jpg" alt="" class="gallery-slide lastClone" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-1.jpg" alt="" class="gallery-slide" active="true">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-2.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-3.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-4.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-5.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-6.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-7.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-8.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-9.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-10.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-1.jpg" alt="" class="gallery-slide firstClone" active="false">
-    `;
+//     gallerySlideInnerHTML = `
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-10.jpg" alt="" class="gallery-slide lastClone" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-1.jpg" alt="" class="gallery-slide" active="true">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-2.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-3.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-4.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-5.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-6.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-7.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-8.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-9.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-10.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsIII/DominicsPizzaPastaIII-1.jpg" alt="" class="gallery-slide firstClone" active="false">
+//     `;
 
-    // set innnerHTML
-    gallerySlide.innerHTML = gallerySlideInnerHTML;
-  } else if (pathName.indexOf("/locations/dominicsII") !== -1) {
-    // console.log("HI II");
-    galleryThumbnails.innerHTML += `
-    <img src="/images/dominicsII/DominicsPizzaPastaII-1.jpg" alt="" class="thumbnail" active="true">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-2.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-3.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-4.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-5.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-6.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-7.jpg" alt="" class="thumbnail" active="false">
-    `;
+//     // set innnerHTML
+//     gallerySlide.innerHTML = gallerySlideInnerHTML;
+//   } else if (pathName.indexOf("/locations/dominicsII") !== -1) {
+//     // console.log("HI II");
+//     galleryThumbnails.innerHTML += `
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-1.jpg" alt="" class="thumbnail" active="true">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-2.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-3.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-4.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-5.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-6.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-7.jpg" alt="" class="thumbnail" active="false">
+//     `;
 
-    galleryLength = galleryThumbnails.childElementCount;
+//     galleryLength = galleryThumbnails.childElementCount;
 
-    gallerySlideInnerHTML = `
-    <img src="/images/dominicsII/DominicsPizzaPastaII-7.jpg" alt="" class="gallery-slide lastClone" active="false">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-1.jpg" alt="" class="gallery-slide" active="true">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-2.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-3.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-4.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-5.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-6.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-7.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsII/DominicsPizzaPastaII-1.jpg" alt="" class="gallery-slide firstClone" active="false">
-    `;
+//     gallerySlideInnerHTML = `
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-7.jpg" alt="" class="gallery-slide lastClone" active="false">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-1.jpg" alt="" class="gallery-slide" active="true">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-2.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-3.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-4.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-5.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-6.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-7.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsII/DominicsPizzaPastaII-1.jpg" alt="" class="gallery-slide firstClone" active="false">
+//     `;
 
-    // set innnerHTML
-    gallerySlide.innerHTML = gallerySlideInnerHTML;
-  } else if (pathName.indexOf("/locations/dominicsI") !== -1) {
-    galleryThumbnails.innerHTML += `
-    <img src="/images/dominicsI/DominicsPizzaPastaI-1.jpg" alt="" class="thumbnail" active="true">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-2.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-3.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-4.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-5.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-6.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-7.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-8.jpg" alt="" class="thumbnail" active="false">
-    `;
+//     // set innnerHTML
+//     gallerySlide.innerHTML = gallerySlideInnerHTML;
+//   } else if (pathName.indexOf("/locations/dominicsI") !== -1) {
+//     galleryThumbnails.innerHTML += `
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-1.jpg" alt="" class="thumbnail" active="true">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-2.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-3.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-4.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-5.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-6.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-7.jpg" alt="" class="thumbnail" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-8.jpg" alt="" class="thumbnail" active="false">
+//     `;
 
-    galleryLength = galleryThumbnails.childElementCount;
+//     galleryLength = galleryThumbnails.childElementCount;
 
-    gallerySlideInnerHTML = `
-    <img src="/images/dominicsI/DominicsPizzaPastaI-8.jpg" alt="" class="gallery-slide lastClone" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-1.jpg" alt="" class="gallery-slide" active="true">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-2.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-3.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-4.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-5.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-6.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-7.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-8.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsI/DominicsPizzaPastaI-1.jpg" alt="" class="gallery-slide firstClone" active="false">
-    `;
+//     gallerySlideInnerHTML = `
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-8.jpg" alt="" class="gallery-slide lastClone" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-1.jpg" alt="" class="gallery-slide" active="true">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-2.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-3.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-4.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-5.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-6.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-7.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-8.jpg" alt="" class="gallery-slide" active="false">
+//     <img src="/images/dominicsI/DominicsPizzaPastaI-1.jpg" alt="" class="gallery-slide firstClone" active="false">
+//     `;
 
-    // set innnerHTML
-    gallerySlide.innerHTML = gallerySlideInnerHTML;
-  }
-}
+//     // set innnerHTML
+//     gallerySlide.innerHTML = gallerySlideInnerHTML;
+//   }
+// }
