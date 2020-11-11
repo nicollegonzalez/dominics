@@ -10,6 +10,7 @@ let translateX;
 let currentThumbnail;
 let previousThumbnail;
 let currentGallerySlide;
+let previousGallerySlide;
 
 window.addEventListener("load", (event) => {
   console.log("Finished loading");
@@ -155,6 +156,9 @@ window.addEventListener("load", (event) => {
         currentThumbnail =
           galleryThumbnails.children[carouselImages.length - 3];
         previousThumbnail = galleryThumbnails.children[0];
+        // currentGallerySlide = ;
+        // previousGallerySlide = ;
+        console.log(gallerySlide.children);
       } else {
         currentThumbnail = galleryThumbnails.children[counter - 2];
         previousThumbnail = galleryThumbnails.children[counter - 1];

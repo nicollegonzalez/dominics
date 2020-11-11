@@ -5,27 +5,22 @@ window.addEventListener("load", (event) => {
 
   if (pathName.indexOf("/careers") !== -1) {
     printApplicationBtn.addEventListener("click", function (e) {
-      // console.log("HERE 1!!!");
       function adjustHeight(textareaElement, minHeight) {
         // compute the height difference which is caused by border and outline
         var outerHeight = parseInt(
           window.getComputedStyle(textareaElement).height,
           10
         );
-        // console.log("&&&&&&& Outer Height", outerHeight);
         if (outerHeight >= 17) {
           var diff = outerHeight - textareaElement.clientHeight;
-          // console.log("$$$$$$$",diff);
 
           // set the height to 0 in case of it has to be shrinked
           textareaElement.style.height = 0;
 
           // set the correct height
           // el.scrollHeight is the full height of the content, not just the visible part
-          // console.log("$$$$$$$$$ Scroll Height", textareaElement.scrollHeight);
           textareaElement.style.height =
             Math.max(minHeight, textareaElement.scrollHeight - diff * 2) + "px";
-          // console.log("$%$%$%$%:",textareaElement.style.height);
         }
       }
 
@@ -49,24 +44,18 @@ window.addEventListener("load", (event) => {
       window.print();
 
       setTimeout(function () {
-        // console.log("AFTER PRINTING!!!!");
-        // console.log("HERE 2!!!");
         function adjustHeight(textareaElement, minHeight) {
           // compute the height difference which is caused by border and outline
           var outerHeight = parseInt(
             window.getComputedStyle(textareaElement).height,
             10
           );
-          // console.log("outerHeight",outerHeight);
           if (outerHeight < 195) {
             outerHeight = 195;
-            // console.log("outerHeight NEW***",outerHeight);
-            // textareaElement.clientHeight = 106;
-            // console.log("clientHeight:", textareaElement.clientHeight);
+
           }
           if (outerHeight >= 195) {
             var diff = outerHeight - (outerHeight - 2);
-            // console.log("diff",diff);
 
             // set the height to 0 in case of it has to be shrinked
             textareaElement.style.height = 0;
@@ -107,8 +96,6 @@ window.addEventListener("load", (event) => {
       }, 1500);
     });
 
-    // console.log(typeof(inputs));
-    // console.log((inputs.length));
 
     for (let i = 0; i < inputs.length; i++) {
       inputs[i].addEventListener("keyup", function (e) {
@@ -121,7 +108,6 @@ window.addEventListener("load", (event) => {
           document
             .querySelector("#first-time-yes-input")
             .classList.remove("none");
-          // console.log(document.querySelector('#first-time-yes-input').previousElementSibling);//.classList.remove("none");
           document
             .querySelector("#first-time-yes-input")
             .previousElementSibling.classList.remove("none");
@@ -322,8 +308,6 @@ window.addEventListener("load", (event) => {
           document
             .querySelector("#previous-employment-contact-number-1-input")
             .previousElementSibling.classList.remove("none");
-          // document.querySelector('#').classList.remove("none");
-          // document.querySelector('#').nextElementSibling.classList.remove("none");
         } else {
           document
             .querySelector("#previous-employment-position-1-input")
@@ -567,11 +551,9 @@ window.addEventListener("load", (event) => {
           document
             .querySelector("#previous-employment-wage-3-input")
             .previousElementSibling.classList.add("none");
-          // document.querySelector('#previous-employment-wage-3-input').nextElementSibling.classList.add("none");
           document
             .querySelector("#previous-employment-start-date-3-input")
             .classList.add("none");
-          // document.querySelector('#previous-employment-start-date-3-input').previousElementSibling.classList.add("none");
           document
             .querySelector("#previous-employment-start-date-3-input")
             .nextElementSibling.classList.add("none");
@@ -622,8 +604,6 @@ window.addEventListener("load", (event) => {
           document
             .querySelector("#refernce-relationship-1-input")
             .previousElementSibling.classList.remove("none");
-          // document.querySelector('#').classList.remove("none");
-          // document.querySelector('#').nextElementSibling.classList.remove("none");
         } else {
           document
             .querySelector("#refernce-number-1-input")
@@ -651,8 +631,6 @@ window.addEventListener("load", (event) => {
           document
             .querySelector("#refernce-relationship-2-input")
             .previousElementSibling.classList.remove("none");
-          // document.querySelector('#').classList.remove("none");
-          // document.querySelector('#').nextElementSibling.classList.remove("none");
         } else {
           document
             .querySelector("#refernce-number-2-input")
@@ -680,8 +658,6 @@ window.addEventListener("load", (event) => {
           document
             .querySelector("#refernce-relationship-3-input")
             .previousElementSibling.classList.remove("none");
-          // document.querySelector('#').classList.remove("none");
-          // document.querySelector('#').nextElementSibling.classList.remove("none");
         } else {
           document
             .querySelector("#refernce-number-3-input")
@@ -701,27 +677,22 @@ window.addEventListener("load", (event) => {
 
     (function () {
       function adjustHeight(textareaElement, minHeight) {
-        // console.log("HERE 3!!!");
         // compute the height difference which is caused by border and outline
         var outerHeight = parseInt(
           window.getComputedStyle(textareaElement).height,
           10
         );
-        // console.log("outerHeight",outerHeight);
         if (outerHeight < 108) {
           outerHeight = 108;
         }
         if (outerHeight >= 108) {
-          // console.log("outerHeight*",outerHeight);
           var diff = outerHeight - textareaElement.clientHeight;
-          // console.log("diff",diff);
 
           // set the height to 0 in case of it has to be shrinked
           textareaElement.style.height = 0;
 
           // set the correct height
           // el.scrollHeight is the full height of the content, not just the visible part
-          // console.log("Scroll Height:",textareaElement.scrollHeight);
           textareaElement.style.height =
             Math.max(minHeight, textareaElement.scrollHeight + diff) + "px";
         }

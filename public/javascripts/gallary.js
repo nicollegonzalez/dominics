@@ -78,13 +78,13 @@ if (pathName.indexOf("/locations/") !== -1) {
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-7.jpg" alt="" class="thumbnail" active="false">
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-8.jpg" alt="" class="thumbnail" active="false">
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-9.jpg" alt="" class="thumbnail" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-10.jpg" alt="" class="thumbnail" active="false">
+    <img src="/images/dominicsIII/DominicsPizzaPastaIII-14.jpg" alt="" class="thumbnail" active="false">
     `;
 
     galleryLength = galleryThumbnails.childElementCount;
 
     gallerySlideInnerHTML = `
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-10.jpg" alt="" class="gallery-slide lastClone" active="false">
+    <img src="/images/dominicsIII/DominicsPizzaPastaIII-14.jpg" alt="" class="gallery-slide lastClone" active="false">
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-1.jpg" alt="" class="gallery-slide" active="true">
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-2.jpg" alt="" class="gallery-slide" active="false">
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-3.jpg" alt="" class="gallery-slide" active="false">
@@ -94,7 +94,7 @@ if (pathName.indexOf("/locations/") !== -1) {
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-7.jpg" alt="" class="gallery-slide" active="false">
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-8.jpg" alt="" class="gallery-slide" active="false">
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-9.jpg" alt="" class="gallery-slide" active="false">
-    <img src="/images/dominicsIII/DominicsPizzaPastaIII-10.jpg" alt="" class="gallery-slide" active="false">
+    <img src="/images/dominicsIII/DominicsPizzaPastaIII-14.jpg" alt="" class="gallery-slide" active="false">
     <img src="/images/dominicsIII/DominicsPizzaPastaIII-1.jpg" alt="" class="gallery-slide firstClone" active="false">
     `;
 
