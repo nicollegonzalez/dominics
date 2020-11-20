@@ -1,7 +1,7 @@
 const pathName = window.location.pathname;
 const locationGallery = document.querySelector(".gallery");
-const gallerySlide = document.querySelector(".gallery-carousel-slide");
-const galleryThumbnails = document.querySelector(".gallery-thumbnails");
+let gallerySlide = document.querySelector(".gallery-carousel-slide");
+let galleryThumbnails = document.querySelector(".gallery-thumbnails");
 let galleryLength;
 let gallerySlideInnerHTML;
 

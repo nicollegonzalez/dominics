@@ -546,6 +546,18 @@ a.nav-menu-link:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: opacity 0.3s;
+  transition-timing-function: ease-out;
+}
+
+img.gallery-slide[active="false"] {
+  opacity: 0.3;
+}
+
+img.gallery-slide[active="true"] {
+  opacity: 1;
+  // transition: opacity 0.3s;
+  // transition-timing-function: ease-out;
 }
 
 img.thumbnail[active="true"] {
@@ -570,6 +582,8 @@ img.thumbnail[active="true"] {
   width: 70px;
   height: 70px;
   display: inline-block;
+  transition: opacity 0.3s;
+  transition-timing-function: ease-out;
 }
 
 #mainContent .dominics-intro div.logo,

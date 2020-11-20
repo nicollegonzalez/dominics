@@ -7,10 +7,9 @@ const arrowLeft = document.querySelector("#arrow-left");
 const arrowRight = document.querySelector("#arrow-right");
 const carouselTimer = 4000;
 let translateX;
-let currentThumbnail;
-let previousThumbnail;
-let currentGallerySlide;
-let previousGallerySlide;
+let activeThumbnail;
+let activeGallerySlide;
+let transitionGallerySlide;
 
 window.addEventListener("load", (event) => {
   console.log("Finished loading");
@@ -98,6 +97,7 @@ window.addEventListener("load", (event) => {
     pathName == "/locations/dominicsII" ||
     pathName == "/locations/dominicsI"
   ) {
+    galleryThumbnails = document.querySelectorAll(".thumbnail");
     carouselSlide = document.querySelector(".gallery-carousel-slide");
     carouselImages = document.querySelectorAll(".gallery-slide");
     counter = 1;
@@ -123,9 +123,25 @@ window.addEventListener("load", (event) => {
       slideLeft();
     });
 
+    galleryThumbnails.forEach((thumbnail) => {
+      thumbnail.onclick = function () {
+        resetCarouselTimer();
+        resetGallery();
+
+        // set clicked thumbnail as the active thumbnail
+        thumbnail.setAttribute("active", "true");
+        let thumbnailIndex = [].indexOf.call(
+          thumbnail.parentNode.children,
+          thumbnail
+        );
+        counter = thumbnailIndex;
+
+        slideRight();
+      };
+    });
+
     carouselSlide.addEventListener("transitionend", () => {
       if (carouselImages[counter].className === "gallery-slide lastClone") {
-        console.log(carouselImages[counter].className);
         carouselSlide.style.transition = "none";
         size = carouselImages[counter].clientWidth;
         counter = carouselImages.length - 2;
@@ -135,7 +151,8 @@ window.addEventListener("load", (event) => {
           translateX =
             -size * counter + (locationGallery.clientWidth - size) / 2;
         }
-        carouselSlide.style.transform = "translateX(" + translateX + "px)";
+
+        translateSlideX(translateX);
       }
 
       if (carouselImages[counter].className === "gallery-slide firstClone") {
@@ -146,51 +163,69 @@ window.addEventListener("load", (event) => {
 
         translateX = -size * counter + (locationGallery.clientWidth - size) / 2;
 
-        carouselSlide.style.transform = "translateX(" + translateX + "px)";
+        translateSlideX(translateX);
       }
     });
 
     function slideLeft() {
       if (counter <= 0) return;
       else if (counter <= 1) {
-        currentThumbnail =
-          galleryThumbnails.children[carouselImages.length - 3];
-        previousThumbnail = galleryThumbnails.children[0];
-        // currentGallerySlide = ;
-        // previousGallerySlide = ;
-        console.log(gallerySlide.children);
+        activeThumbnail = galleryThumbnails[carouselImages.length - 3];
+        activeGallerySlide = gallerySlide.children[carouselImages.length - 2];
       } else {
-        currentThumbnail = galleryThumbnails.children[counter - 2];
-        previousThumbnail = galleryThumbnails.children[counter - 1];
+        activeThumbnail = galleryThumbnails[counter - 2];
+        activeGallerySlide = gallerySlide.children[counter - 1];
       }
       carouselSlide.style.transition = "transform 0.6s ease-in-out";
       size = carouselImages[counter].clientWidth;
-      currentThumbnail.setAttribute("active", "true");
-      previousThumbnail.setAttribute("active", "false");
       counter--;
 
       translateX = -size * counter + (locationGallery.clientWidth - size) / 2;
 
-      carouselSlide.style.transform = "translateX(" + translateX + "px)";
+      translateSlideX(translateX);
+      resetGallery();
+      updateGalleryAttributes();
     }
 
     function slideRight() {
       if (counter >= carouselImages.length - 1) return;
       else if (counter >= carouselImages.length - 2) {
-        currentThumbnail = galleryThumbnails.children[0];
+        activeThumbnail = galleryThumbnails[0];
+        activeGallerySlide = gallerySlide.children[1];
       } else {
-        currentThumbnail = galleryThumbnails.children[counter];
+        activeThumbnail = galleryThumbnails[counter];
+        activeGallerySlide = gallerySlide.children[counter + 1];
       }
       carouselSlide.style.transition = "transform 0.6s ease-in-out";
       size = carouselImages[counter].clientWidth;
-      previousThumbnail = galleryThumbnails.children[counter - 1];
-      currentThumbnail.setAttribute("active", "true");
-      previousThumbnail.setAttribute("active", "false");
-      counter++;
 
+      counter++;
       translateX = -size * counter + (locationGallery.clientWidth - size) / 2;
 
-      carouselSlide.style.transform = "translateX(" + translateX + "px)";
+      translateSlideX(translateX);
+      resetGallery();
+      updateGalleryAttributes();
+    }
+
+    function resetGallery() {
+      // Reset all thumbnails and all image slides to false
+      document.querySelectorAll(`[active=true]`).forEach((node) => {
+        node.setAttribute("active", "false");
+      });
+    }
+
+    function updateGalleryAttributes() {
+      activeThumbnail.setAttribute("active", "true");
+      activeGallerySlide.setAttribute("active", "true");
+      if (counter <= 0) {
+        gallerySlide.children[counter].setAttribute("active", "true");
+      } else if (counter >= carouselImages.length - 1) {
+        gallerySlide.children[counter].setAttribute("active", "true");
+      }
+    }
+
+    function translateSlideX(num) {
+      carouselSlide.style.transform = "translateX(" + num + "px)";
     }
 
     function startCarousel() {
@@ -199,18 +234,19 @@ window.addEventListener("load", (event) => {
       }, carouselTimer);
 
       document.getElementById("arrow-left").onclick = function () {
-        clearInterval(carouselLoop);
-        carouselLoop = setInterval(function () {
-          slideRight();
-        }, carouselTimer);
+        resetCarouselTimer();
       };
 
       document.getElementById("arrow-right").onclick = function () {
-        clearInterval(carouselLoop);
-        carouselLoop = setInterval(function () {
-          slideRight();
-        }, carouselTimer);
+        resetCarouselTimer();
       };
+    }
+
+    function resetCarouselTimer() {
+      clearInterval(carouselLoop);
+      carouselLoop = setInterval(function () {
+        slideRight();
+      }, carouselTimer);
     }
   }
 });
