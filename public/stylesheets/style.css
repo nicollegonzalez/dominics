@@ -449,7 +449,15 @@ a.nav-menu-link:hover {
   position: relative;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  transition: opacity 0.3s;
+  transition-timing-function: ease-out; }
+
+img.gallery-slide[active="false"] {
+  opacity: 0.3; }
+
+img.gallery-slide[active="true"] {
+  opacity: 1; }
 
 img.thumbnail[active="true"] {
   opacity: 0.3; }
@@ -469,7 +477,9 @@ img.thumbnail[active="true"] {
 .thumbnail {
   width: 70px;
   height: 70px;
-  display: inline-block; }
+  display: inline-block;
+  transition: opacity 0.3s;
+  transition-timing-function: ease-out; }
 
 #mainContent .dominics-intro div.logo,
 #mainContent .location-intro div.logo {

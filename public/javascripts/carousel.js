@@ -100,7 +100,7 @@ window.addEventListener("load", (event) => {
     galleryThumbnails = document.querySelectorAll(".thumbnail");
     carouselSlide = document.querySelector(".gallery-carousel-slide");
     carouselImages = document.querySelectorAll(".gallery-slide");
-    counter = 1;
+    counter = 2;
     size = carouselImages[counter].clientWidth;
 
     translateX = -size * counter + (locationGallery.clientWidth - size) / 2;
@@ -112,6 +112,7 @@ window.addEventListener("load", (event) => {
 
     // Init Carousel Loop
     startCarousel();
+
     // setTimeout(startCarousel(), 3000);
 
     // instead of the ES6 way ()=> you can do function(){}
@@ -129,14 +130,20 @@ window.addEventListener("load", (event) => {
         resetGallery();
 
         // set clicked thumbnail as the active thumbnail
-        thumbnail.setAttribute("active", "true");
+        // thumbnail.setAttribute("active", "true");
         let thumbnailIndex = [].indexOf.call(
           thumbnail.parentNode.children,
           thumbnail
         );
-        counter = thumbnailIndex;
+        counter = thumbnailIndex + 1;
 
         slideRight();
+      };
+    });
+
+    document.querySelectorAll("video").forEach((video) => {
+      video.onclick = function () {
+        clearInterval(carouselLoop);
       };
     });
 
@@ -156,7 +163,6 @@ window.addEventListener("load", (event) => {
       }
 
       if (carouselImages[counter].className === "gallery-slide firstClone") {
-        console.log(carouselImages[counter].className);
         carouselSlide.style.transition = "none";
         size = carouselImages[counter].clientWidth;
         counter = carouselImages.length - counter;
@@ -170,10 +176,13 @@ window.addEventListener("load", (event) => {
     function slideLeft() {
       if (counter <= 0) return;
       else if (counter <= 1) {
-        activeThumbnail = galleryThumbnails[carouselImages.length - 3];
+        activeThumbnail = galleryThumbnails[carouselImages.length - 4];
         activeGallerySlide = gallerySlide.children[carouselImages.length - 2];
+      } else if (counter <= 2) {
+        activeThumbnail = galleryThumbnails[carouselImages.length - 3];
+        activeGallerySlide = gallerySlide.children[1];
       } else {
-        activeThumbnail = galleryThumbnails[counter - 2];
+        activeThumbnail = galleryThumbnails[counter - 3];
         activeGallerySlide = gallerySlide.children[counter - 1];
       }
       carouselSlide.style.transition = "transform 0.6s ease-in-out";
@@ -190,10 +199,10 @@ window.addEventListener("load", (event) => {
     function slideRight() {
       if (counter >= carouselImages.length - 1) return;
       else if (counter >= carouselImages.length - 2) {
-        activeThumbnail = galleryThumbnails[0];
+        activeThumbnail = galleryThumbnails[counter - 1];
         activeGallerySlide = gallerySlide.children[1];
       } else {
-        activeThumbnail = galleryThumbnails[counter];
+        activeThumbnail = galleryThumbnails[counter - 1];
         activeGallerySlide = gallerySlide.children[counter + 1];
       }
       carouselSlide.style.transition = "transform 0.6s ease-in-out";
@@ -232,6 +241,18 @@ window.addEventListener("load", (event) => {
       carouselLoop = setInterval(function () {
         slideRight();
       }, carouselTimer);
+
+      document.querySelectorAll("video").forEach((video) => {
+        video.onplay = (event) => {
+          clearInterval(carouselLoop);
+        };
+      });
+
+      document.querySelectorAll("video").forEach((video) => {
+        video.onended = (event) => {
+          resetCarouselTimer();
+        };
+      });
 
       document.getElementById("arrow-left").onclick = function () {
         resetCarouselTimer();
