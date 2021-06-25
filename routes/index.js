@@ -24,7 +24,6 @@ router.get('/', (req, res, next) => {
 router.get('/locations', (req, res, next) => {
   Location.find()
   .then(allTheLocations => {
-    // console.log('Retrieved locations from DB:', allTheLocations);
     res.render('location-views/locations', { locations: allTheLocations});
   })
   .catch(error => {
@@ -36,11 +35,6 @@ router.get('/locations/:location', (req, res, next) => {
   // theLocation = req.params.location;
   Location.findOne({ locationRoute: req.params.location})
     .then(theLocation => {
-      console.log(theLocation.mapURL);
-      console.log(theLocation.locationAddress.addressURL);
-      console.log("*******",theLocation,"*******");
-      console.log("*******",theLocation.lunchMenu,"*******");
-      console.log("Menu:",theLocation.menu);
       res.render(`location-views/location`, {location: theLocation});
     })
     .catch(error => {
@@ -73,11 +67,6 @@ router.post('/deals-user-info',(req, res, next) => {
       res.send(err);
     } else {
       if (!result ) {
-        // console.log(req.body);
-        // console.log(req.params);
-        // console.log("$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%",req.headers.referer,"$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$$%");
-        // console.log(req.query);
-        console.log(restaurant);
         const newCustomer = new Customer({ name, email, restaurant});
         newCustomer.save()
         .then((customer) => {
